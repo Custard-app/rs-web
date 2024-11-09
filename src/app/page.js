@@ -20,7 +20,6 @@ export default function Home() {
             <p className="w-full text-right text-lg font-lato font-medium">
               ~ Wolf of Wall Street
             </p>
-            <p className='text-4xl font-bold'>Hello world</p>
           </div>
         </div>
         <Dreamsection />
