@@ -197,13 +197,13 @@ function Calculator() {
             </div>
 
             <div className="flex items-center justify-between gap-4 text-gray-700">
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2 w-44">
+              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">Invested Amount</p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{investedAmount.toLocaleString()}
                 </p>
               </div>
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2 w-44">
+              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">
                   {' '}
                   Estimated Returns
@@ -212,7 +212,7 @@ function Calculator() {
                   ₹{estimatedReturns.toLocaleString()}
                 </p>
               </div>
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2 w-44">
+              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">Total Amount</p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{totalAmount.toLocaleString()}
