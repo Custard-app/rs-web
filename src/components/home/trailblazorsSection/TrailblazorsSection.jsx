@@ -69,7 +69,7 @@ function TrailblazorsSection() {
       <div className="w-full overflow-hidden">
         {/* Animated container with products */}
         <div
-          className="flex items-center justify-center gap-6 animate-slide-back-and-forth"
+          className="flex items-center justify-center gap-10 animate-slide-back-and-forth"
           style={{
             animation: 'slide-back-and-forth 5s ease-in-out infinite',
           }}
