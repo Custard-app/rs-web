@@ -35,7 +35,7 @@ function Dreamsection() {
   return (
     <>
       <WidthXL>
-        <div className="mt-24 bg-white">
+        <div className="mt-24 bg-white overflow-hidden">
           <div className="w-full flex flex-col items-center mb-16 gap-5 z-5">
             <h1 className="text-6xl font-extrabold uppercase">
               Do you have a{' '}

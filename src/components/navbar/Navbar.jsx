@@ -10,7 +10,7 @@ function Navbar() {
     <div className='bg-primary border-b border-black'>
       <WidthXL>
         <div className='flex items-center justify-between py-5'>
-          <Link href="/" passHref>
+          <Link href="/" >
             <Image src={logo} alt="Rupeestop" width={195} height={34} />
           </Link>
           <div className='space-x-4 text-accentGray-100 flex gap-6 items-center text-base font-bold'>

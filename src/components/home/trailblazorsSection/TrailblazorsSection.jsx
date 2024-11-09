@@ -1,9 +1,63 @@
 import React from 'react';
+import heroSectionImage from '@/assets/images/heroImage.png';
+import './Trailblazors.css';
+import { BsPlay } from 'react-icons/bs';
+import { BsPause } from 'react-icons/bs';
 
 function TrailblazorsSection() {
+  const products = [
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+    {
+      image: heroSectionImage,
+      heading: 'Robert Fox',
+      content:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+    },
+  ];
   return (
-    <div className="my-24 bg-primary py-8 flex flex-col items-center justify-center gap-6">
-      <div className="w-full flex flex-col items-center gap-1 ">
+    <div className="my-24 bg-primary py-12  flex flex-col items-center justify-center gap-6">
+      <div className="w-full flex flex-col items-center gap-1">
         <h2 className="text-5xl font-bold font-poppins text-white">
           Don't Just take our word for it
         </h2>
@@ -11,13 +65,38 @@ function TrailblazorsSection() {
           Listen to what our Finance Trailblazors say.
         </p>
       </div>
-      <div>
-        <div className="flex flex-col items-center justify-center gap-4">
-          <div className="w-60 h-96 bg-gray-500 rounded-2xl"></div>
-          <div className="w-64 h-28 p-2 rounded-br-3xl rounded-tl-3xl bg-white flex flex-col justify-center items-center gap-2">
-            <h3 className="text-black font-semibold font-lato text-xl text-center">fsddfsdf </h3>
-            <p className="font-lato italic text-base text-center text-gray-300">{`"fdfdsfdsfsdfdsf dfdsfd sfsdv sd"`}</p>
-          </div>
+      {/* Wrapper for hiding overflow */}
+      <div className="w-full overflow-hidden">
+        {/* Animated container with products */}
+        <div
+          className="flex items-center justify-center gap-6 animate-slide-back-and-forth"
+          style={{
+            animation: 'slide-back-and-forth 5s ease-in-out infinite',
+          }}
+        >
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center gap-4"
+            >
+              <div
+                className="w-60 h-96 bg-cover bg-center rounded-2xl relative overflow-hidden"
+                style={{ backgroundImage: `url(${product.image.src})` }}
+              >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
+                <button className="absolute bottom-2 right-2 border-2 border-white w-9 h-9 rounded-full text-white flex items-center justify-center font-bold">
+                  <BsPlay size={20} />
+                </button>
+              </div>
+              <div className="w-64 h-28 p-2 rounded-br-3xl rounded-tl-3xl bg-white flex flex-col justify-center items-center gap-2">
+                <h3 className="text-black font-semibold font-lato text-xl text-center">
+                  {product.heading}
+                </h3>
+                <p className="font-lato italic text-base text-center text-gray-500">{`"${product.content}"`}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

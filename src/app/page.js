@@ -1,3 +1,5 @@
+import Footer from '@/components/footer/Footer';
+import Calculator from '@/components/home/calculatorSection/Calculator';
 import Dreamsection from '@/components/home/heroSection/Dreamsection';
 import Herosection from '@/components/home/heroSection/Herosection';
 import TrailblazorsSection from '@/components/home/trailblazorsSection/TrailblazorsSection';
@@ -8,7 +10,7 @@ export default function Home() {
     <div className="">
       <main className='overflow-hidden'>
         <Herosection />
-        <div className="w-full h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center">
+        <div className="w-full h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center overflow-hidden">
           <div className="w-[739px]">
             <p className="text-2xl font-semibold font-lato text-gray-950 italic">
               “The only thing standing between you and your goal is the story
@@ -22,6 +24,8 @@ export default function Home() {
         </div>
         <Dreamsection />
         <TrailblazorsSection/>
+        <Calculator/>
+        <Footer/>
       </main>
     </div>
   );
