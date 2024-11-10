@@ -35,7 +35,7 @@ export default function Home() {
             className='pl-5 py-2 px-2 rounded-3xl border bg-transparent text-white'
             />
           </div>
-          <div>
+          <div className='w-full flex items-center justify-between text-gray-400'>
             <Link href="#">Gold Rate Update</Link>
             <Link href="#">Expert tips to Invest</Link>
             <Link href="#">SIP: How does it work?</Link>
