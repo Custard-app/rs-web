@@ -9,19 +9,29 @@ import portfolioIcon from '@/assets/images/computer-video-call.png';
 import fixedDepositIcon from '@/assets/images/money-bag.png';
 import bondsIcon from '@/assets/images/document-add-outline.png';
 import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 function Navbar() {
   const [showInstrumentsBanner, setShowInstrumentsBanner] = useState(false);
+  const [showCalculatorsBanner, setShowCalculatorsBanner] = useState(false);
 
   const toggleInstrumentsBanner = () => {
-    console.log('fjljfl');
+    if(showCalculatorsBanner){
+      setShowCalculatorsBanner(false);
+    }
     setShowInstrumentsBanner(!showInstrumentsBanner);
+  };
+  const toggleCalculatorsBanner = () => {
+    if(showInstrumentsBanner){
+      setShowInstrumentsBanner(false)
+    }
+    setShowCalculatorsBanner(!showCalculatorsBanner);
   };
 
   return (
     <div className="bg-primary border-b border-black relative z-30">
       <WidthXL>
-        <div className="flex items-center justify-between py-5">
+        <div className="flex items-center justify-between py-5 relative">
           <Link href="/">
             <Image src={logo} alt="Rupeestop" width={195} height={34} />
           </Link>
@@ -33,9 +43,12 @@ function Navbar() {
             >
               Instruments <IoIosArrowDown size={20} />
             </button>
-            <Link href="/calculators" className="flex items-center gap-2">
+            <button
+              onClick={toggleCalculatorsBanner}
+              className="flex items-center gap-2"
+            >
               Calculators <IoIosArrowDown size={20} />
-            </Link>
+            </button>
             <Link href="/community">Community</Link>
             <Link
               href="/login"
@@ -44,11 +57,9 @@ function Navbar() {
               Login
             </Link>
           </div>
-        </div>
-
-        {/* Instruments Slider Banner */}
+          {/* Instruments Slider Banner */}
         <div
-          className={`absolute top-0 right-4 mx-auto w-[650px] bg-gray-100 px-7 py-5 shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
+          className={`absolute top-0 -right-32 mx-auto w-[650px] bg-gray-100 px-7 py-5 shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
             showInstrumentsBanner
               ? 'translate-y-0 opacity-100'
               : '-translate-y-20 opacity-0 pointer-events-none'
@@ -126,7 +137,86 @@ function Navbar() {
             </div>
           </div>
         </div>
-        {/* )}  */}
+        {/* Calculators Slider Banner */}
+        <div
+          className={`absolute top-0 -right-32 mx-auto w-[510px] bg-gray-100 px-7 py-5 flex flex-col shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
+            showCalculatorsBanner
+              ? 'translate-y-0 opacity-100'
+              : '-translate-y-20 opacity-0 pointer-events-none'
+          }`}
+          style={{ top: '100%' }}
+        >
+          <div className="flex justify-between gap-7">
+            {/* Left side options */}
+            <div className="space-y-4 text-lg text-gray-900 font-semibold w-[45%] flex flex-col items-start justify-evenly gap-4">
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                FD Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                NPS Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                RD Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                CAGR Calculator
+              </Link>
+            </div>
+
+            {/* Right side message */}
+            <div className="space-y-4 text-lg text-gray-900 font-semibold w-[45%] flex flex-col items-start justify-evenly gap-4">
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                NSC Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                HRA Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                MF Calculator
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-3 font-lato font-medium text-lg"
+              >
+                <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                SSY Calculator
+              </Link>
+            </div>
+          </div>
+            <p className='text-accentOrange-200 font-lato text-center mt-5 flex justify-center items-center gap-2'>See All Calculators <span><IoIosArrowRoundForward size={25}/></span></p>
+          
+        </div>
+        </div>
+
+        
       </WidthXL>
     </div>
   );
