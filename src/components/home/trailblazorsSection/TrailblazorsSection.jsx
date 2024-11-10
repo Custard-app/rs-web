@@ -59,7 +59,7 @@ function TrailblazorsSection() {
     <div className="my-24 bg-primary py-12  flex flex-col items-center justify-center gap-6">
       <div className="w-full flex flex-col items-center gap-1">
         <h2 className="text-5xl font-bold font-poppins text-white">
-          Don't Just take our word for it
+          Don&#39;t Just take our word for it
         </h2>
         <p className="text-2xl font-lato font-medium text-gray-300">
           Listen to what our Finance Trailblazors say.

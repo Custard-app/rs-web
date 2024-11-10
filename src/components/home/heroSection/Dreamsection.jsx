@@ -44,7 +44,7 @@ function Dreamsection() {
               </span>
             </h1>
             <p className="text-xl font-lato font-medium">
-              There's no limit on how much we can dream, right?
+              There&#39;s no limit on how much we can dream, right?
             </p>
           </div>
           <div className="w-full flex items-center justify-between gap-5">

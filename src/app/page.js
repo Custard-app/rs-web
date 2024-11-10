@@ -15,7 +15,7 @@ export default function Home() {
           <div className="w-[739px]">
             <p className="text-2xl font-semibold font-lato text-gray-950 italic">
               “The only thing standing between you and your goal is the story
-              you keep telling yourself as to why you can't achieve it”
+              you keep telling yourself as to why you can&#39;t achieve it”
             </p>
 
             <p className="w-full text-right text-lg font-lato font-medium">
