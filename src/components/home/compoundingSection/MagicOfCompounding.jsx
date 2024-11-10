@@ -31,7 +31,7 @@ function MagicOfCompounding() {
       </WidthXL>
       <WidthXXL>
         <div className=" bg-primary rounded-[60px] -mb-44 flex items-end justify-center gap-10 py-24 relative">
-            <p className='font-poppins font-extrabold text-6xl flex flex-col items-start justify-center text-gray-200 gap-4'>I am gonna make an <span>offer you can't refuse...</span></p>
+            <p className='font-poppins font-extrabold text-6xl flex flex-col items-start justify-center text-gray-200 gap-4'>I am gonna make an <span>offer you can&#39;t refuse...</span></p>
             <button className="flex items-center bg-accentLime p-2 px-3 rounded-full mt-8 z-5">
           <p className="text-black font-semibold text-base capitalize">
             I want To Listen{' '}
