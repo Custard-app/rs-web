@@ -3,6 +3,7 @@ import heroSectionImage from '@/assets/images/heroImage.png';
 import './Trailblazors.css';
 import { BsPlay } from 'react-icons/bs';
 import { BsPause } from 'react-icons/bs';
+import WidthXXL from '@/wrapper/widths/WidthXXL';
 
 function TrailblazorsSection() {
   const products = [
@@ -57,6 +58,7 @@ function TrailblazorsSection() {
   ];
   return (
     <div className="my-24 bg-primary py-12  flex flex-col items-center justify-center gap-6">
+      <WidthXXL>
       <div className="w-full flex flex-col items-center gap-1">
         <h2 className="text-5xl font-bold font-poppins text-white">
           Don&#39;t Just take our word for it
@@ -66,12 +68,12 @@ function TrailblazorsSection() {
         </p>
       </div>
       {/* Wrapper for hiding overflow */}
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden mt-10">
         {/* Animated container with products */}
         <div
           className="flex items-center justify-center gap-10 animate-slide-back-and-forth"
           style={{
-            animation: 'slide-back-and-forth 5s ease-in-out infinite',
+            animation: 'slide-back-and-forth 20s ease-in-out infinite',
           }}
         >
           {products.map((product, index) => (
@@ -99,6 +101,7 @@ function TrailblazorsSection() {
           ))}
         </div>
       </div>
+      </WidthXXL>
     </div>
   );
 }

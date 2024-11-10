@@ -47,6 +47,7 @@ module.exports = {
       maxWidth: {
         'custom-xl': '1220px',
         'custom-xxl': '1440px',
+        'custom-xxxl': '1540px',
       },
     },
   },

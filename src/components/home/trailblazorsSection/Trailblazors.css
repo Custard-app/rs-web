@@ -9,10 +9,10 @@
 
 @keyframes slide-back-and-forth {
     0%, 100% {
-      transform: translateX(0);
+      transform: translateX(30%);
     }
     50% {
-      transform: translateX(-50px); /* Adjust distance as needed */
+      transform: translateX(-30%); /* Adjust distance as needed */
     }
   }
   

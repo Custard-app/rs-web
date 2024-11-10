@@ -4,9 +4,9 @@ import './Calculator.css';
 import WidthXL from '@/wrapper/widths/WidthXL';
 
 function Calculator() {
-  const [monthlyInstallment, setMonthlyInstallment] = useState(62000);
-  const [expectedReturn, setExpectedReturn] = useState(7);
-  const [timePeriod, setTimePeriod] = useState(14);
+  const [monthlyInstallment, setMonthlyInstallment] = useState(1000);
+  const [expectedReturn, setExpectedReturn] = useState(1);
+  const [timePeriod, setTimePeriod] = useState(1);
   const [isSIPMode, setIsSIPMode] = useState(true);
 
   const [isClient, setIsClient] = useState(false);
