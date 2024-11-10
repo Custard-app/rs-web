@@ -35,7 +35,7 @@ export default function Home() {
         <div className="bg-[#1B1B1B] w-full flex items-center justify-center gap-56 mt-24">
           <div className="flex flex-col items-center justify-center gap-16 pb-20">
             <div className="flex items-center justify-start gap-5">
-              <Image src={arrow} className="w-44" />
+              <Image src={arrow} alt='button' className="w-44" />
               <div className="flex flex-col items-center justify-center mt-20 gap-8">
                 <h1 className="font-extrabold font-poppins text-7xl uppercase text-white text-center">
                   Aaj ki taaza khabar
