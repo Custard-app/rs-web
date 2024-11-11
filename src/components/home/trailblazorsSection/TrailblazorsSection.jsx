@@ -57,13 +57,13 @@ function TrailblazorsSection() {
     },
   ];
   return (
-    <div className="my-24 bg-primary py-12  flex flex-col items-center justify-center gap-6">
+    <div className="my-14 sm:my-24 bg-primary py-12  flex flex-col items-center justify-center gap-6">
       <WidthXXL>
       <div className="w-full flex flex-col items-center gap-1">
-        <h2 className="text-5xl font-bold font-poppins text-white">
+        <h2 className="text-4xl sm:text-5xl text-center font-bold font-poppins text-white">
           Don&#39;t Just take our word for it
         </h2>
-        <p className="text-2xl font-lato font-medium text-gray-300">
+        <p className="text-sm sm:text-2xl font-lato text-center text-gray-300">
           Listen to what our Finance Trailblazors say.
         </p>
       </div>

@@ -6,7 +6,7 @@ import { GoArrowRight } from 'react-icons/go';
 
 const QuickCards = ({ product }) => {
   return (
-    <div className="peer group relative w-[290px] h-[376px] rounded-tr-[50px] rounded-br-[30px] rounded-bl-[30px] text-black  overflow-hidden transform transition-all duration-300 hover:w-[330px] hover:animate-wiggle py-8 px-5 flex flex-col justify-center items-center gap-6">
+    <div className="peer group relative w-full sm:w-[290px] h-[200px] sm:h-[376px] rounded-tr-[50px] rounded-br-[30px] rounded-bl-[30px] text-black  overflow-hidden transform transition-all duration-300 sm:hover:w-[330px] hover:animate-wiggle py-8 px-5 flex flex-row sm:flex-col justify-between sm:justify-center items-center gap-6">
       <div className="absolute w-full inset-0 bg-accentGray-400 rounded-tr-md rounded-br-md rounded-bl-md"></div>
       <div className="z-10">
         <Image

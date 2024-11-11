@@ -15,16 +15,16 @@ import MagicOfCompounding from '@/components/home/compoundingSection/MagicOfComp
 export default function Home() {
   return (
     <div className="">
-      <main className="overflow-hidden">
+      <main className="overflow-hidden bg-white">
         <Herosection />
-        <div className="w-full h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center overflow-hidden">
-          <div className="w-[739px]">
-            <p className="text-2xl font-semibold font-lato text-gray-950 italic">
+        <div className="w-full h-32 sm:h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center ">
+          <div className="w-[350px] sm:w-[739px]">
+            <p className="text-base sm:text-2xl font-semibold font-lato text-gray-950 italic text-wrap">
               “The only thing standing between you and your goal is the story
               you keep telling yourself as to why you can&#39;t achieve it”
             </p>
 
-            <p className="w-full text-right text-lg font-lato font-medium">
+            <p className="w-full text-right text-sm sm:text-lg font-lato font-medium mt-2">
               ~ Wolf of Wall Street
             </p>
           </div>

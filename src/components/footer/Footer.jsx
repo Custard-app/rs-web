@@ -10,12 +10,12 @@ function Footer() {
   return (
     <div className="w-full bg-footer py-20">
       <WidthXL>
-        <h1 className="text-[200px] font-bold text-transparent border-text text-center">
+        <h1 className="text-[70px] sm:text-[200px] font-bold text-transparent border-text text-center">
           {' '}
           Rupeestop
         </h1>
         <div className="flex items-start justify-between text-white mt-14">
-          <div className="flex flex-col gap-3 w-96">
+          <  div className="flex flex-col gap-3 w-96">
             <Link href="/">
               <Image src={logo} alt="Rupeestop" width={195} height={34} />
             </Link>
@@ -64,6 +64,7 @@ function Footer() {
                 Bonds
               </Link>
             </div>
+          
           </div>
           <div>
             <div className="flex flex-col mb-5">

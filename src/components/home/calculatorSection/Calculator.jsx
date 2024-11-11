@@ -72,22 +72,23 @@ function Calculator() {
   // }
 
   return (
-    <div className="my-24 bg-accentGray-100 flex flex-col items-center justify-center">
+    <div className="my-14 sm:my-24 px-5 sm:px-0 bg-accentGray-100 flex flex-col items-center justify-center">
       <WidthXL>
         <div className="w-full flex flex-col items-center gap-1 mb-10">
-          <h2 className="text-6xl font-bold font-poppins text-black capitalize">
+          <h2 className="text-4xl  text-center sm:text-6xl font-bold font-poppins text-black capitalize">
             Finance Weapons
           </h2>
-          <p className="text-xl font-lato font-semibold text-gray-300">
+          <p className="text-sm sm:text-xl text-center font-lato font-semibold text-gray-300">
             {isSIPMode
               ? 'Know the SIP amount required to achieve your goals.'
               : 'Calculate the final amount for Lumpsum investment.'}
           </p>
         </div>
 
-        <div className="w-[100%] mx-auto flex items-center justify-around p-10 bg-backgroundLight rounded-[40px]">
+        <div className="w-full mx-auto flex flex-col sm:flex-row items-center justify-around p-10 bg-backgroundLight rounded-[40px] gap-14">
+
           {/* Left part */}
-          <div className="w-[45%] gap-6 flex flex-col items-center justify-center text-gray-700">
+          <div className="w-full sm:w-[45%] gap-6 flex flex-col items-center justify-center text-gray-700">
             {/* Toggle Slider */}
             <div className="toggle-container">
               <div className="toggle-switch" onClick={handleToggle}>
@@ -115,8 +116,8 @@ function Calculator() {
                 </div>
               </div>
             </div>
-            <div className="w-[90%] calculator">
-              <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
+            <div className="w-full sm:w-[90%] calculator">
+              <p className="flex items-center justify-between mb-6 font-lato font-medium sm:font-semibold text-sm sm:text-lg">
                 {isSIPMode ? 'Monthly Installment' : 'Lumpsum Amount'}{' '}
                 <span>₹{monthlyInstallment.toLocaleString()}</span>
               </p>
@@ -135,7 +136,7 @@ function Calculator() {
             </div>
 
             <div className="w-[90%] calculator">
-              <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
+              <p className="flex items-center justify-between mb-6 font-lato font-medium sm:font-semibold text-sm sm:text-lg">
                 Expected Return<span>{expectedReturn}%</span>
               </p>
               <input
@@ -153,7 +154,7 @@ function Calculator() {
             </div>
 
             <div className="w-[90%] calculator">
-              <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
+              <p className="flex items-center justify-between mb-6 font-lato font-medium sm:font-semibold text-sm sm:text-lg">
                 Time Period<span>{timePeriod} Years</span>
               </p>
               <input
@@ -172,7 +173,7 @@ function Calculator() {
           </div>
 
           {/* Right part */}
-          <div className="flex flex-col items-center w-[45%] gap-8">
+          <div className="flex flex-col items-center w-full sm:w-[45%] gap-9">
             <div
               className="doughnut-chart"
               style={{
@@ -196,14 +197,14 @@ function Calculator() {
               </div>
             </div>
 
-            <div className="flex items-center justify-between gap-4 text-gray-700">
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-700">
+              <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">Invested Amount</p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{investedAmount.toLocaleString()}
                 </p>
               </div>
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
+              <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">
                   {' '}
                   Estimated Returns
@@ -212,7 +213,7 @@ function Calculator() {
                   ₹{estimatedReturns.toLocaleString()}
                 </p>
               </div>
-              <div className="p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
+              <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">Total Amount</p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{totalAmount.toLocaleString()}
@@ -220,6 +221,7 @@ function Calculator() {
               </div>
             </div>
           </div>
+
         </div>
       </WidthXL>
     </div>
