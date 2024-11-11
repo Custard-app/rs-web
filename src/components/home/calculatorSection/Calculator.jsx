@@ -115,7 +115,7 @@ function Calculator() {
                 </div>
               </div>
             </div>
-            <div className="w-[90%]">
+            <div className="w-[90%] calculator">
               <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
                 {isSIPMode ? 'Monthly Installment' : 'Lumpsum Amount'}{' '}
                 <span>₹{monthlyInstallment.toLocaleString()}</span>
@@ -134,7 +134,7 @@ function Calculator() {
               />
             </div>
 
-            <div className="w-[90%]">
+            <div className="w-[90%] calculator">
               <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
                 Expected Return<span>{expectedReturn}%</span>
               </p>
@@ -152,7 +152,7 @@ function Calculator() {
               />
             </div>
 
-            <div className="w-[90%]">
+            <div className="w-[90%] calculator">
               <p className="flex items-center justify-between mb-6 font-lato font-semibold text-lg">
                 Time Period<span>{timePeriod} Years</span>
               </p>
