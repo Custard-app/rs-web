@@ -29,9 +29,10 @@ function MagicOfCompounding() {
           </div>
         </div>
       </WidthXL>
+
+      {/* Card */}
       <WidthXXL>
         <div className=" bg-primary rounded-[60px] -mb-44 flex flex-col sm:flex-row items-center sm:items-end justify-center gap-10 pt-28 sm:pt-0 sm:py-24 relative">
-
           <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-6xl flex flex-col items-start justify-center text-gray-200 gap-4">
             I am gonna make an <span>offer you can&#39;t refuse...</span>
           </p>

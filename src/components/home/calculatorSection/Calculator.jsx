@@ -199,13 +199,13 @@ function Calculator() {
 
             <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-700">
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
-                <p className="font-lato font-medium text-sm">Invested Amount</p>
+                <p className="font-lato font-medium text-sm text-nowrap">Invested Amount</p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{investedAmount.toLocaleString()}
                 </p>
               </div>
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
-                <p className="font-lato font-medium text-sm">
+                <p className="font-lato font-medium text-sm text-nowrap">
                   {' '}
                   Estimated Returns
                 </p>
