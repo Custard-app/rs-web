@@ -20,6 +20,7 @@ module.exports = {
         brightLime: '#B6E300', // Vibrant lime green for accents
         mutedTeal: '#286F6C', // Muted teal for softer accent
         backgroundLight: '#F3F1EF', // Light background shade
+        backgroundLight2: '#E4E5E0', // Light background shade
         footer: '#1B1B1B',
 
         // Existing colors for gray and orange accents

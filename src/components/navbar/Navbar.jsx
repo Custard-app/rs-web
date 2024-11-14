@@ -60,7 +60,7 @@ function Navbar() {
   }, [isHamOpen]);
 
   return (
-    <div className="bg-primary border-b border-black relative z-30">
+    <div className="bg-primary bg-opacity-30 backdrop-blur-md border-b border-black z-30 sticky top-0">
       <WidthXL>
         <div className="flex items-center justify-between py-5 px-5 sm:px-0 sm:py-5 relative">
           <Link href="/">

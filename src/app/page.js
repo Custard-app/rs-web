@@ -156,7 +156,7 @@ export default function Home() {
           </div>
         </div>
         <MagicOfCompounding />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </div>
   );
