@@ -46,7 +46,7 @@ function AboutUs() {
               </h2>
               <p className="font-lato font-medium text-sm sm:text-lg text-gray-800 text-center">
                 We are always on the lookout for passionate and driven
-                individuals to join our growing team. If you're excited about
+                individuals to join our growing team. If you&#39;re excited about
                 working in a collaborative, innovative environment with growth
                 opportunities, reach out to us and make an impact in the world
                 of finance.
@@ -64,8 +64,8 @@ function AboutUs() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
               {
-                datas.map((data) => (
-                  <JobOpeningCard data={data}/>
+                datas.map((data, index) => (
+                  <JobOpeningCard data={data} key={index}/>
                 ))
               }
             </div>
