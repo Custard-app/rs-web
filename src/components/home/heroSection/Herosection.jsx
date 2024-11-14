@@ -7,7 +7,7 @@ import Width3XL from '@/wrapper/widths/Width3XL';
 
 function Herosection() {
   return (
-    <div className="bg-teal-900 overflow-hidden relative">
+    <div className="bg-teal-900 overflow-hidden relative w-full">
       {/* <Width3XL> */}
         <div className="w-full flex flex-col items-center relative overflow-hidden pb-20">
           <h1 className="text-accentGray-400 text-center uppercase font-poppins font-bold sm:font-extrabold text-[54px] sm:text-7xl mt-10">

@@ -8,9 +8,8 @@ import Link from 'next/link';
 import arrow from '@/assets/images/arrow.png';
 import { FiMail, FiArrowRight } from 'react-icons/fi';
 import { HiArrowTrendingUp } from 'react-icons/hi2';
-import { IoStarSharp } from "react-icons/io5";
+import { IoStarSharp } from 'react-icons/io5';
 import MagicOfCompounding from '@/components/home/compoundingSection/MagicOfCompounding';
-
 
 export default function Home() {
   return (
@@ -32,19 +31,41 @@ export default function Home() {
         <Dreamsection />
         <TrailblazorsSection />
         <Calculator />
-        <div className="bg-[#1B1B1B] w-full flex items-center justify-center gap-56 mt-24">
-          <div className="flex flex-col items-center justify-center gap-16 pb-20">
-            <div className="flex items-center justify-start gap-5">
-              <Image src={arrow} alt='button' className="w-44" />
+        {/* Moving horizontal Carousel */}
+        <div className="flex sm:hidden w-full h-[74px] overflow-hidden bg-white whitespace-nowrap mt-24 ">
+          <div className="w-full animate-horizontalScroll">
+            <p className=" text-gray-900 text-6xl font-extrabold font-poppins flex items-center">
+              <span>
+                <IoStarSharp size={50} />
+              </span>
+              TODAY&#39;S LATEST NEWS
+            </p>
+          </div>
+        </div>
+        <div className="bg-[#1B1B1B] w-full flex flex-col sm:flex-row items-center justify-center sm:gap-56 px-5 sm:px-0 relative">
+          <div className="flex flex-col items-center justify-center gap-12 sm:gap-16 pb-20">
+            <div className="flex items-center justify-center sm:justify-start gap-0 sm:gap-5">
+              <Image
+                src={arrow}
+                alt="icon"
+                className="hidden sm:block w-44 h-44  sm:w-44"
+              />
+              <div className="absolute sm:hidden top-14 left-4 w-14 h-14">
+                <Image src={arrow} alt="icon" />
+              </div>
               <div className="flex flex-col items-center justify-center mt-20 gap-8">
-                <h1 className="font-extrabold font-poppins text-7xl uppercase text-white text-center">
+                <h1 className="hidden sm:block font-extrabold font-poppins text-5xl sm:text-7xl uppercase text-white text-center">
                   Aaj ki taaza khabar
                 </h1>
-                <p className="font-lato font-semibold text-xl text-gray-100 text-center">
+                <h1 className="flex flex-col items-center sm:hidden font-extrabold font-poppins text-5xl sm:text-7xl uppercase text-white text-center">
+                  Aaj ki
+                  <span>taaza khabar</span>
+                </h1>
+                <p className="font-lato font-semibold text-sm sm:text-xl text-gray-100 text-center">
                   Stay Updated with the Latest News in Finance.
                 </p>
                 <div className="flex items-center justify-center">
-                  <div className="relative w-full max-w-md flex items-center justify-between">
+                  <div className="relative w-[80%] sm:w-full max-w-md flex items-center justify-between">
                     {/* Email Icon and Placeholder */}
                     <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
                       <FiMail className="text-gray-500" />
@@ -66,64 +87,67 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full flex items-center justify-between text-gray-400">
+            <div className="w-full flex items-center justify-center sm:justify-between gap-12 flex-wrap text-gray-400">
               <Link
                 href="#"
-                className="font-lato italic text-base flex items-center justify-center gap-2"
+                className="font-lato italic text-xs sm:text-base flex items-center justify-center gap-2"
               >
                 Gold Rate Update
                 <span>
-                  <HiArrowTrendingUp size={25} />
+                  <HiArrowTrendingUp className="w-3 h-3 sm:w-6 sm:h-6" />
                 </span>
               </Link>
               <Link
                 href="#"
-                className="font-lato italic text-base flex items-center justify-center gap-2"
+                className="font-lato italic text-xs sm:text-base flex items-center justify-center gap-2"
               >
                 Expert tips to Invest
                 <span>
-                  <HiArrowTrendingUp size={25} />
+                  <HiArrowTrendingUp className="w-3 h-3 sm:w-6 sm:h-6" />
                 </span>
               </Link>
               <Link
                 href="#"
-                className="font-lato italic text-base flex items-center justify-center gap-2"
+                className="font-lato italic text-xs sm:text-base flex items-center justify-center gap-2"
               >
                 SIP: How does it work?
                 <span>
-                  <HiArrowTrendingUp size={25} />
+                  <HiArrowTrendingUp className="w-3 h-3 sm:w-6 sm:h-6" />
                 </span>
               </Link>
               <Link
                 href="#"
-                className="font-lato italic text-base flex items-center justify-center gap-2"
+                className="font-lato italic text-xs sm:text-base flex items-center justify-center gap-2"
               >
                 Should you Invest in Debt funds
                 <span>
-                  <HiArrowTrendingUp size={25} />
+                  <HiArrowTrendingUp className="w-3 h-3 sm:w-6 sm:h-6" />
                 </span>
               </Link>
             </div>
           </div>
+
           {/* Moving Vertical Carousel */}
-          <div className="w-36 h-[475px] overflow-hidden bg-white whitespace-nowrap flex">
+          <div className="hidden sm:flex w-36 h-[475px] overflow-hidden bg-white whitespace-nowrap">
             <div className="w-full animate-verticalScroll">
               <p className=" text-gray-900 text-6xl font-extrabold font-poppins transform -rotate-90 flex items-center">
-                <span><IoStarSharp size={50}/></span>
-                <span className='ml-10'>T</span>
+                <span>
+                  <IoStarSharp size={50} />
+                </span>
+                <span className="ml-10">T</span>
                 <span>O</span>
                 <span>D</span>
                 <span>A</span>
                 <span>Y</span>
                 <span>&#39;</span>
                 <span>S</span>
-                <span className='ml-10'>L</span>
+                <span className="ml-10">L</span>
                 <span>A</span>
                 <span>T</span>
                 <span>E</span>
                 <span>S</span>
                 <span>T</span>
-                <span className='ml-10'>N</span>
+                <span className="ml-10">N</span>
                 <span>E</span>
                 <span>W</span>
                 <span>S</span>
@@ -131,7 +155,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      <MagicOfCompounding/>
+        <MagicOfCompounding />
         <Footer />
       </main>
     </div>

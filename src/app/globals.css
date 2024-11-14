@@ -27,3 +27,16 @@ body {
 .animate-verticalScroll {
   animation: verticalScroll 5s linear infinite;
 }
+
+@keyframes horizontalScroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+.animate-horizontalScroll {
+  animation: horizontalScroll 5s linear infinite;
+}
