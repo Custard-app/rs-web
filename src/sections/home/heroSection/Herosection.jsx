@@ -28,7 +28,7 @@ function Herosection() {
   return (
     <div className="bg-teal-900 overflow-hidden relative w-full z-0">
       {/* <Width3XL> */}
-      <div className="w-full flex flex-col items-center relative overflow-hidden pb-20">
+      <div className="w-full flex flex-col items-center relative overflow-hidden pb-20 pt-12 sm:pt-20">
         <h1 className="text-accentGray-400 text-center uppercase font-poppins font-bold sm:font-extrabold text-[54px] sm:text-7xl mt-20">
           Choose Freedom
         </h1>
@@ -58,7 +58,7 @@ function Herosection() {
       {/* </Width3XL> */}
 
       {/* Big Circle */}
-      <div className="hidden sm:flex absolute right-[-10%] top-[2%] w-[1100px] h-[1100px] rounded-full border-[1px] opacity-25"></div>
+      <div className="hidden sm:flex absolute right-[-10%] top-[10%] w-[1100px] h-[1100px] rounded-full border-[1px] opacity-25"></div>
       {/* Small Circle */}
       <div className="hidden sm:flex absolute right-[-6%] top-[25%] w-[850px] h-[850px] rounded-full border-[1px] opacity-25"></div>
 

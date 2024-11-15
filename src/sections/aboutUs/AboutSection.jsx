@@ -5,7 +5,7 @@ import aboutImg from '@/assets/images/about1.png';
 
 function AboutSection() {
   return (
-    <div className="bg-white px-5 sm:px-0 py-14 sm:py-24">
+    <div className="bg-white px-5 sm:px-0 py-14 sm:py-24 w-full">
       <WidthXL>
         <div className="w-full flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-11 sm:gap-0 relative">
           <div className="w-full sm:w-1/2 flex flex-col items-center-center sm:items-start flex-wrap gap-6">

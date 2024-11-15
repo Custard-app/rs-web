@@ -40,3 +40,9 @@ body {
 .animate-horizontalScroll {
   animation: horizontalScroll 5s linear infinite;
 }
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+}
