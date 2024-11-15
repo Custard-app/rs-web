@@ -1,19 +1,45 @@
+'use client'
 import WidthXL from '@/wrapper/widths/WidthXL';
 import React from 'react';
 import './Footer.css';
 import Image from 'next/image';
-
 import logo from '@/assets/images/Logo.png';
 import Link from 'next/link';
+import { FiMail, FiArrowRight } from 'react-icons/fi';
+import { usePathname } from 'next/navigation';
 
-function Footer() {
+function Footer2() {
+  const pathname = usePathname();
+  const isHomepage = pathname === '/';
   return (
-    <div className="w-full bg-footer py-20 px-5 sm:px-0">
+    <div className={`w-full ${isHomepage && 'hidden'} bg-footer py-20 px-5 sm:px-0`}>
       <WidthXL>
-        <h1 className="text-[70px] sm:text-[200px] font-bold text-transparent border-text text-center">
-          {' '}
-          Rupeestop
-        </h1>
+        <div className='w-full flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 bg-[#FFFBF7] py-7 px-5 sm:px-9 rounded-xl'>
+          <div>
+            <p className='font-lato font-medium text-base text-gray-950'>Newsletter</p>
+            <p className='font-lato text-base text-gray-700'>Stay updated with Latest News in Finance</p>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="relative w-[75%] sm:w-full max-w-md flex items-center justify-between">
+              {/* Email Icon and Placeholder */}
+              <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
+                <FiMail className="text-gray-800" />
+              </div>
+
+              {/* Input Field */}
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="block w-[500px] py-4 pl-10 border rounded-full bg-transparent text-gray-950 border-gray-800 outline-none"
+              />
+
+              {/* Submit Button */}
+              <button className="absolute top-2 right-2 flex items-center bg-accentOrange-200 text-white rounded-full p-2 px-4 outline-none">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-start justify-between text-white mt-14 gap-7 sm:gap-0">
           {/* Description */}
@@ -22,7 +48,7 @@ function Footer() {
               <Image
                 src={logo}
                 alt="Rupeestop"
-                className="w-[139px] h-[28px] sm:w-49 sm:h-8"
+                className="w-[139px] h-[28px] sm:w-49 sm:h-7"
               />
             </Link>
             <p className="text-xs sm:text-lg font-lato text-justify text-white text-wrap">
@@ -96,7 +122,8 @@ function Footer() {
           </div>
 
           {/* For mobile screen */}
-          <div className="flex sm:hidden flex-col gap-7">
+          <div className="flex sm:hidden flex-col items-center justify-center gap-7">
+
             <div className="flex items-center justify-between gap-5">
               {/* Navigation */}
               <div>
@@ -147,7 +174,7 @@ function Footer() {
 
             {/* Trems and conditions */}
             <div className="w-full mx-auto">
-              <div className='flex items-center justify-center gap-3 text-gray-400'>
+              <div className="flex items-center justify-center gap-3 text-gray-400">
                 <Link href="#" className="font-lato font-medium text-xs ">
                   Terms and Conditions
                 </Link>
@@ -166,4 +193,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Footer2;

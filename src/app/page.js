@@ -1,22 +1,22 @@
-import Footer from '@/components/footer/Footer';
-import Calculator from '@/components/home/calculatorSection/Calculator';
-import Dreamsection from '@/components/home/heroSection/Dreamsection';
-import Herosection from '@/components/home/heroSection/Herosection';
-import TrailblazorsSection from '@/components/home/trailblazorsSection/TrailblazorsSection';
+import arrow from '@/assets/images/arrow.png';
+import Footer from '@/sections/footer/Footer';
+import Calculator from '@/sections/home/calculatorSection/Calculator';
+import MagicOfCompounding from '@/sections/home/compoundingSection/MagicOfCompounding';
+import Dreamsection from '@/sections/home/heroSection/Dreamsection';
+import Herosection from '@/sections/home/heroSection/Herosection';
+import TrailblazorsSection from '@/sections/home/trailblazorsSection/TrailblazorsSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import arrow from '@/assets/images/arrow.png';
-import { FiMail, FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiMail } from 'react-icons/fi';
 import { HiArrowTrendingUp } from 'react-icons/hi2';
 import { IoStarSharp } from 'react-icons/io5';
-import MagicOfCompounding from '@/components/home/compoundingSection/MagicOfCompounding';
 
 export default function Home() {
   return (
     <div className="">
       <main className="overflow-hidden bg-white">
         <Herosection />
-        <div className="w-full h-32 sm:h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center ">
+        <div className="w-full h-32 sm:h-44 bg-accentGray-400 text-center flex flex-col items-center justify-center z-0">
           <div className="w-[350px] sm:w-[739px]">
             <p className="text-base sm:text-2xl font-semibold font-lato text-gray-950 italic text-wrap">
               “The only thing standing between you and your goal is the story
@@ -156,7 +156,7 @@ export default function Home() {
           </div>
         </div>
         <MagicOfCompounding />
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </div>
   );

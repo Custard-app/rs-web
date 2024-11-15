@@ -1,11 +1,10 @@
-import AboutSection from '@/components/aboutUs/AboutSection';
-import JobOpeningCard from '@/components/aboutUs/cards/JobOpeningCard';
-import HeroSection from '@/components/aboutUs/HeroSection';
-import MapDataSection from '@/components/aboutUs/MapDataSection';
-import TeamSection from '@/components/aboutUs/TeamSection';
+import AboutSection from '@/sections/aboutUs/AboutSection';
+import JobOpeningCard from '@/sections/aboutUs/cards/JobOpeningCard';
+import HeroSection from '@/sections/aboutUs/HeroSection';
+import MapDataSection from '@/sections/aboutUs/MapDataSection';
+import TeamSection from '@/sections/aboutUs/TeamSection';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Link from 'next/link';
-import React from 'react';
 
 const datas = [
   {
@@ -32,7 +31,7 @@ const datas = [
 
 function AboutUs() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <HeroSection />
       <AboutSection />
       <TeamSection />
