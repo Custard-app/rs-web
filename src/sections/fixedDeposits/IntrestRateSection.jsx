@@ -22,7 +22,7 @@ const InterestRateSection = () => {
                 HDFC Limited
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated 'AAA'
+                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
                 by two leading credit rating agencies (CRISIL and ICRA) for the
                 last 23 years.
               </p>
@@ -132,7 +132,7 @@ const InterestRateSection = () => {
                 Mahindra & Mahindra
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated 'AAA'
+                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
                 by two leading credit rating agencies (CRISIL and ICRA) for the
                 last 23 years.
               </p>
@@ -242,7 +242,7 @@ const InterestRateSection = () => {
                 PNB Housing Finance
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated 'AAA'
+                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
                 by two leading credit rating agencies (CRISIL and ICRA) for the
                 last 23 years.
               </p>
@@ -352,7 +352,7 @@ const InterestRateSection = () => {
                 Bajaj Finserv
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated 'AAA'
+                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
                 by two leading credit rating agencies (CRISIL and ICRA) for the
                 last 23 years.
               </p>

@@ -43,7 +43,7 @@ const FAQSection = () => {
     <div className="max-w-[1000px] mx-auto py-10 px-5 sm:px-0 bg-backgroundLight2">
       <h2 className="font-poppins text-[32px] sm:text-[42px] font-semibold text-center mb-3 sm:mb-4">Got Questions?</h2>
       <p className="font-lato font-medium text-sm sm:text-lg text-center text-gray-600 mb-10">
-        Relax, We've Got You Covered
+        Relax, We&#39;ve Got You Covered
       </p>
 
       <div className="space-y-5">

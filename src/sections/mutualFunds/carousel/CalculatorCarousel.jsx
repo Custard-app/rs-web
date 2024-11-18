@@ -87,8 +87,6 @@ function CalculatorCarousel() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // fetch data;
-
       // Map the response data to carousel slides format
       const mappedSlides = Feedbacks.map((item, index) => ({
         key: index,
@@ -116,7 +114,7 @@ function CalculatorCarousel() {
             {/* Comment/message area */}
             <div className="flex-grow flex items-center">
               <p className="text-center px-2 italic text-xs sm:text-lg">
-                "{item.comment}"
+              &#34;{item.comment}&#34;
               </p>
             </div>
 
