@@ -6,7 +6,7 @@ import mutualFundHero from '@/assets/images/mutualfund-hero.png';
 
 function HeroSection() {
   return (
-    <div className="relative hfull sm:h-[90vh] flex items-center bg-primary flex-col">
+    <div className="relative h-full sm:h-[90vh] flex items-center bg-primary flex-col pt-10">
       <WidthXL>
         {/* Left Section (Text Content) */}
         <div className="flex flex-col items-center sm:items-start gap-4 sm:py-36 pt-28 sm:pt-44 relative w-full sm:w-1/2 px-5 sm:px-0">

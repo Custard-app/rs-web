@@ -12,7 +12,7 @@ function Footer2() {
   const pathname = usePathname();
   const isHomepage = pathname === '/';
   return (
-    <div className={`w-full ${isHomepage && 'hidden'} bg-footer py-20 px-5 sm:px-0`}>
+    <div className={`w-full ${isHomepage && 'hidden'} bg-footer py-20 px-5 sm:px-0 z-10`}>
       <WidthXL>
         <div className='w-full flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 bg-[#FFFBF7] py-7 px-5 sm:px-9 rounded-xl'>
           <div>
