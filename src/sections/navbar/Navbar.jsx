@@ -144,19 +144,19 @@ function Navbar() {
                 Mutual Fund
               </Link>
               <Link
-                href="#"
+                href="/fixeddeposits"
                 className="font-lato font-medium text-base text-gray-200" onClick={closeMenu}
               >
                 Fixed deposits
               </Link>
               <Link
-                href="#"
+                href="/portfolio-management-services"
                 className="font-lato font-medium text-base text-gray-200" onClick={closeMenu}
               >
                 Portfolio Management System
               </Link>
               <Link
-                href="#"
+                href="/bonds"
                 className="font-lato font-medium text-base text-gray-200" onClick={closeMenu}
               >
                 Bonds
@@ -248,7 +248,7 @@ function Navbar() {
               Mutual Fund
             </Link>
             <Link
-              href="#"
+              href="portfolio-management-services"
               className="flex items-center gap-3 font-lato font-medium text-lg"
             >
               <Image
@@ -260,7 +260,7 @@ function Navbar() {
               Portfolio Management
             </Link>
             <Link
-              href="#"
+              href="fixeddeposits"
               className="flex items-center gap-3 font-lato font-medium text-lg"
             >
               <Image
@@ -272,7 +272,7 @@ function Navbar() {
               Fixed Deposit
             </Link>
             <Link
-              href="#"
+              href="bonds"
               className="flex items-center gap-3 font-lato font-medium text-lg"
             >
               <Image src={bondsIcon} alt="Bonds" width={30} height={30} />
