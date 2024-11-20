@@ -9,7 +9,7 @@ function HeroSection() {
     <div className="relative h-full sm:h-[90vh] flex items-center bg-primary flex-col pt-10">
       <WidthXL>
         {/* Left Section (Text Content) */}
-        <div className="flex flex-col items-center sm:items-start gap-4 sm:py-36 pt-28 sm:pt-44 relative w-full sm:w-1/2 px-5 sm:px-0">
+        <div className="flex flex-col items-center sm:items-start gap-4 sm:py-36 pt-28 sm:pt-32 relative w-full sm:w-1/2 px-5 sm:px-0">
           <h1 className="font-lato font-bold text-4xl sm:text-6xl text-white text-center sm:text-start">
             Mutual Funds
           </h1>

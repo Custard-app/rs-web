@@ -15,6 +15,7 @@ import { FaCircleCheck } from 'react-icons/fa6';
 function WhatPmsSection() {
   const [activeTab, setActiveTab] = useState('customized');
   const [isInView, setIsInView] = useState(false);
+  const [isTabChange, setIsTabChange] = useState(false);
   const containerRef = useRef(null);
 
   const data = {
@@ -58,6 +59,17 @@ function WhatPmsSection() {
       }
     };
   }, []);
+
+   // Combine in-view and tab change triggers
+  const shouldAnimate = isInView || isTabChange;
+
+  // Handle tab change
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setIsTabChange(true);
+
+    setTimeout(() => setIsTabChange(false), 500);
+  };
 
   return (
     <div className="py-14 sm:py-24 mt-0 sm:mt-20 px-5 sm:px-0 ">
@@ -144,11 +156,10 @@ function WhatPmsSection() {
 
         {/* CUSTOMISED PMS START */}
         <div className="flex flex-col gap-16 bg-backgroundLight2 rounded-[20px] py-10 px-10 sm:px-20 -mx-10">
-
           {/* Tabs */}
           <div className="flex space-x-4 items-center justify-center">
             <button
-              onClick={() => setActiveTab('customized')}
+              onClick={() => handleTabChange("customized")}
               className={`px-7 py-3 rounded-full font-lato font-bold texxt-sm sm:text-[20px] ${
                 activeTab === 'customized'
                   ? 'bg-primary text-white'
@@ -158,7 +169,7 @@ function WhatPmsSection() {
               Customised PMS
             </button>
             <button
-              onClick={() => setActiveTab('predesigned')}
+              onClick={() => handleTabChange("predesigned")}
               className={`px-7 py-3 rounded-full font-lato font-bold text-sm sm:text-[20px] ${
                 activeTab === 'predesigned'
                   ? 'bg-primary text-white'
@@ -172,7 +183,10 @@ function WhatPmsSection() {
           {/* Content */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-10 sm:gap-20">
             {/* Left Box */}
-            <div className="w-full sm:w-1/2 h-[419px] bg-primary text-white rounded-xl p-6 flex flex-col gap-4">
+            <div
+              ref={containerRef}
+              className="w-full sm:w-1/2 h-[419px] bg-primary text-white rounded-xl p-6 flex flex-col gap-4"
+            >
               {/* Title */}
               <p className="font-lato font-bold text-[24px] sm:text-[26px] animate-fade-in text-center">
                 {data[activeTab].title}
@@ -180,7 +194,9 @@ function WhatPmsSection() {
 
               {/* Description */}
               <p
-                className="font-lato font-medium text-base sm:text-[20px] animate-fade-in-delayed"
+                className={`font-lato font-medium text-base sm:text-[20px] ${
+                  shouldAnimate ? 'animate-fade-in-delayed' : ''
+                }`}
                 style={{ '--animation-delay': '0.3s' }}
               >
                 {data[activeTab].description}
@@ -191,10 +207,12 @@ function WhatPmsSection() {
                 {data[activeTab].point.map((item, index) => (
                   <li
                     key={index}
-                    className="font-lato font-semibold text-base sm:text-[20px] flex items-start gap-2 animate-fade-in-delayed"
-                    style={{ '--animation-delay': `${0.5 + index * 0.2}s` }}
+                    className={`font-lato font-semibold text-base sm:text-[20px] flex items-start gap-2 ${
+                      shouldAnimate ? 'animate-fade-in-delayed' : ''
+                    }`}
+                    style={{ '--animation-delay': `${0.8 + index * 0.2}s` }}
                   >
-                    <span className='mt-1'>
+                    <span className="mt-1">
                       <FaCircleCheck size={20} />
                     </span>
                     {item}
@@ -212,7 +230,6 @@ function WhatPmsSection() {
               />
             </div>
           </div>
-
         </div>
         {/* CUSTOMISED PMS END */}
       </WidthXL>

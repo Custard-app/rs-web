@@ -1,0 +1,57 @@
+@keyframes moveline {
+    0% {
+      width: 224px; 
+    }
+    100% {
+      width: 0; 
+    }
+  }
+
+
+.arrow-timeline {
+  background-color: yellow;
+  animation: moveline 4s linear forwards;
+  animation-delay: var(--animation-delay);
+}
+.arrow-timeline2 {
+  background-color: yellow;
+  animation: moveline 4s linear forwards;
+}
+.arrow-timeline3 {
+  background-color: yellow;
+  animation: moveline 4s linear forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .animate-text{
+    position: relative;
+    background-color: green;
+}
+
+.animate-text::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-color: red;
+    z-index: 10;
+} */
