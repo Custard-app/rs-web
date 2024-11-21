@@ -144,7 +144,7 @@ export default function GetstartSection() {
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
                   Begin with a minimum investment of ₹25 lakhs and monitor your
-                  portfolio's performance.
+                  portfolio&#39;s performance.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text4' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -230,7 +230,7 @@ export default function GetstartSection() {
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
                   Begin with a minimum investment of ₹25 lakhs and monitor your
-                  portfolio's performance.
+                  portfolio&#39;s performance.
                 </p>
               </div>
             </div>
