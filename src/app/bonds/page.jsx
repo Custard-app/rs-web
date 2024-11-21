@@ -1,19 +1,19 @@
-import GetstartSection from '@/sections/pms/GetstartSection';
-import HeroSection from '@/sections/pms/HeroSection';
-import WhatPmsSection from '@/sections/pms/WhatPmsSection';
-import WhyPmsSection from '@/sections/pms/WhyPmsSection';
-import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
+import BasicbondSection from '@/sections/bonds/BasicbondSection'
+import BondTypesSection from '@/sections/bonds/BondTypesSection'
+import HeroSection from '@/sections/bonds/HeroSection'
+import GetstartSection from '@/sections/pms/GetstartSection'
+import WidthXXL from '@/wrapper/widths/WidthXXL'
+import React from 'react'
 import { GoArrowRight } from 'react-icons/go';
 
-function page() {
+export default function page() {
   return (
-    <div>
-      <HeroSection />
-      <WhatPmsSection />
-      <WhyPmsSection />
-      <GetstartSection />
-      {/* Card */}
+    <>
+        <HeroSection/>
+        <BasicbondSection/>
+        <BondTypesSection/>  
+        <GetstartSection/>
+        {/* Card */}
       <div className="bg-white py-14 sm:py-24 px-5 sm:px-0">
         <WidthXXL>
           <div className=" bg-primary rounded-[60px] flex flex-col items-center justify-center gap-8 py-14 sm:py-24 relative ">
@@ -52,8 +52,6 @@ function page() {
           </div>
         </WidthXXL>
       </div>
-    </div>
-  );
+    </>
+  )
 }
-
-export default page;

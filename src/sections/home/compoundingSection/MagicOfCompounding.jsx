@@ -54,10 +54,10 @@ function MagicOfCompounding() {
             />
           </div>
           {/* Big circle */}
-          <div className="absolute -left-8 sm:-left-10 -top-16 sm:-top-48 w-[260] sm:w-[470px] h-[260px] sm:h-[470px] rounded-full border-[1px] opacity-25"></div>
+          <div className="absolute -left-8 sm:-left-10 -top-16 sm:-top-48 w-[260px] sm:w-[470px] h-[260px] sm:h-[470px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>
 
           {/* small circle */}
-          <div className="absolute -left-10 -top-24  sm:-top-52 w-[201px] sm:w-[350px] h-[201px] sm:h-[350px] rounded-full border-[1px] opacity-25"></div>
+          <div className="absolute -left-10 -top-24  sm:-top-52 w-[201px] sm:w-[350px] h-[201px] sm:h-[350px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>
         </div>
       </WidthXXL>
     </div>

@@ -1,0 +1,12 @@
+@keyframes bondsHorizontalScroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-90%);
+    }
+  }
+  
+  .animate-bondsHorizontalScroll {
+    animation: bondsHorizontalScroll 15s linear infinite;
+  }

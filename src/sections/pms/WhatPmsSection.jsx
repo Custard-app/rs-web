@@ -17,6 +17,7 @@ function WhatPmsSection() {
   const [isInView, setIsInView] = useState(false);
   const [isTabChange, setIsTabChange] = useState(false);
   const containerRef = useRef(null);
+  const [hasBeenSeen, setHasBeenSeen] = useState(false);  
 
   const data = {
     customized: {
@@ -43,22 +44,28 @@ function WhatPmsSection() {
     },
   };
 
+
   useEffect(() => {
+    const currentRef = containerRef.current;
     const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.5 },
+      ([entry]) => {
+        if (entry.isIntersecting && !hasBeenSeen) {
+          setIsInView(true);
+          setHasBeenSeen(true);  
+        }
+      },
+      {
+        threshold: 0.5,
+      },
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if(currentRef){
+      observer.observe(currentRef);
     }
-
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
-  }, []);
+  }, [hasBeenSeen]);
 
    // Combine in-view and tab change triggers
   const shouldAnimate = isInView || isTabChange;

@@ -1,57 +1,54 @@
 @keyframes moveline {
-    0% {
-      width: 224px; 
-    }
-    100% {
-      width: 0; 
-    }
+  0% {
+    transform: translateX(0); /* Start at the top */
   }
-
+  100% {
+    transform: translateX(180px); /* Move down by 200px */
+  }
+}
 
 .arrow-timeline {
-  background-color: yellow;
-  animation: moveline 4s linear forwards;
-  animation-delay: var(--animation-delay);
+  background-color: white;
+  animation: moveline 1s linear forwards;
 }
 .arrow-timeline2 {
-  background-color: yellow;
-  animation: moveline 4s linear forwards;
+  background-color: white;
+  animation: moveline 1s linear forwards;
+  animation-delay: 1s;
 }
 .arrow-timeline3 {
-  background-color: yellow;
-  animation: moveline 4s linear forwards;
+  background-color: white;
+  animation: moveline 1s linear forwards;
+  animation-delay: 2s;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .animate-text{
-    position: relative;
-    background-color: green;
+@keyframes movetext {
+  0% {
+    transform: translateX(0); /* Start at the top */
+  }
+  100% {
+    transform: translateX(200px); /* Move down by 200px */
+  }
 }
 
-.animate-text::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    top: 0;
-    left: 0;
-    background-color: red;
-    z-index: 10;
-} */
+.animate-text {
+  background-color: white;
+  animation: movetext 1s linear forwards;
+}
+.animate-text2 {
+  background-color: white;
+  animation: movetext 1s linear forwards;
+  animation-delay: 1s;
+}
+.animate-text3 {
+  background-color: white;
+  animation: movetext 1s linear forwards;
+  animation-delay: 2s;
+}
+.animate-text4 {
+  background-color: white;
+  animation: movetext 1s linear forwards;
+  animation-delay: 3s;
+}
