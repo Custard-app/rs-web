@@ -32,7 +32,7 @@ const calculators = [
     },
   ];
 
-export default function page() {
+export default function FDCalculator() {
   const [principal, setPrincipal] = useState(20000);
   const [rate, setRate] = useState(12);
   const [tenure, setTenure] = useState(5);
