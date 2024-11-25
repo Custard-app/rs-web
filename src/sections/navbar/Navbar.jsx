@@ -224,7 +224,7 @@ function Navbar() {
                   FD Calculator
                 </Link>
                 <Link
-                  href="#"
+                  href="/calculators/NPSCalculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -379,7 +379,7 @@ function Navbar() {
                 FD Calculator
               </Link>
               <Link
-                href="#"
+                href="/calculators/NPSCalculator"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >
