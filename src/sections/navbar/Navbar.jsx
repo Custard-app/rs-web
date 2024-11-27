@@ -187,9 +187,12 @@ function Navbar() {
               {/* Right side message */}
               <div className="bg-[#DCFCFF] w-[45%] h-56  px-5 py-3 rounded-lg flex flex-col  gap-4">
                 <div className="flex justify-between items-center">
-                  <p className="font-lato font-semibold text-xs italic text-accentOrange-200">
+                  <Link 
+                  href="portfolio-health-checker"
+                  onClick={closeInstrumentBanner}
+                  className="font-lato font-semibold text-xs italic text-accentOrange-200">
                     Portfolio Health Checker
-                  </p>
+                  </Link>
                   <div className="w-12 h-12 rounded-full bg-primary"></div>
                 </div>
                 <p className="font-lato font-semibold text-xl italic text-black">
@@ -353,7 +356,7 @@ function Navbar() {
                 Bonds
               </Link>
               <Link
-                href="#"
+                href="portfolio-health-checker"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >

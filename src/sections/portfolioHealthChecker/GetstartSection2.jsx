@@ -2,9 +2,9 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import React, { useEffect, useRef, useState } from 'react';
 import { RxTriangleRight } from 'react-icons/rx';
-import './GetstartSection.css';
+import '@/sections/pms/GetstartSection.css';
 
-export default function GetstartSection() {
+export default function GetstartSection2() {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
   const [hasBeenSeen, setHasBeenSeen] = useState(false);  
@@ -89,11 +89,10 @@ export default function GetstartSection() {
               </p>
               <div className="relative overflow-hidden">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Asses your Goals
+                Create an Account
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Understand your financial objectives, risk tolerance, and
-                  investment horizon
+                Sign up or log in to your Rupeestop account.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -106,11 +105,11 @@ export default function GetstartSection() {
               </p>
               <div className="relative overflow-hidden">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Choose your PMS type
+                Import your Portfolio
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Decide between customized or pre-designed PMS based on your
-                  preferences.
+                Import your portfolio details.
+                Manual entry option available for custom portfolios.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text2' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -123,11 +122,11 @@ export default function GetstartSection() {
               </p>
               <div className="relative overflow-hidden">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Consult with Experts
+                Get your Report
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Talk to our advisors to select the best portfolio manager and
-                  investment strategy.
+                Talk to our advisors to select 
+                Receive a detailed health report of your portfolio.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text3' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -140,11 +139,10 @@ export default function GetstartSection() {
               </p>
               <div className="relative overflow-hidden">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Start Investing
+                Implement Recommendations
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Begin with a minimum investment of ₹25 lakhs and monitor your
-                  portfolio&#39;s performance.
+                Follow personalized advice to rebalance and optimize your portfolio.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text4' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -154,20 +152,20 @@ export default function GetstartSection() {
           {/* FOR SMALL SCREEN */}
           <div className="w-[350px] flex sm:hidden flex-col relative gap-20">
             {/* Arrow 1 */}
-            <div className="absolute -left-2 top-[100px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
+            <div className="absolute left-2 top-[95px] flex items-center text-xl whitespace-nowrap rotate-90">
+              {`-----------`}
               <RxTriangleRight className=" -ml-2" />
             </div>
 
             {/* Arrow 2 */}
-            <div className="absolute -left-2 top-[280px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
+            <div className="absolute left-2 top-[260px] flex items-center text-xl whitespace-nowrap rotate-90">
+              {`-----------`}
               <RxTriangleRight className=" -ml-2" />
             </div>
 
             {/* Arrow 3 */}
-            <div className="absolute -left-2 top-[460px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
+            <div className="absolute left-2 top-[440px] flex items-center text-xl whitespace-nowrap rotate-90">
+              {`-----------`}
               <RxTriangleRight className=" -ml-2" />
             </div>
 
@@ -178,11 +176,10 @@ export default function GetstartSection() {
               </p>
               <div className="w-[250px]">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Asses your Goals
+                Create an Account
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Understand your financial objectives, risk tolerance, and
-                  investment horizon
+                Sign up or log in to your Rupeestop account.
                 </p>
               </div>
             </div>
@@ -194,11 +191,11 @@ export default function GetstartSection() {
               </p>
               <div className="w-[250px]">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Choose your PMS type
+                Import your Portfolio
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Decide between customized or pre-designed PMS based on your
-                  preferences.
+                Import your portfolio details.
+                Manual entry option available for custom portfolios.
                 </p>
               </div>
             </div>
@@ -210,11 +207,11 @@ export default function GetstartSection() {
               </p>
               <div className="w-[250px]">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Consult with Experts
+                Get your Report 
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Talk to our advisors to select the best portfolio manager and
-                  investment strategy.
+                Talk to our advisors to select 
+                Receive a detailed health report of your portfolio.
                 </p>
               </div>
             </div>
@@ -226,11 +223,10 @@ export default function GetstartSection() {
               </p>
               <div className="w-[250px]">
                 <p className="font-lato font-bold text-lg text-center text-black">
-                  Start Investing
+                Implement Recommendations
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Begin with a minimum investment of ₹25 lakhs and monitor your
-                  portfolio&#39;s performance.
+                Follow personalized advice to rebalance and optimize your portfolio.
                 </p>
               </div>
             </div>

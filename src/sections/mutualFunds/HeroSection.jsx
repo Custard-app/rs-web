@@ -37,7 +37,7 @@ function HeroSection() {
           alt="Mutual Funds Background"
           layout="fill"
           objectFit="cover"
-          className="z-0"
+          className="z-0 w-[1000px]"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-transparent to-transparent"></div>
