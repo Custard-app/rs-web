@@ -69,7 +69,7 @@ const TestimonialSection = () => {
 
               </div>
               <p className="text-gray-700 font-lato font-normal text-start text-sm sm:text-lg">
-                "{testimonial.feedback}"
+              &#34;{testimonial.feedback}&#34;
               </p>
             </div>
           ))}

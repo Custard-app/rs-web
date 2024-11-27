@@ -18,7 +18,7 @@ function UsePhcSection() {
                 Optimize Returns
               </h2>
               <p className="font-lato font-medium text-sm sm:text-lg text-center">
-                Ensure you're getting the best possible returns based on your
+                Ensure you&#39;re getting the best possible returns based on your
                 risk tolerance and investment goals.
               </p>
             </div>
@@ -49,7 +49,7 @@ function UsePhcSection() {
               </h2>
               <p className="font-lato font-medium text-sm sm:text-lg text-center">
                 Monitor market trends closely to understand their influence on
-                your portfolio's performance
+                your portfolio&#39;s performance
               </p>
             </div>
 
@@ -59,7 +59,7 @@ function UsePhcSection() {
                 Comprehensive Analysis
               </h2>
               <p className="font-lato font-medium text-sm sm:text-lg text-center">
-                Receive an in-depth analysis of your portfolio's overall
+                Receive an in-depth analysis of your portfolio&#39;s overall
                 performance and growth potential.
               </p>
             </div>
