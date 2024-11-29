@@ -235,7 +235,7 @@ function Navbar() {
                   NPS Calculator
                 </Link>
                 <Link
-                  href="#"
+                  href="/calculators/rd-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -243,7 +243,7 @@ function Navbar() {
                   RD Calculator
                 </Link>
                 <Link
-                  href="#"
+                  href="/calculators/cagr-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -255,7 +255,7 @@ function Navbar() {
               {/* Right side message */}
               <div className="space-y-4 text-lg text-gray-900 font-semibold w-[45%] flex flex-col items-start justify-evenly gap-4">
                 <Link
-                  href="#"
+                  href="/calculators/nsc-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -271,7 +271,7 @@ function Navbar() {
                   HRA Calculator
                 </Link>
                 <Link
-                  href="#"
+                   href="/calculators/mutual-fund-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -389,7 +389,7 @@ function Navbar() {
                 NPS Calculator
               </Link>
               <Link
-                href="#"
+                href="/calculators/rd-calculator"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >

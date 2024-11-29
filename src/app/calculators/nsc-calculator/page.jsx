@@ -1,7 +1,7 @@
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GoArrowRight } from 'react-icons/go';
 import '@/sections/home/calculatorSection/Calculator.css';
 
@@ -10,8 +10,8 @@ const calculators = [
     category: 'Investment Calculators',
     items: [
       {
-        title: 'MF Calculator',
-        description: 'Calculate the estimated returns of your one-time mutual fund investment.',
+        title: 'FD Calculator',
+        description: 'Find out your Fixed Deposit maturity details with ease.',
         button: 'Calculate',
       },
       {
@@ -26,68 +26,68 @@ const calculators = [
         button: 'Calculate',
       },
       {
-        title: 'NSC Calculator',
+        title: 'MF Calculator',
         description:
-          'Now learn how much your National Savings Certificate (NSC) will grow for you!',
+          'Calculate the estimated returns of your one-time mutual fund investment.',
         button: 'Calculate',
       },
     ],
   },
 ];
 
-export default function FDCalculator() {
+export default function NSCCalculator() {
   const [principal, setPrincipal] = useState(20000);
-  const [rate, setRate] = useState(12);
-  const [tenure, setTenure] = useState(5);
-  const [maturityAmount, setMaturityAmount] = useState(36123);
-  const [totalInterest, setTotalInterest] = useState(16123);
+  const [rate, setRate] = useState(6); // Typical NSC rate
+  const [tenure, setTenure] = useState(5); // Standard NSC tenure
+  const [maturityAmount, setMaturityAmount] = useState(0);
+  const [totalInterest, setTotalInterest] = useState(0);
+  // const [maturityAmount, setMaturityAmount] = useState(26765);
+  // const [totalInterest, setTotalInterest] = useState(6765);
   const [interestPercentage, setInterestPercentage] = useState(0);
-  const [principalPercentage, setPrincipalPercentage] = useState(55);
+  const [principalPercentage, setPrincipalPercentage] = useState(0);
+  // const [principalPercentage, setPrincipalPercentage] = useState(74);
 
   const calculateMaturity = () => {
-    // Quarterly compounding logic
-    const n = 4; // Quarterly compounding (4 times a year)
-    const ratePerPeriod = rate / (n * 100); // Convert annual rate to quarterly rate (in decimals)
-    const totalPeriods = tenure * n; // Total number of compounding periods
+    // NSC maturity calculation assumes yearly compounding
+    const ratePerPeriod = rate / 100; // Convert rate to a decimal
+    const compoundInterestFactor = Math.pow(1 + ratePerPeriod, tenure);
+    const totalAmount = Math.ceil(principal * compoundInterestFactor);
+    const totalInterest = Math.ceil(totalAmount - principal);
 
-    const compoundInterestFactor = Math.pow(1 + ratePerPeriod, totalPeriods);
-    const totalAmount = Math.ceil(principal * compoundInterestFactor); // Maturity amount with compound interest
-    const totalInterest = Math.ceil(totalAmount - principal); // Interest earned
-
-    // Calculate percentages for visualization
     const interestPercentage = Math.ceil((totalInterest / totalAmount) * 100);
     const principalPercentage = 100 - interestPercentage;
 
 
 
-    // Update state
     setMaturityAmount(totalAmount);
     setTotalInterest(totalInterest);
     setInterestPercentage(interestPercentage);
     setPrincipalPercentage(principalPercentage);
   };
 
+  useEffect(() => {
+    calculateMaturity();
+  },[])
+
   return (
     <>
       <div className="w-full h-[73px] sm:h-[80px] bg-primary"></div>
       <div className="pt-14 px-5 sm:px-0 bg-white relative">
         <WidthXL>
-          {/* HEROSECTION START */}
           <div>
             <h1 className="font-poppins font-bold text-[30px] sm:text-[42px] text-start">
-              FD Calculator
+              NSC Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Easily calculate the maturity amount of your Fixed Deposit with
-              our FD Calculator. Just enter the principal amount, interest rate,
-              and tenure to get instant results.
+              Calculate the maturity amount of your National Savings Certificate
+              (NSC) investment. Enter the principal amount, interest rate, and
+              tenure to get instant results.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
-              Find out your Fixed Deposit (FD) Maturity Details with Ease
+              Find out your National Savings Certificate (NSC) Maturity Details
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
-              {/* Left Side - Inputs */}
               <div className="w-full sm:w-1/2 flex flex-col gap-5 sm:gap-8">
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
@@ -108,6 +108,7 @@ export default function FDCalculator() {
                   <input
                     type="number"
                     value={rate}
+                    step="0.1"
                     onChange={(e) => setRate(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -132,7 +133,6 @@ export default function FDCalculator() {
                 </button>
               </div>
 
-              {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
                 <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
                   <div className="flex items-center justify-center gap-5">
@@ -142,7 +142,7 @@ export default function FDCalculator() {
                     </div>
                     <div className="flex items-center justify-center gap-3">
                       <div className="w-7 h-2 bg-brightLime rounded-md"></div>
-                      <p className="font-lato text-xs">Total Investmet</p>
+                      <p className="font-lato text-xs">Total Investment</p>
                     </div>
                   </div>
                   <div
@@ -152,6 +152,7 @@ export default function FDCalculator() {
                             #B6E300 0% ${principalPercentage}%,
                             #004C48 ${principalPercentage}% 100%
                           )`,
+                          transition: 'background 6s ease-in-out',
                     }}
                   >
                     <div className="doughnut-hole"></div>
@@ -168,7 +169,7 @@ export default function FDCalculator() {
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <p className="font-lato text-base sm:text-lg text-gray-600 ">
-                      Total Interst Earned
+                      Total Interest Earned
                     </p>
                     <p className="font-lato font-semibold text-[28px]  sm:text-[38px] text-accentOrange-200">
                       ₹{totalInterest}
@@ -178,10 +179,8 @@ export default function FDCalculator() {
               </div>
             </div>
           </div>
-          {/* HEROSECTION END */}
-
-          {/* CAROUSEL START */}
-          <div className=" mt-20">
+        {/* CAROUSEL START */}
+        <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -217,13 +216,12 @@ export default function FDCalculator() {
         <WidthXXL>
           <div className=" bg-primary rounded-[60px] flex flex-col items-center justify-center gap-8 py-14 sm:py-24 relative ">
             <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-5xl text-gray-50 text-center">
-              Contact us for personalized FD advice
+              Contact us for personalized NSC advice
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your
-                investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
               </p>
             </div>
 
