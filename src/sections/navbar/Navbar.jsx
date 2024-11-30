@@ -279,7 +279,7 @@ function Navbar() {
                   MF Calculator
                 </Link>
                 <Link
-                  href="#"
+                  href="/calculators/sukanya-samriddhi-yojana-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
