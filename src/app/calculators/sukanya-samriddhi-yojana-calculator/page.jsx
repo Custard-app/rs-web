@@ -107,7 +107,7 @@ export default function SSYCalculator() {
               Calculate the maturity value of your Sukanya Samriddhi Yojana account with ease.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
-              Plan Your Daughter's Secure Future Today
+              Plan Your Daughter&#39;s Secure Future Today
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
@@ -129,7 +129,7 @@ export default function SSYCalculator() {
 
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
-                    Girl's Age (years)
+                    Girl&#39;s Age (years)
                   </label>
                   <input
                     type="number"
