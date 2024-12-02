@@ -158,17 +158,6 @@ export default function NPSCalculator() {
               {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
               <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex items-center justify-center">
-                  {/* <div
-                    className="doughnut-chart"
-                    style={{
-                      background: `conic-gradient(
-                            #004C48 0% ${principalPercentage}%,
-                            #B6E300 ${principalPercentage}% 100%
-                          )`,
-                    }}
-                  >
-                    <div className="doughnut-hole"></div>
-                  </div> */}
                 </div>
                 <div className="w-full flex items-center justify-evenly gap-4">
                   <div className="flex flex-col items-center gap-4">

@@ -4,41 +4,46 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
 import { GoArrowRight } from 'react-icons/go';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+
+// Register chart.js components
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const calculators = [
-    {
-      category: 'Investment Calculators',
-      items: [
-        {
-          title: 'FD Calculator',
-          description: 'Find out your Fixed Deposit maturity details with ease.',
-          button: 'Calculate',
-        },
-        {
-          title: 'NPS Calculator',
-          description:
-            'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
-          button: 'Calculate',
-        },
-        {
-          title: 'RD Calculator',
-          description: 'The simplest Recurring Deposit Calculator out there!',
-          button: 'Calculate',
-        },
-        {
-          title: 'NSC Calculator',
-          description:
-            'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
-          button: 'Calculate',
-        },
-      ],
-    },
-  ];
+  {
+    category: 'Investment Calculators',
+    items: [
+      {
+        title: 'FD Calculator',
+        description: 'Find out your Fixed Deposit maturity details with ease.',
+        button: 'Calculate',
+      },
+      {
+        title: 'NPS Calculator',
+        description:
+          'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
+        button: 'Calculate',
+      },
+      {
+        title: 'RD Calculator',
+        description: 'The simplest Recurring Deposit Calculator out there!',
+        button: 'Calculate',
+      },
+      {
+        title: 'NSC Calculator',
+        description:
+          'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
+        button: 'Calculate',
+      },
+    ],
+  },
+];
 
 export default function PPFCalculator() {
   const [yearlyInvestment, setYearlyInvestment] = useState(10000); // Default yearly investment
   const [ppfRate, setPPFRate] = useState(7.1); // Current PPF interest rate
-  const [tenure,setTenure] = useState(15);
+  const [tenure, setTenure] = useState(15);
   const [startYear, setStartYear] = useState(new Date().getFullYear());
   const [maturityDetails, setMaturityDetails] = useState({
     totalInvestment: 0,
@@ -73,9 +78,33 @@ export default function PPFCalculator() {
     setInterestPercentage(interestPercentage);
   };
 
+  const doughnutData = {
+    labels: ['Total Investment', 'Total Interest'],
+    datasets: [
+      {
+        data: [
+          parseFloat(maturityDetails.totalInvestment),
+          parseFloat(maturityDetails.totalInterest),
+        ],
+        backgroundColor: ['#B6E300', '#004C48'],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const doughnutOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top', // Position the labels in a row on top
+        display: false,
+      },
+    },
+  };
+
   useEffect(() => {
     calculatePPF();
-  },[])
+  }, []);
 
   return (
     <>
@@ -87,11 +116,13 @@ export default function PPFCalculator() {
               PPF Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Easily calculate the maturity value of your Public Provident Fund with our PPF Calculator.
-              Just enter your yearly investment and interest rate to get instant results.
+              Easily calculate the maturity value of your Public Provident Fund
+              with our PPF Calculator. Just enter your yearly investment and
+              interest rate to get instant results.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
-              Find out your Public Provident Fund (PPF) Maturity Details with Ease
+              Find out your Public Provident Fund (PPF) Maturity Details with
+              Ease
             </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
@@ -104,7 +135,9 @@ export default function PPFCalculator() {
                   <input
                     type="number"
                     value={yearlyInvestment}
-                    onChange={(e) => setYearlyInvestment(Number(e.target.value))}
+                    onChange={(e) =>
+                      setYearlyInvestment(Number(e.target.value))
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -118,14 +151,18 @@ export default function PPFCalculator() {
                     value={tenure}
                     step="1"
                     min="15"
-                    max='50'
+                    max="50"
                     onChange={(e) => setTenure(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
-                <div className='flex items-center justify-between'>
-                    <p className="font-bold font-lato text-base sm:text-[20px] text-gray-700">Rate of interest</p>
-                    <p className="w-[100px] sm:w-[200px]  font-bold font-lato text-base sm:text-[20px] text-gray-700 px-10 py-2 bg-gray-200 rounded-md text-center">{ppfRate}%</p>
+                <div className="flex items-center justify-between">
+                  <p className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                    Rate of interest
+                  </p>
+                  <p className="w-[100px] sm:w-[200px]  font-bold font-lato text-base sm:text-[20px] text-gray-700 px-10 py-2 bg-gray-200 rounded-md text-center">
+                    {ppfRate}%
+                  </p>
                 </div>
 
                 <button
@@ -138,36 +175,31 @@ export default function PPFCalculator() {
 
               {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
-                  <div className="flex items-center justify-center gap-5">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-primary rounded-md"></div>
-                      <p className="font-lato text-xs">Total Interest</p>
-                    </div>
+                {/* Doughnut Chart */}
+                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[330px] flex flex-col items-center justify-between gap-2 sm:gap-4 p-4 sm:p-8">
+                  <div className="flex items-center justify-center gap-5 -mt-2">
                     <div className="flex items-center justify-center gap-3">
                       <div className="w-7 h-2 bg-brightLime rounded-md"></div>
                       <p className="font-lato text-xs">Total Investment</p>
                     </div>
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="w-7 h-2 bg-primary rounded-md"></div>
+                      <p className="font-lato text-xs">Total Return</p>
+                    </div>
                   </div>
-                  <div
-                    className="doughnut-chart"
-                    style={{
-                      background: `conic-gradient(
-                        #B6E300 0% ${investmentPercentage}%,
-                        #004C48 ${investmentPercentage}% 100%
-                      )`,
-                    }}
-                  >
-                    <div className="doughnut-hole"></div>
-                  </div>
+                  <Doughnut data={doughnutData} options={doughnutOptions} />
                 </div>
+
                 <div className="w-full flex items-center justify-between gap-2">
                   <div className="flex flex-col items-center gap-4">
                     <p className="font-lato text-base sm:text-lg text-gray-600 text-center">
                       Maturity Value
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{maturityDetails.maturityValue}
+                      ₹
+                      {Number(maturityDetails.maturityValue).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -175,7 +207,10 @@ export default function PPFCalculator() {
                       Invested Amount
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{maturityDetails.totalInvestment}
+                      ₹
+                      {Number(maturityDetails.totalInvestment).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -183,15 +218,18 @@ export default function PPFCalculator() {
                       Total Interest Earned
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{maturityDetails.totalInterest}
+                      ₹
+                      {Number(maturityDetails.totalInterest).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-         {/* CAROUSEL START */}
-         <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -232,7 +270,8 @@ export default function PPFCalculator() {
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your
+                investment journey with Rupeestop!
               </p>
             </div>
 

@@ -1,14 +1,10 @@
 'use client';
+
+import React, { useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React, { useEffect, useState } from 'react';
 import { GoArrowRight } from 'react-icons/go';
 import '@/sections/home/calculatorSection/Calculator.css';
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-
-// Register chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend);
+import WidthXXL from '@/wrapper/widths/WidthXXL';
 
 const calculators = [
   {
@@ -26,8 +22,8 @@ const calculators = [
         button: 'Calculate',
       },
       {
-        title: 'RD Calculator',
-        description: 'The simplest Recurring Deposit Calculator out there!',
+        title: 'NSC Calculator',
+        description: 'Calculate the maturity amount of your National Savings Certificate (NSC) investment. ',
         button: 'Calculate',
       },
       {
@@ -40,55 +36,30 @@ const calculators = [
   },
 ];
 
-export default function NSCCalculator() {
-  const [principal, setPrincipal] = useState(20000);
-  const [rate, setRate] = useState(6); // Typical NSC rate
-  const [tenure, setTenure] = useState(5); // Standard NSC tenure
-  const [maturityAmount, setMaturityAmount] = useState(0);
-  const [totalInterest, setTotalInterest] = useState(0);
-  const [interestPercentage, setInterestPercentage] = useState(0);
-  const [principalPercentage, setPrincipalPercentage] = useState(0);
+export default function HRACalculator() {
+  const [basicSalary, setBasicSalary] = useState(500000); // Default Basic Salary (P.A.)
+  const [dearnessAllowance, setDearnessAllowance] = useState(50000); // Default DA (P.A.)
+  const [hraReceived, setHraReceived] = useState(120000); // Default HRA Received (P.A.)
+  const [totalRentPaid, setTotalRentPaid] = useState(100000); // Default Rent Paid (P.A.)
+  const [isMetroCity, setIsMetroCity] = useState(false); // Default: Not a Metro City
+  const [results, setResults] = useState({
+    exemptedHRA: 0,
+    taxableHRA: 0,
+  });
 
-  const calculateMaturity = () => {
-    // NSC maturity calculation assumes yearly compounding
-    const ratePerPeriod = rate / 100; // Convert rate to a decimal
-    const compoundInterestFactor = Math.pow(1 + ratePerPeriod, tenure);
-    const totalAmount = Math.ceil(principal * compoundInterestFactor);
-    const totalInterest = Math.ceil(totalAmount - principal);
+  const calculateHRA = () => {
+    const annualBasic = parseFloat(basicSalary) + parseFloat(dearnessAllowance);
+    const rentExcess = Math.max(0, totalRentPaid - 0.1 * annualBasic);
+    const hraMetroLimit = isMetroCity ? 0.5 * annualBasic : 0.4 * annualBasic;
+    const exemptedHRA = Math.min(hraMetroLimit, rentExcess, hraReceived);
 
-    const interestPercentage = Math.ceil((totalInterest / totalAmount) * 100);
-    const principalPercentage = 100 - interestPercentage;
+    const taxableHRA = hraReceived - exemptedHRA;
 
-    setMaturityAmount(totalAmount);
-    setTotalInterest(totalInterest);
-    setInterestPercentage(interestPercentage);
-    setPrincipalPercentage(principalPercentage);
+    setResults({
+      exemptedHRA: exemptedHRA,
+      taxableHRA: taxableHRA,
+    });
   };
-
-  const doughnutData = {
-    labels: ['Total Investment', 'Total Interest'],
-    datasets: [
-      {
-        data: [parseFloat(principal), parseFloat(totalInterest)],
-        backgroundColor: ['#B6E300', '#004C48'],
-        hoverOffset: 4,
-      },
-    ],
-  };
-
-  const doughnutOptions = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top', // Position the labels in a row on top
-        display: false,
-      },
-    },
-  };
-
-  useEffect(() => {
-    calculateMaturity();
-  }, []);
 
   return (
     <>
@@ -97,101 +68,133 @@ export default function NSCCalculator() {
         <WidthXL>
           <div>
             <h1 className="font-poppins font-bold text-[30px] sm:text-[42px] text-start">
-              NSC Calculator
+              HRA Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Calculate the maturity amount of your National Savings Certificate
-              (NSC) investment. Enter the principal amount, interest rate, and
-              tenure to get instant results.
+              Calculate your exempted and taxable HRA effortlessly based on your
+              salary, rent, and location.
             </p>
-            <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
-              Find out your National Savings Certificate (NSC) Maturity Details
-            </h2>
 
             <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
+              {/* Input Section */}
               <div className="w-full sm:w-1/2 flex flex-col gap-5 sm:gap-8">
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
-                    Principal Amount
+                    Basic Salary (P.A.)
                   </label>
                   <input
                     type="number"
-                    value={principal}
-                    onChange={(e) => setPrincipal(Number(e.target.value))}
+                    min="0"
+                    value={basicSalary}
+                    onChange={(e) => setBasicSalary(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
-
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
-                    Interest Rate (%)
+                    Dearness Allowance (P.A.)
                   </label>
                   <input
                     type="number"
-                    value={rate}
-                    step="0.1"
-                    onChange={(e) => setRate(Number(e.target.value))}
+                    min="0"
+                    value={dearnessAllowance}
+                    onChange={(e) =>
+                      setDearnessAllowance(Number(e.target.value))
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
-
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
-                    Tenure (years)
+                    HRA Received (P.A.)
                   </label>
                   <input
                     type="number"
-                    value={tenure}
-                    onChange={(e) => setTenure(Number(e.target.value))}
+                    min="0"
+                    value={hraReceived}
+                    onChange={(e) => setHraReceived(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
+                <div className="flex items-center justify-between">
+                  <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                    Total Rent Paid (P.A.)
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    value={totalRentPaid}
+                    onChange={(e) => setTotalRentPaid(Number(e.target.value))}
+                    className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
+                  />
+                </div>
+                <div className="flex items-center justify-between">
+                  <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                    Metro City?
+                  </label>
+                  <div className="flex items-center justify-between gap-24 mt-2">
+                    <label className="flex items-center gap-2 font-lato text-lg text-gray-500">
+                      <input
+                        type="radio"
+                        name="metroCity"
+                        value="true"
+                        checked={isMetroCity === true}
+                        onChange={(e) =>
+                          setIsMetroCity(e.target.value === 'true')
+                        }
+                        className="w-4 h-4 border-gray-300 focus:ring-black"
+                      />
+                      Yes
+                    </label>
+                    <label className="flex items-center gap-2 font-lato text-lg text-gray-500">
+                      <input
+                        type="radio"
+                        name="metroCity"
+                        value="false"
+                        checked={isMetroCity === false}
+                        onChange={(e) =>
+                          setIsMetroCity(e.target.value === 'true')
+                        }
+                        className="w-4 h-4 border-gray-300 focus:ring-black"
+                      />
+                      No
+                    </label>
+                  </div>
+                </div>
+
                 <button
-                  onClick={calculateMaturity}
+                  onClick={calculateHRA}
                   className="bg-primary font-lato font-bold text-base text-white px-5 py-[10px] rounded-3xl block mx-auto"
                 >
-                  Calculate Maturity Amount
+                  Calculate HRA
                 </button>
               </div>
 
+              {/* Result Section */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[330px] flex flex-col items-center justify-between gap-2 sm:gap-4 p-4 sm:p-8">
-                  <div className="flex items-center justify-center gap-5 -mt-2">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-brightLime rounded-md"></div>
-                      <p className="font-lato text-xs">Total Investment</p>
-                    </div>
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-primary rounded-md"></div>
-                      <p className="font-lato text-xs">Total Return</p>
-                    </div>
-                  </div>
-                  <Doughnut data={doughnutData} options={doughnutOptions} />
-                </div>
-                <div className="w-full flex items-center justify-evenly">
-                  <div className="flex flex-col items-center gap-4">
-                    <p className="font-lato text-base sm:text-lg text-gray-600">
-                      Maturity Amount
-                    </p>
-                    <p className="font-lato font-semibold text-[28px] sm:text-[38px] text-accentOrange-200">
-                      ₹{maturityAmount}
-                      ₹{Number(maturityAmount).toLocaleString('en-IN')}
+                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
+                  <div className="flex flex-col items-center gap-2">
+                    <h3 className="font-lato text-lg font-semibold">
+                      Exempted HRA
+                    </h3>
+                    <p className="font-lato font-bold text-[25px] text-accentOrange-200">
+                      ₹{results.exemptedHRA}
                     </p>
                   </div>
-                  <div className="flex flex-col items-center gap-4">
-                    <p className="font-lato text-base sm:text-lg text-gray-600 ">
-                      Total Interest Earned
-                    </p>
-                    <p className="font-lato font-semibold text-[28px]  sm:text-[38px] text-accentOrange-200">
-                      ₹{Number(totalInterest).toLocaleString('en-IN')}
+                  <div className="flex flex-col items-center gap-2">
+                    <h3 className="font-lato text-lg font-semibold">
+                      Taxable HRA
+                    </h3>
+                    <p className="font-lato font-bold text-[25px] text-accentOrange-200">
+                      ₹{results.taxableHRA}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/* CAROUSEL START */}
-          <div className=" mt-20">
+        {/* CAROUSEL START */}
+        <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -227,13 +230,12 @@ export default function NSCCalculator() {
         <WidthXXL>
           <div className=" bg-primary rounded-[60px] flex flex-col items-center justify-center gap-8 py-14 sm:py-24 relative ">
             <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-5xl text-gray-50 text-center">
-              Contact us for personalized NSC advice
+              Contact us for personalized HRA advice
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your
-                investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
               </p>
             </div>
 

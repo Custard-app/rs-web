@@ -1,9 +1,14 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import { Doughnut } from 'react-chartjs-2'; 
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { GoArrowRight } from 'react-icons/go';
 import '@/sections/home/calculatorSection/Calculator.css';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
+
+// Register chart.js components
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const calculators = [
   {
@@ -43,7 +48,7 @@ export default function RDCalculator() {
   const [maturityAmount, setMaturityAmount] = useState(364902);
   const [totalInvestment, setTotalInvestment] = useState(300000);
   const [totalInterest, setTotalInterest] = useState(64902);
-  const [investmentPercentage, setInvestmentPercentage] = useState(83);
+  const [investmentPercentage, setInvestmentPercentage] = useState(0);
   const [interestPercentage, setInterestPercentage] = useState(0);
 
   const calculateMaturity = () => {
@@ -74,6 +79,34 @@ export default function RDCalculator() {
     setInvestmentPercentage(investmentPercentage);
     setInterestPercentage(interestPercentage);
   };
+
+  const doughnutData = {
+    labels: ['Total Investment', 'Total Interest'],
+    datasets: [
+      {
+        data: [
+          parseFloat(totalInvestment),
+          parseFloat(totalInterest),
+        ],
+        backgroundColor: ['#B6E300', '#004C48'],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const doughnutOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top', // Position the labels in a row on top
+        display: false,
+      },
+    },
+  };
+
+  useEffect(()=>{
+    calculateMaturity();
+  },[])
 
   return (
     <>
@@ -143,36 +176,28 @@ export default function RDCalculator() {
 
               {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
-                  <div className="flex items-center justify-center gap-5">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-primary rounded-md"></div>
-                      <p className="font-lato text-xs">Total Interest</p>
-                    </div>
+                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[330px] flex flex-col items-center justify-between gap-2 sm:gap-4 p-4 sm:p-8">
+                  <div className="flex items-center justify-center gap-5 -mt-2">
                     <div className="flex items-center justify-center gap-3">
                       <div className="w-7 h-2 bg-brightLime rounded-md"></div>
                       <p className="font-lato text-xs">Total Investment</p>
                     </div>
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="w-7 h-2 bg-primary rounded-md"></div>
+                      <p className="font-lato text-xs">Total Interest</p>
+                    </div>
                   </div>
-                  <div
-                    className="doughnut-chart"
-                    style={{
-                      background: `conic-gradient(
-                            #B6E300 0% ${investmentPercentage}%,
-                            #004C48 ${investmentPercentage}% 100%
-                          )`,
-                    }}
-                  >
-                    <div className="doughnut-hole"></div>
-                  </div>
+                  <Doughnut data={doughnutData} options={doughnutOptions} />
                 </div>
+
+
                 <div className="w-full flex items-center justify-between gap-2">
                   <div className="flex flex-col items-center gap-4">
                     <p className="font-lato text-base sm:text-lg text-gray-600 text-center">
                       Maturity Amount
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{maturityAmount}
+                      ₹{Number(maturityAmount).toLocaleString('en-IN')}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -180,7 +205,7 @@ export default function RDCalculator() {
                       Invested Amount
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{totalInvestment}
+                      ₹{Number(totalInvestment).toLocaleString('en-IN')}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -188,7 +213,7 @@ export default function RDCalculator() {
                       Total Interest Earned
                     </p>
                     <p className="font-lato font-semibold text-[16px]  sm:text-[25px] text-accentOrange-200">
-                      ₹{totalInterest}
+                      ₹{Number(totalInterest).toLocaleString('en-IN')}
                     </p>
                   </div>
                 </div>

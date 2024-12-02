@@ -263,7 +263,7 @@ function Navbar() {
                   NSC Calculator
                 </Link>
                 <Link
-                  href="#"
+                  href="/calculators/hra-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -396,7 +396,7 @@ function Navbar() {
                 RD Calculator
               </Link>
               <Link
-                href="#"
+                href="/calculators/hra-calculator"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >

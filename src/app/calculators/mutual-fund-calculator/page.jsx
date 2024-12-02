@@ -1,40 +1,44 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { GoArrowRight } from 'react-icons/go';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+
+// Register chart.js components
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const calculators = [
-    {
-      category: 'Investment Calculators',
-      items: [
-        {
-          title: 'FD Calculator',
-          description: 'Find out your Fixed Deposit maturity details with ease.',
-          button: 'Calculate',
-        },
-        {
-          title: 'NPS Calculator',
-          description:
-            'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
-          button: 'Calculate',
-        },
-        {
-          title: 'RD Calculator',
-          description: 'The simplest Recurring Deposit Calculator out there!',
-          button: 'Calculate',
-        },
-        {
-          title: 'NSC Calculator',
-          description:
-            'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
-          button: 'Calculate',
-        },
-      ],
-    },
-  ];
-
+  {
+    category: 'Investment Calculators',
+    items: [
+      {
+        title: 'FD Calculator',
+        description: 'Find out your Fixed Deposit maturity details with ease.',
+        button: 'Calculate',
+      },
+      {
+        title: 'NPS Calculator',
+        description:
+          'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
+        button: 'Calculate',
+      },
+      {
+        title: 'RD Calculator',
+        description: 'The simplest Recurring Deposit Calculator out there!',
+        button: 'Calculate',
+      },
+      {
+        title: 'NSC Calculator',
+        description:
+          'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
+        button: 'Calculate',
+      },
+    ],
+  },
+];
 
 export default function MutualFundCalculator() {
   const [investmentAmount, setInvestmentAmount] = useState(5000);
@@ -48,11 +52,15 @@ export default function MutualFundCalculator() {
   const calculateMaturity = () => {
     // Formula for Compound Interest:
     const r = rate / 100; // Annual rate in decimal
-    const maturityAmount = Math.ceil(investmentAmount * Math.pow(1 + r, tenure)); // A = P(1 + r)^n
+    const maturityAmount = Math.ceil(
+      investmentAmount * Math.pow(1 + r, tenure),
+    ); // A = P(1 + r)^n
     const estimatedReturns = maturityAmount - investmentAmount; // Returns earned
 
     // Calculate percentages for the chart
-    const investmentPercentage = Math.ceil((investmentAmount / maturityAmount) * 100);
+    const investmentPercentage = Math.ceil(
+      (investmentAmount / maturityAmount) * 100,
+    );
     const returnsPercentage = 100 - investmentPercentage;
 
     console.log('ip:', investmentPercentage);
@@ -64,6 +72,31 @@ export default function MutualFundCalculator() {
     setReturnsPercentage(returnsPercentage);
   };
 
+  const doughnutData = {
+    labels: ['Total Investment', 'Estimated Return'],
+    datasets: [
+      {
+        data: [parseFloat(investmentAmount), parseFloat(estimatedReturns)],
+        backgroundColor: ['#B6E300', '#004C48'],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const doughnutOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top', // Position the labels in a row on top
+        display: false,
+      },
+    },
+  };
+
+  useEffect(() => {
+    calculateMaturity();
+  }, []);
+
   return (
     <>
       <div className="w-full h-[73px] sm:h-[80px] bg-primary"></div>
@@ -74,8 +107,9 @@ export default function MutualFundCalculator() {
               Mutual Fund Investment Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Calculate the estimated returns of your one-time mutual fund investment. Enter
-              your investment amount, expected annual return, and tenure to get instant results.
+              Calculate the estimated returns of your one-time mutual fund
+              investment. Enter your investment amount, expected annual return,
+              and tenure to get instant results.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
               Discover Your Investment Returns
@@ -92,7 +126,9 @@ export default function MutualFundCalculator() {
                     type="number"
                     value={investmentAmount}
                     step="1000"
-                    onChange={(e) => setInvestmentAmount(Number(e.target.value))}
+                    onChange={(e) =>
+                      setInvestmentAmount(Number(e.target.value))
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -131,36 +167,28 @@ export default function MutualFundCalculator() {
 
               {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
-                  <div className="flex items-center justify-center gap-5">
+                {/* Doughnut Chart */}
+                <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[330px] flex flex-col items-center justify-between gap-2 sm:gap-4 p-4 sm:p-8">
+                  <div className="flex items-center justify-center gap-5 -mt-2">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-[#004C48] rounded-md"></div>
-                      <p className="font-lato text-xs">Estimated Returns</p>
-                    </div>
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-[#B6E300] rounded-md"></div>
+                      <div className="w-7 h-2 bg-brightLime rounded-md"></div>
                       <p className="font-lato text-xs">Total Investment</p>
                     </div>
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="w-7 h-2 bg-primary rounded-md"></div>
+                      <p className="font-lato text-xs">Estimated Return</p>
+                    </div>
                   </div>
-                  <div
-                    className="doughnut-chart"
-                    style={{
-                      background: `conic-gradient(
-                            #B6E300 0% ${investmentPercentage}%,
-                            #004C48 ${investmentPercentage}% 100%
-                          )`,
-                    }}
-                  >
-                    <div className="doughnut-hole"></div>
-                  </div>
+                  <Doughnut data={doughnutData} options={doughnutOptions} />
                 </div>
+
                 <div className="w-full flex items-center justify-evenly">
                   <div className="flex flex-col items-center gap-4">
                     <p className="font-lato text-base sm:text-lg text-gray-600">
                       Maturity Amount
                     </p>
                     <p className="font-lato font-semibold text-[28px] sm:text-[38px] text-accentOrange-200">
-                      ₹{maturityAmount}
+                      ₹{Number(maturityAmount).toLocaleString('en-IN')}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -168,15 +196,15 @@ export default function MutualFundCalculator() {
                       Estimated Returns
                     </p>
                     <p className="font-lato font-semibold text-[28px]  sm:text-[38px] text-accentOrange-200">
-                      ₹{estimatedReturns}
+                      ₹{Number(estimatedReturns).toLocaleString('en-IN')}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        {/* CAROUSEL START */}
-        <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -217,7 +245,8 @@ export default function MutualFundCalculator() {
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your
+                investment journey with Rupeestop!
               </p>
             </div>
 
