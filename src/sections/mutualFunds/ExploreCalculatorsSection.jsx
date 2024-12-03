@@ -1,6 +1,11 @@
 'use client';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination,EffectCoverflow } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import 'swiper/css/effect-fade';
+import 'swiper/css/effect-coverflow';
+
 
 const cardData = [
   {
@@ -18,43 +23,14 @@ const cardData = [
     description: 'Plan your tax savings with ease.',
     buttonText: 'Calculate Now',
   },
-  {
-    title: 'Tax Saving Calculator',
-    description: 'Plan your tax savings with ease.',
-    buttonText: 'Calculate Now',
-  },
-  {
-    title: 'Tax Saving Calculator',
-    description: 'Plan your tax savings with ease.',
-    buttonText: 'Calculate Now',
-  },
 ];
 
 const ExploreCalculatorsSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (!isPaused) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % cardData.length);
-      }, 9000);
-      return () => clearInterval(interval);
-    }
-  }, [isPaused]);
-
-  const handleMouseEnter = () => setIsPaused(true);
-  const handleMouseLeave = () => setIsPaused(false);
-
-  const nextSlide = () =>
-    setCurrentIndex((prev) => (prev + 1) % cardData.length);
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev - 1 + cardData.length) % cardData.length);
-
   return (
     <div className="bg-white pb-14 sm:pb-24 pt-0 sm:pt-24 px-5 sm:px-0">
-      <WidthXL>
+      <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center">
+          {/* Left Section */}
           <div className="flex flex-col items-center sm:items-start gap-6">
             <h1 className="font-poppins font-semibold text-[42px] text-wrap text-center sm:text-left">
               Effortlessly Calculate Your Mutual Fund Returns
@@ -64,29 +40,37 @@ const ExploreCalculatorsSection = () => {
             </button>
           </div>
 
-          {/* Carousel */}
-          <div className="relative overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 justify-start"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }} // Adjust to use full width
-            >
-              {cardData.map((card, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 w-full sm:w-[80%] p-4 transition-opacity duration-500 ${
-                    currentIndex === index
-                      ? 'opacity-100 scale-100' // Current card: fully visible
-                      : currentIndex === index + 1 ||
-                        (currentIndex === cardData.length - 1 && index === 0)
-                      ? 'opacity-70 scale-95' // Next card: slightly faded and scaled down
-                      : 'opacity-50 scale-90' // Other cards: more faded and smaller
-                  }`}
-                >
-                  <div
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    className="bg-[#FFF8F2] w-[280px] h-[420px] rounded-xl shadow-lg flex flex-col items-start justify-between p-5"
-                  >
+          {/* Swiper Carousel */}
+          <Swiper
+            modules={[Autoplay, Pagination, EffectCoverflow]}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            
+            }}
+            pagination={{el:'', clickable: true}}
+            effect={'coverflow'}
+            grabCursor={true}
+            spaceBetween={0}
+            slidesPerView={'auto'} 
+            centeredSlides={true} 
+            coverflowEffect={
+              {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5
+              }
+            }
+            // pagination={{ clickable: true }}
+            className="w-full sm:w-2/3 mt-8 sm:mt-0"
+          >
+            {cardData.map((card, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative w-[280px] h-[420px] bg-[#fff8f2]">
+                  {/* Card */}
+                  <div className="w-full h-full rounded-xl shadow-lg flex flex-col items-start justify-between p-5">
                     <div className="w-[95px] h-[95px] bg-[#C4C4C4] rounded-full"></div>
                     <div>
                       <h2 className="font-lato text-2xl font-semibold text-black">
@@ -96,17 +80,19 @@ const ExploreCalculatorsSection = () => {
                         {card.description}
                       </p>
                     </div>
-
                     <button className="w-full border-2 border-accentOrange-200 text-black rounded-full p-2 px-4">
                       {card.buttonText}
                     </button>
                   </div>
+
+                  {/* Fade Overlay for Next Card */}
+                  <div className="absolute inset-0 bg-black bg-opacity-30 rounded-xl pointer-events-none"></div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-      </WidthXL>
+      </div>
     </div>
   );
 };

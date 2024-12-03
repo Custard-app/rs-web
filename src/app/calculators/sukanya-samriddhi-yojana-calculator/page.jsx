@@ -4,41 +4,38 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import { GoArrowRight } from 'react-icons/go';
 import '@/sections/home/calculatorSection/Calculator.css';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import { Doughnut } from 'react-chartjs-2'; 
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import DoughnutChart from '@/components/chart/DoughnutChart';
 
-// Register chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend);
 
 const calculators = [
-    {
-      category: 'Investment Calculators',
-      items: [
-        {
-          title: 'FD Calculator',
-          description: 'Find out your Fixed Deposit maturity details with ease.',
-          button: 'Calculate',
-        },
-        {
-          title: 'NPS Calculator',
-          description:
-            'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
-          button: 'Calculate',
-        },
-        {
-          title: 'RD Calculator',
-          description: 'The simplest Recurring Deposit Calculator out there!',
-          button: 'Calculate',
-        },
-        {
-          title: 'NSC Calculator',
-          description:
-            'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
-          button: 'Calculate',
-        },
-      ],
-    },
-  ];
+  {
+    category: 'Investment Calculators',
+    items: [
+      {
+        title: 'FD Calculator',
+        description: 'Find out your Fixed Deposit maturity details with ease.',
+        button: 'Calculate',
+      },
+      {
+        title: 'NPS Calculator',
+        description:
+          'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
+        button: 'Calculate',
+      },
+      {
+        title: 'RD Calculator',
+        description: 'The simplest Recurring Deposit Calculator out there!',
+        button: 'Calculate',
+      },
+      {
+        title: 'NSC Calculator',
+        description:
+          'Calculate the maturity amount of your National Savings Certificate(NSC) investment. ',
+        button: 'Calculate',
+      },
+    ],
+  },
+];
 
 export default function SSYCalculator() {
   const [yearlyInvestment, setYearlyInvestment] = useState(10000);
@@ -58,24 +55,24 @@ export default function SSYCalculator() {
     const maxInvestmentPeriod = 15; // Maximum deposit period in years
     const maturityPeriod = 21; // Total maturity period in years
     const endYear = parseInt(startYear, 10) + maturityPeriod; // Maturity year
-  
+
     let principal = 0; // Total principal invested
     let balance = 0; // Total balance including interest
-  
+
     // For the first 15 years: Add yearly investment and compound interest
     for (let i = 0; i < maxInvestmentPeriod; i++) {
       principal += yearlyInvestment; // Add yearly deposit
       balance += yearlyInvestment; // Add yearly deposit to balance
       balance = Math.floor(balance + (balance * ssyRate) / 100); // Apply yearly interest
     }
-  
+
     // For the next 6 years: Only compound interest on the balance
     for (let i = 0; i < maturityPeriod - maxInvestmentPeriod; i++) {
       balance = Math.floor(balance + (balance * ssyRate) / 100); // Apply yearly interest
     }
-  
+
     const totalInterest = balance - principal; // Calculate total interest earned
-  
+
     // Update state with results
     setMaturityDetails({
       totalInvestment: principal,
@@ -83,45 +80,19 @@ export default function SSYCalculator() {
       maturityYear: endYear,
       maturityValue: balance,
     });
-  
+
     // Calculate doughnut chart percentages
     const investmentPercentage = Math.floor((principal / balance) * 100);
     const interestPercentage = 100 - investmentPercentage;
-  
+
     setInvestmentPercentage(investmentPercentage);
     setInterestPercentage(interestPercentage);
   };
 
-  const doughnutData = {
-    labels: ['Total Investment', 'Total Interest'],
-    datasets: [
-      {
-        data: [
-          parseFloat(maturityDetails.totalInvestment),
-          parseFloat(maturityDetails.totalInterest),
-        ],
-        backgroundColor: ['#B6E300', '#004C48'],
-        hoverOffset: 4,
-      },
-    ],
-  };
 
-  const doughnutOptions = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top', // Position the labels in a row on top
-        display: false,
-      },
-    },
-  };
-
-  
   useEffect(() => {
     calculateSSY();
-  },[])
-  
-  
+  }, []);
 
   return (
     <>
@@ -133,7 +104,8 @@ export default function SSYCalculator() {
               SSY Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Calculate the maturity value of your Sukanya Samriddhi Yojana account with ease.
+              Calculate the maturity value of your Sukanya Samriddhi Yojana
+              account with ease.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
               Plan Your Daughter&#39;s Secure Future Today
@@ -142,7 +114,9 @@ export default function SSYCalculator() {
             <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
               {/* Left Side - Inputs */}
               <div className="w-full sm:w-1/2 flex flex-col gap-5 sm:gap-8">
-              <p className='w-full text-start font-bold font-lato text-base sm:text-[20px] text-gray-400'>Latest SSY Rate = {ssyRate}%</p>
+                <p className="w-full text-start font-bold font-lato text-base sm:text-[20px] text-gray-400">
+                  Latest SSY Rate = {ssyRate}%
+                </p>
                 <div className="flex items-center justify-between">
                   <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
                     Yearly Investment
@@ -151,7 +125,9 @@ export default function SSYCalculator() {
                     type="number"
                     value={yearlyInvestment}
                     step="1000"
-                    onChange={(e) => setYearlyInvestment(Number(e.target.value))}
+                    onChange={(e) =>
+                      setYearlyInvestment(Number(e.target.value))
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -189,42 +165,12 @@ export default function SSYCalculator() {
 
               {/* Right Side - Results */}
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-                {/* <div className="bg-[#D9D9D9] rounded-[16px] w-full h-[313px] flex flex-col items-center justify-center gap-10">
-                  <div className="flex items-center justify-center gap-5">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-primary rounded-md"></div>
-                      <p className="font-lato text-xs">Total Interest</p>
-                    </div>
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-brightLime rounded-md"></div>
-                      <p className="font-lato text-xs">Total Investment</p>
-                    </div>
-                  </div>
-                  <div
-                    className="doughnut-chart"
-                    style={{
-                      background: `conic-gradient(
-                            #B6E300 0% ${investmentPercentage}%,
-                            #004C48 ${investmentPercentage}% 100%
-                          )`,
-                    }}
-                  >
-                    <div className="doughnut-hole"></div>
-                  </div>
-                </div> */}
-<div className="bg-[#D9D9D9] rounded-[16px] w-full h-[330px] flex flex-col items-center justify-between gap-2 sm:gap-4 p-4 sm:p-8">
-                  <div className="flex items-center justify-center gap-5 -mt-2">
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-brightLime rounded-md"></div>
-                      <p className="font-lato text-xs">Total Investment</p>
-                    </div>
-                    <div className="flex items-center justify-center gap-3">
-                      <div className="w-7 h-2 bg-primary rounded-md"></div>
-                      <p className="font-lato text-xs">Total Intesest</p>
-                    </div>
-                  </div>
-                  <Doughnut data={doughnutData} options={doughnutOptions} />
-                </div>
+              <DoughnutChart 
+                t1="Total Investment"
+                t2="Total Interest"
+                totalInvestment={maturityDetails.totalInvestment}
+                totalInterest={maturityDetails.totalInterest}
+                />
 
                 <div className="w-full flex items-center justify-between gap-2">
                   <div className="flex flex-col items-center gap-4">
@@ -232,7 +178,10 @@ export default function SSYCalculator() {
                       Maturity Value
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{Number(maturityDetails.maturityValue).toLocaleString('en-IN')}
+                      ₹
+                      {Number(maturityDetails.maturityValue).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -240,7 +189,10 @@ export default function SSYCalculator() {
                       Invested Amount
                     </p>
                     <p className="font-lato font-semibold text-[16px] sm:text-[25px] text-accentOrange-200">
-                      ₹{Number(maturityDetails.totalInvestment).toLocaleString('en-IN')}
+                      ₹
+                      {Number(maturityDetails.totalInvestment).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                   <div className="flex flex-col items-center gap-4">
@@ -248,15 +200,18 @@ export default function SSYCalculator() {
                       Total Interest Earned
                     </p>
                     <p className="font-lato font-semibold text-[16px]  sm:text-[25px] text-accentOrange-200">
-                      ₹{Number(maturityDetails.totalInterest).toLocaleString('en-IN')}
+                      ₹
+                      {Number(maturityDetails.totalInterest).toLocaleString(
+                        'en-IN',
+                      )}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        {/* CAROUSEL START */}
-        <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -297,7 +252,8 @@ export default function SSYCalculator() {
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your
+                investment journey with Rupeestop!
               </p>
             </div>
 
