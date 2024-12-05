@@ -1,7 +1,11 @@
 'use client';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import './Calculator.css';
 import WidthXL from '@/wrapper/widths/WidthXL';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Calculator() {
   const [monthlyInstallment, setMonthlyInstallment] = useState(1000);
@@ -9,33 +13,9 @@ function Calculator() {
   const [timePeriod, setTimePeriod] = useState(1);
   const [isSIPMode, setIsSIPMode] = useState(true);
 
-  const [isClient, setIsClient] = useState(false);
-
-  // Hydration check for client-only logic
-  // useEffect(() => {
-  //   setIsClient(true);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (!isClient) return; 
-
-  //   const rangeInputs = document.querySelectorAll('input[type="range"]');
-  //   rangeInputs.forEach((input) => updateRangeBackground(input));
-
-  //   rangeInputs.forEach((input) => {
-  //     input.addEventListener('input', () => updateRangeBackground(input));
-  //   });
-
-  //   return () => {
-  //     rangeInputs.forEach((input) =>
-  //       input.removeEventListener('input', () => updateRangeBackground(input))
-  //     );
-  //   };
-  // }, [isClient]);
-
   const investedAmount = isSIPMode
-    ? monthlyInstallment * 12 * timePeriod
-    : monthlyInstallment;
+    ? monthlyInstallment * 12 * timePeriod // Total investment for SIP
+    : monthlyInstallment; // Single investment for lump sum
 
   const estimatedReturns = isSIPMode
     ? Math.floor(
@@ -43,17 +23,13 @@ function Calculator() {
           ((1 + expectedReturn / 100 / 12) ** (12 * timePeriod) - 1)) /
           (expectedReturn / 100 / 12)) *
           (1 + expectedReturn / 100 / 12),
-      )
+      ) - investedAmount // Calculate profit for SIP
     : Math.floor(
         investedAmount * (1 + expectedReturn / 100) ** timePeriod -
           investedAmount,
-      );
+      ); // Calculate profit for lump sum
 
   const totalAmount = Math.floor(investedAmount + estimatedReturns);
-  const investedPercentage = Math.floor((investedAmount / totalAmount) * 100);
-  const estimatedPercentage = Math.floor(
-    (estimatedReturns / totalAmount) * 100,
-  );
 
   const updateRangeBackground = (e) => {
     const input = e.target;
@@ -66,10 +42,26 @@ function Calculator() {
     setIsSIPMode(!isSIPMode);
   };
 
+  const doughnutOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+        display: false,
+      },
+    },
+  };
 
-  // if (!isClient) {
-  //   return null; 
-  // }
+  const doughnutData = {
+    labels: ['Invested Amount', 'Estimated Returns'],
+    datasets: [
+      {
+        data: [investedAmount, estimatedReturns],
+        backgroundColor: ['#B6E300', '#004C48'],
+        borderWidth: 0,
+      },
+    ],
+  };
 
   return (
     <div className="my-14 sm:my-24 px-5 sm:px-0 bg-accentGray-100 flex flex-col items-center justify-center">
@@ -86,7 +78,6 @@ function Calculator() {
         </div>
 
         <div className="w-full mx-auto flex flex-col sm:flex-row items-center justify-around p-10 bg-backgroundLight rounded-[40px] gap-14">
-
           {/* Left part */}
           <div className="w-full sm:w-[45%] gap-6 flex flex-col items-center justify-center text-gray-700">
             {/* Toggle Slider */}
@@ -135,7 +126,7 @@ function Calculator() {
               />
             </div>
 
-            <div className="w-[90%] calculator">
+            <div className="w-full sm:w-[90%] calculator">
               <p className="flex items-center justify-between mb-6 font-lato font-medium sm:font-semibold text-sm sm:text-lg">
                 Expected Return<span>{expectedReturn}%</span>
               </p>
@@ -153,7 +144,7 @@ function Calculator() {
               />
             </div>
 
-            <div className="w-[90%] calculator">
+            <div className="w-full sm:w-[90%] calculator">
               <p className="flex items-center justify-between mb-6 font-lato font-medium sm:font-semibold text-sm sm:text-lg">
                 Time Period<span>{timePeriod} Years</span>
               </p>
@@ -174,16 +165,8 @@ function Calculator() {
 
           {/* Right part */}
           <div className="flex flex-col items-center w-full sm:w-[45%] gap-9">
-            <div
-              className="doughnut-chart"
-              style={{
-                background: `conic-gradient(
-              #004C48 0% ${investedPercentage}%,
-              #B6E300 ${investedPercentage}% 100%
-            )`,
-              }}
-            >
-              <div className="doughnut-hole"></div>
+            <div className='w-[280px] h-[280px] mx-auto'>
+              <Doughnut data={doughnutData} options={doughnutOptions} />
             </div>
 
             <div className="flex items-center justify-center gap-5">
@@ -199,29 +182,30 @@ function Calculator() {
 
             <div className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-700">
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
-                <p className="font-lato font-medium text-sm text-nowrap">Invested Amount</p>
+                <p className="font-lato font-medium text-sm text-nowrap">
+                  Invested Amount
+                </p>
                 <p className="font-lato font-bold text-2xl">
-                  ₹{investedAmount.toLocaleString()}
+                  ₹{Number(investedAmount).toLocaleString('en-IN')}
                 </p>
               </div>
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm text-nowrap">
                   {' '}
-                  Estimated Returns
+                  Estimated Returnsss
                 </p>
                 <p className="font-lato font-bold text-2xl">
-                  ₹{estimatedReturns.toLocaleString()}
+                  ₹{Number(estimatedReturns).toLocaleString('en-IN')}
                 </p>
               </div>
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm">Total Amount</p>
                 <p className="font-lato font-bold text-2xl">
-                  ₹{totalAmount.toLocaleString()}
+                  ₹{Number(totalAmount).toLocaleString('en-IN')}
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </WidthXL>
     </div>
