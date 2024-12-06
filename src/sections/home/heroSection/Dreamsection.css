@@ -46,3 +46,19 @@
     transform: scale(1.2);
   }
   
+
+  .triangle-box {
+    position: relative;
+  }
+  
+  .triangle-box::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; /* Position the triangle just below the box */
+    left: 50%; /* Center the triangle */
+    transform: translateX(-50%);
+    border-width: 6px; /* Size of the triangle */
+    border-style: solid;
+    border-color: white transparent transparent transparent; /* White top triangle */
+  }
+  

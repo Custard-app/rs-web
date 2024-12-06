@@ -12,7 +12,8 @@ const postOfficeMISCalculators = [
     items: [
       {
         title: 'Post Office MIS Calculator',
-        description: 'Calculate monthly income and maturity amount from your Post Office MIS investment.',
+        description:
+          'Calculate monthly income and maturity amount from your Post Office MIS investment.',
         button: 'Calculate',
       },
     ],
@@ -37,7 +38,9 @@ export default function PostOfficeMISCalculator() {
     const maturityAmount = principal;
 
     // Calculate percentages for the chart
-    const incomePercentage = Math.ceil((annualInterest / (annualInterest + principal)) * 100);
+    const incomePercentage = Math.ceil(
+      (annualInterest / (annualInterest + principal)) * 100,
+    );
     const principalPercentage = 100 - incomePercentage;
 
     // Update state
@@ -62,7 +65,8 @@ export default function PostOfficeMISCalculator() {
               Post Office MIS Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Calculate your monthly income and maturity amount from the Post Office Monthly Income Scheme.
+              Calculate your monthly income and maturity amount from the Post
+              Office Monthly Income Scheme.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
               Simplify your savings with accurate MIS calculations
@@ -191,7 +195,8 @@ export default function PostOfficeMISCalculator() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
-                Get help on your Post Office savings with our expert team. Reach out via WhatsApp to start today!
+                Get help on your Post Office savings with our expert team. Reach
+                out via WhatsApp to start today!
               </p>
             </div>
             <button className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
@@ -202,6 +207,18 @@ export default function PostOfficeMISCalculator() {
                 <GoArrowRight size={25} />
               </span>
             </button>
+            {/* Big circle */}
+            <div className="absolute -left-8 sm:-left-14 -top-14 sm:-top-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -left-8 sm:-left-20 -top-14  sm:-top-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* For BOttom */}
+            {/* Big circle */}
+            <div className="absolute -right-8 sm:-right-14 -bottom-14 sm:-bottom-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -right-8 sm:-right-20 -bottom-14  sm:-bottom-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
           </div>
         </WidthXXL>
       </div>

@@ -1,21 +1,14 @@
 'use client';
 import { useState, useEffect } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import Image from 'next/image';
 import React from 'react';
-import QuickCards from './QuickCards';
-import mutualFundImg from '@/assets/images/profit-growth.png';
-import fixedDepositImg from '@/assets/images/keywords.png';
-import pmsImg from '@/assets/images/pms.png';
-import bonds from '@/assets/images/certificate.png';
 import dream1 from '@/assets/images/dream1.png';
 import dream2 from '@/assets/images/dream2.png';
 import dream3 from '@/assets/images/dream3.png';
-import './Dreamsection.css';
-import { FaRegFlag } from 'react-icons/fa6';
 
 function Dreamsection() {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [fade, setFade] = useState(false); // Fade effect state
 
   const data = [
     {
@@ -26,6 +19,7 @@ function Dreamsection() {
       shadowText: "Need to fulfill your child's dream?",
       yearsLeft: '3 more years to go...',
       imageUrl: dream1,
+      width: 90,
     },
     {
       age: 31,
@@ -35,6 +29,7 @@ function Dreamsection() {
       shadowText: 'Want to start a business?',
       yearsLeft: '2 more years to go...',
       imageUrl: dream2,
+      width: 20,
     },
     {
       age: 32,
@@ -44,52 +39,33 @@ function Dreamsection() {
       shadowText: 'Want to buy a house?',
       yearsLeft: '1 more year to go...',
       imageUrl: dream3,
+      width: 55,
     },
   ];
 
-  const products = [
-    {
-      image: mutualFundImg,
-      heading: 'Mutual Funds',
-      content: 'Invest in diversified portfolios to maximize returns.',
-    },
-    {
-      image: fixedDepositImg,
-      heading: 'Fixed Deposits',
-      content: 'Safe and secure investments with guaranteed returns.',
-    },
-    {
-      image: pmsImg,
-      heading: 'Portfolio Management Services (PMS)',
-      content:
-        'Customized investment solutions for high net-worth individuals. ',
-    },
-    {
-      image: bonds,
-      heading: 'Bonds',
-      content: 'Consistent earnings with minimized financial risk.',
-    },
-  ];
-
-  const years = [0, 1, 2]; // Indices for the years
-
+  // Auto-scroll logic
   useEffect(() => {
     const interval = setInterval(() => {
-      setScrollPosition((prev) => (prev + 1) % years.length);
-    }, 3000); // Adjust interval time as needed (3000ms = 3 seconds)
+      setFade(true); // Start fade-out
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % data.length); 
+        setFade(false); 
+      }, 300); // Match the fade duration
+    }, 3000); 
 
-    return () => clearInterval(interval);
-  }, [years.length]);
+    return () => clearInterval(interval); 
+  }, [data.length]);
 
   return (
     <div className="px-5 sm:px-0 bg-white">
       <WidthXL>
         <div className="my-14 sm:my-24 overflow-hidden">
+          {/* Header */}
           <div className="w-full flex flex-col items-center mb-16 gap-5 z-5">
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase flex flex-col sm:flex-row gap-1 sm:gap-0 text-center">
+            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase flex flex-col sm:items-center sm:flex-row gap-2 sm:gap-3 text-center">
               Do you have a{' '}
               <span className="text-primary font-protestRiot capitalize">
-                Dream ?
+                Dream?
               </span>
             </h1>
             <p className="text-sm sm:text-xl font-lato font-medium">
@@ -97,98 +73,75 @@ function Dreamsection() {
             </p>
           </div>
 
-          <div className="w-full flex flex-col sm:flex-row        items-center justify-between gap-5">
-            {/* Left Side - Text and Scroller */}
-            <div className="w-full sm:w-1/2 px-12 py-6 bg-teal-700 text-white rounded-[30px] h-[440px] flex flex-col gap-8 relative">
-              <h3 className="text-right font-lato italic text-xl">
-                {data[scrollPosition].name}, {data[scrollPosition].age} Yrs
+          {/* Main Content */}
+          <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-5">
+            {/* Left Side - Text */}
+            <div
+              className={`w-full sm:w-1/2 px-12 py-6 bg-teal-700 text-white rounded-[30px] h-[440px] flex flex-col gap-8 relative transition-opacity duration-500 `}
+            >
+              <h3 className={`text-right font-lato italic text-xl transition-all duration-500 transform ${
+                fade ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
+              }`}>
+                {data[activeIndex].name}, {data[activeIndex].age} Yrs
               </h3>
-              <div className="flex items-center justify-center flex-col gap-4">
+              <div
+                className={`flex items-center justify-center flex-col gap-4 transition-all duration-500 transform ${
+                  fade ? 'translate-y-8 opacity-0' : 'translate-y-0 opacity-100'
+                }`}
+              >
                 <p className="font-lato italic text-3xl w-80 text-wrap text-center">
-                  {data[scrollPosition].goal}
+                  {data[activeIndex].goal}
                 </p>
-                <p className="text-base text-green-300">
-                  {data[scrollPosition].highlightText}
+                <p className="text-base text-green-300 italic">
+                  {data[activeIndex].highlightText}
                 </p>
-                <p className="text-sm text-green-500 opacity-70">
-                  {data[scrollPosition].shadowText}
+                <p className="text-sm text-green-500 opacity-70 italic">
+                  {data[activeIndex].shadowText}
                 </p>
               </div>
 
-              <div className="absolute w-[80%] bottom-12 left-12 sm:left-16 mx-auto">
-                
-
-                <div className="mt-4 sm:mt-6 relative flex gap-4 items-start">
-                  {/* Scroller Bar */}
-                  <input
-                    type="range"
-                    min="0"
-                    max={data.length - 1}
-                    value={scrollPosition}
-                    onChange={(e) => setScrollPosition(Number(e.target.value))}
-                    className="w-full h-2 sm:h-3 appearance-none rounded-full range-track"
+              {/* Custom Range Scroller at the Bottom */}
+              <div className="w-[80%] mx-auto absolute bottom-14 left-6 right-6">
+                <div className="relative w-full h-3 bg-gray-50 rounded-full">
+                  {/* Scroll Track */}
+                  <div
+                    className="absolute top-0 left-0 h-full bg-[#00EE67] rounded-full transition-all duration-300"
                     style={{
-                      background: `linear-gradient(to right, #00EE67 0%, #00EE67 ${
-                        (scrollPosition / (data.length - 1)) * 100
-                      }%, #E5E5E5 ${
-                        (scrollPosition / (data.length - 1)) * 100
-                      }%, #E5E5E5 100%)`,
+                      width: `${data[activeIndex].width}%`,
                     }}
-                  />
-                  <div className="flex flex-col items-center gap-2 -mt-2">
-                    <FaRegFlag className="text-[#00EE67] w-5 sm:w-6" />
-                    <p className="font-lato font-medium text-xs">Target</p>
-                  </div>
+                  ></div>
 
-                  {/* Display the year above the thumb */}
-                  <div className="mt-2 sm:mt-4">
-                    <p
-                      className="inline-block p-1 sm:p-2 text-xs font-medium font-lato bg-white text-teal-700 rounded-md absolute -top-8 transform translate-x-[-40%]"
-                      style={{
-                        left: `${(scrollPosition / (data.length - 1)) * 100}%`,
-                      }}
-                    >
-                      {data[scrollPosition].yearsLeft}
-                    </p>
+                  {/* Scroll Thumb */}
+                  <div
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 w-7 h-7 bg-white border-[2px] border-[#00EE67] rounded-full cursor-pointer transition-all duration-300"
+                    style={{
+                      left: `${data[activeIndex].width}%`,
+                    }}
+                  >
+                    <div className="absolute -top-10 left-3 transform -translate-x-1/2 -translate-y-1/2 w-32 h-8 text-xs rounded-lg p-2 bg-white text-[#344054] triangle-box">
+                      {data[activeIndex].yearsLeft}
+                    </div>
+                    <div
+                      className="absolute -top-[21px] left-3 transform -translate-x-1/2 -translate-y-1/2 
+                        w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white"
+                    ></div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Side - Image */}
-            <div className="w-full sm:w-1/2 bg-gray-300 h-[440px] rounded-[30px]">
+            <div
+              className={`w-full sm:w-1/2 bg-gray-300 h-[440px] rounded-[30px] transition-opacity duration-500 ${
+                fade ? 'opacity-0' : 'opacity-100'
+              }`}
+            >
               <img
-                src={data[scrollPosition].imageUrl.src}
-                alt="Travel Goal"
+                src={data[activeIndex].imageUrl.src}
+                alt="Dream Goal"
                 className="rounded-[30px] w-full h-full object-cover"
               />
             </div>
-          </div>
-        </div>
-
-        {/* STOP DREAMING SECTION */}
-        <div className="my-10 sm:my-24">
-          <div className="w-full flex flex-col items-center mb-12 sm:mb-16 gap-5 ">
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase text-center">
-              STOP DREAMING,{' '}
-              <span className="text-primary font-protestRiot capitalize">
-                Invest With Us!{' '}
-              </span>
-            </h1>
-            <p className="text-sm sm:text-xl font-lato font-medium">
-              Join us to transform your dreams into reality
-            </p>
-          </div>
-          {/* CARDS */}
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-x-4">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="sm:flex-grow transition-all duration-300 ease-out group-hover:flex-[1] hover:flex-[2] cursor-pointer"
-              >
-                <QuickCards product={product} />
-              </div>
-            ))}
           </div>
         </div>
       </WidthXL>

@@ -6,35 +6,35 @@ import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { GoArrowRight } from 'react-icons/go';
 
 const calculators = [
-    {
-      category: 'Investment Calculators',
-      items: [
-        {
-          title: 'MF Calculator',
-          description:
-            'Calculate the estimated returns of your one-time mutual fund investment.',
-          button: 'Calculate',
-        },
-        {
-          title: 'NPS Calculator',
-          description:
-            'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
-          button: 'Calculate',
-        },
-        {
-          title: 'RD Calculator',
-          description: 'The simplest Recurring Deposit Calculator out there!',
-          button: 'Calculate',
-        },
-        {
-          title: 'NSC Calculator',
-          description:
-            'Now learn how much your National Savings Certificate (NSC) will grow for you!',
-          button: 'Calculate',
-        },
-      ],
-    },
-  ];
+  {
+    category: 'Investment Calculators',
+    items: [
+      {
+        title: 'MF Calculator',
+        description:
+          'Calculate the estimated returns of your one-time mutual fund investment.',
+        button: 'Calculate',
+      },
+      {
+        title: 'NPS Calculator',
+        description:
+          'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
+        button: 'Calculate',
+      },
+      {
+        title: 'RD Calculator',
+        description: 'The simplest Recurring Deposit Calculator out there!',
+        button: 'Calculate',
+      },
+      {
+        title: 'NSC Calculator',
+        description:
+          'Now learn how much your National Savings Certificate (NSC) will grow for you!',
+        button: 'Calculate',
+      },
+    ],
+  },
+];
 
 export default function SIPCalculator() {
   const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
@@ -168,8 +168,8 @@ export default function SIPCalculator() {
               </div>
             </div>
           </div>
-        {/* CAROUSEL START */}
-        <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -209,7 +209,8 @@ export default function SIPCalculator() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
-                Get help on you SIP Calculator with our expert team. Reach out via WhatsApp to start today!
+                Get help on you SIP Calculator with our expert team. Reach out
+                via WhatsApp to start today!
               </p>
             </div>
             <button className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
@@ -220,6 +221,18 @@ export default function SIPCalculator() {
                 <GoArrowRight size={25} />
               </span>
             </button>
+            {/* Big circle */}
+            <div className="absolute -left-8 sm:-left-14 -top-14 sm:-top-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -left-8 sm:-left-20 -top-14  sm:-top-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* For BOttom */}
+            {/* Big circle */}
+            <div className="absolute -right-8 sm:-right-14 -bottom-14 sm:-bottom-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -right-8 sm:-right-20 -bottom-14  sm:-bottom-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
           </div>
         </WidthXXL>
       </div>

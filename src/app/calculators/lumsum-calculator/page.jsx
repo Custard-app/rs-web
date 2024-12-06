@@ -6,35 +6,35 @@ import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { GoArrowRight } from 'react-icons/go';
 
 const calculators = [
-    {
-      category: 'Investment Calculators',
-      items: [
-        {
-          title: 'MF Calculator',
-          description:
-            'Calculate the estimated returns of your one-time mutual fund investment.',
-          button: 'Calculate',
-        },
-        {
-          title: 'NPS Calculator',
-          description:
-            'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
-          button: 'Calculate',
-        },
-        {
-          title: 'RD Calculator',
-          description: 'The simplest Recurring Deposit Calculator out there!',
-          button: 'Calculate',
-        },
-        {
-          title: 'NSC Calculator',
-          description:
-            'Now learn how much your National Savings Certificate (NSC) will grow for you!',
-          button: 'Calculate',
-        },
-      ],
-    },
-  ];
+  {
+    category: 'Investment Calculators',
+    items: [
+      {
+        title: 'MF Calculator',
+        description:
+          'Calculate the estimated returns of your one-time mutual fund investment.',
+        button: 'Calculate',
+      },
+      {
+        title: 'NPS Calculator',
+        description:
+          'Calculate your National Pension Scheme (NPS) amount and tax-saving benefits.',
+        button: 'Calculate',
+      },
+      {
+        title: 'RD Calculator',
+        description: 'The simplest Recurring Deposit Calculator out there!',
+        button: 'Calculate',
+      },
+      {
+        title: 'NSC Calculator',
+        description:
+          'Now learn how much your National Savings Certificate (NSC) will grow for you!',
+        button: 'Calculate',
+      },
+    ],
+  },
+];
 
 export default function LumpSumCalculator() {
   const [principal, setPrincipal] = useState(100000);
@@ -62,89 +62,105 @@ export default function LumpSumCalculator() {
   return (
     <>
       <div className="w-full h-[73px] sm:h-[80px] bg-primary"></div>
-    <div className="pt-14 px-5 sm:px-0 bg-white relative">
-      <WidthXL>
-        <h1 className="font-poppins font-bold text-[30px] sm:text-[42px] text-start">Lump Sum Calculator</h1>
-        <p className="font-lato font-medium text-sm sm:text-[20px] text-start">Calculate your lump sum investment returns and maturity value.</p>
+      <div className="pt-14 px-5 sm:px-0 bg-white relative">
+        <WidthXL>
+          <h1 className="font-poppins font-bold text-[30px] sm:text-[42px] text-start">
+            Lump Sum Calculator
+          </h1>
+          <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
+            Calculate your lump sum investment returns and maturity value.
+          </p>
 
-        <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
-          Find out your Lump Sum Growth
-        </h2>
+          <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
+            Find out your Lump Sum Growth
+          </h2>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
-          {/* Left Side - Inputs */}
-          <div className="w-full sm:w-1/2 flex flex-col gap-5 sm:gap-8">
-            <div className="flex items-center justify-between">
-              <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">Principal Amount</label>
-              <input
-                type="number"
-                value={principal}
-                onChange={(e) => setPrincipal(Number(e.target.value))}
-                className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
-              />
+          <div className="flex flex-col sm:flex-row items-center justify-between p-8 gap-5 sm:gap-10">
+            {/* Left Side - Inputs */}
+            <div className="w-full sm:w-1/2 flex flex-col gap-5 sm:gap-8">
+              <div className="flex items-center justify-between">
+                <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                  Principal Amount
+                </label>
+                <input
+                  type="number"
+                  value={principal}
+                  onChange={(e) => setPrincipal(Number(e.target.value))}
+                  className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                  Expected Return (%)
+                </label>
+                <input
+                  type="number"
+                  value={expectedReturn}
+                  onChange={(e) => setExpectedReturn(Number(e.target.value))}
+                  className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">
+                  Tenure (years)
+                </label>
+                <input
+                  type="number"
+                  value={tenure}
+                  onChange={(e) => setTenure(Number(e.target.value))}
+                  className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
+                />
+              </div>
+
+              <button
+                onClick={calculateLumpSum}
+                className="bg-primary font-lato font-bold text-base text-white px-5 py-[10px] rounded-3xl block mx-auto"
+              >
+                Calculate Lump Sum
+              </button>
             </div>
 
-            <div className="flex items-center justify-between">
-              <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">Expected Return (%)</label>
-              <input
-                type="number"
-                value={expectedReturn}
-                onChange={(e) => setExpectedReturn(Number(e.target.value))}
-                className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
+            {/* Right Side - Results */}
+            <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
+              <DoughnutChart
+                t1="Total Investment"
+                t2="Total Returns"
+                totalInvestment={totalInvested}
+                totalInterest={totalReturns}
               />
-            </div>
 
-            <div className="flex items-center justify-between">
-              <label className="font-bold font-lato text-base sm:text-[20px] text-gray-700">Tenure (years)</label>
-              <input
-                type="number"
-                value={tenure}
-                onChange={(e) => setTenure(Number(e.target.value))}
-                className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
-              />
+              <div className="w-full flex items-center justify-between ga-2">
+                <div className="flex flex-col items-center gap-4">
+                  <p className="font-lato text-base sm:text-lg text-gray-600 text-center">
+                    Total Value
+                  </p>
+                  <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
+                    ₹{Number(maturityAmount).toLocaleString('en-IN')}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-4">
+                  <p className="font-lato text-base sm:text-lg text-gray-600 text-center">
+                    Est. Return
+                  </p>
+                  <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
+                    ₹{Number(totalReturns).toLocaleString('en-IN')}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-4">
+                  <p className="font-lato text-base sm:text-lg text-gray-600 text-center">
+                    Total Investment
+                  </p>
+                  <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
+                    ₹{Number(totalInvested).toLocaleString('en-IN')}
+                  </p>
+                </div>
+              </div>
             </div>
-
-            <button
-              onClick={calculateLumpSum}
-              className="bg-primary font-lato font-bold text-base text-white px-5 py-[10px] rounded-3xl block mx-auto"
-            >
-              Calculate Lump Sum
-            </button>
           </div>
-
-          {/* Right Side - Results */}
-          <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-6 sm:mt-0 gap-5">
-            <DoughnutChart
-              t1="Total Investment"
-              t2="Total Returns"
-              totalInvestment={totalInvested}
-              totalInterest={totalReturns}
-            />
-
-            <div className="w-full flex items-center justify-between ga-2">
-              <div className="flex flex-col items-center gap-4">
-                <p className="font-lato text-base sm:text-lg text-gray-600 text-center">Total Value</p>
-                <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
-                  ₹{Number(maturityAmount).toLocaleString('en-IN')}
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-4">
-                <p className="font-lato text-base sm:text-lg text-gray-600 text-center">Est. Return</p>
-                <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
-                  ₹{Number(totalReturns).toLocaleString('en-IN')}
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-4">
-                <p className="font-lato text-base sm:text-lg text-gray-600 text-center">Total Investment</p>
-                <p className="font-lato font-semibold text-base sm:text-[30px] text-accentOrange-200">
-                  ₹{Number(totalInvested).toLocaleString('en-IN')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {/* CAROUSEL START */}
-      <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -184,7 +200,8 @@ export default function LumpSumCalculator() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
-                Get help on you Lumsum Calculator with our expert team. Reach out via WhatsApp to start today!
+                Get help on you Lumsum Calculator with our expert team. Reach
+                out via WhatsApp to start today!
               </p>
             </div>
             <button className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
@@ -195,6 +212,18 @@ export default function LumpSumCalculator() {
                 <GoArrowRight size={25} />
               </span>
             </button>
+            {/* Big circle */}
+            <div className="absolute -left-8 sm:-left-14 -top-14 sm:-top-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -left-8 sm:-left-20 -top-14  sm:-top-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* For BOttom */}
+            {/* Big circle */}
+            <div className="absolute -right-8 sm:-right-14 -bottom-14 sm:-bottom-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -right-8 sm:-right-20 -bottom-14  sm:-bottom-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
           </div>
         </WidthXXL>
       </div>

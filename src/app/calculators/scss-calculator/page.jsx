@@ -12,7 +12,8 @@ const scssCalculators = [
     items: [
       {
         title: 'Senior Citizen Savings Scheme (SCSS) Calculator',
-        description: 'Calculate quarterly interest, total interest, and maturity value for SCSS.',
+        description:
+          'Calculate quarterly interest, total interest, and maturity value for SCSS.',
         button: 'Calculate',
       },
     ],
@@ -59,7 +60,8 @@ export default function SCSSCalculator() {
               Senior Citizen Savings Scheme (SCSS) Calculator
             </h1>
             <p className="font-lato font-medium text-sm sm:text-[20px] text-start">
-              Calculate quarterly interest, total interest, and maturity value from your SCSS investment.
+              Calculate quarterly interest, total interest, and maturity value
+              from your SCSS investment.
             </p>
             <h2 className="text-lg sm:text-[28px] font-lato font-bold text-gray-800 text-center py-10 sm:py-16">
               Secure your future with precise SCSS calculations
@@ -75,7 +77,9 @@ export default function SCSSCalculator() {
                   <input
                     type="number"
                     value={yearlyInvestment}
-                    onChange={(e) => setYearlyInvestment(Number(e.target.value))}
+                    onChange={(e) =>
+                      setYearlyInvestment(Number(e.target.value))
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -152,8 +156,8 @@ export default function SCSSCalculator() {
             </div>
           </div>
           {/* HEROSECTION END */}
-        {/* CAROUSEL START */}
-        <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {scssCalculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -193,7 +197,8 @@ export default function SCSSCalculator() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
-                Get help on your Senior Citizen Savings Scheme with our expert team. Reach out via WhatsApp to start today!
+                Get help on your Senior Citizen Savings Scheme with our expert
+                team. Reach out via WhatsApp to start today!
               </p>
             </div>
             <button className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
@@ -204,6 +209,18 @@ export default function SCSSCalculator() {
                 <GoArrowRight size={25} />
               </span>
             </button>
+            {/* Big circle */}
+            <div className="absolute -left-8 sm:-left-14 -top-14 sm:-top-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -left-8 sm:-left-20 -top-14  sm:-top-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* For BOttom */}
+            {/* Big circle */}
+            <div className="absolute -right-8 sm:-right-14 -bottom-14 sm:-bottom-20 w-[170px] sm:w-[400px] h-[170px] sm:h-[400px] rounded-full border-white border-[1px] opacity-25"></div>
+
+            {/* small circle */}
+            <div className="absolute -right-8 sm:-right-20 -bottom-14  sm:-bottom-20 w-[120px] sm:w-[300px] h-[120px] sm:h-[300px] rounded-full border-white border-[1px] opacity-25"></div>
           </div>
         </WidthXXL>
       </div>
