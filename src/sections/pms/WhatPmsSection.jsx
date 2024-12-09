@@ -167,7 +167,7 @@ function WhatPmsSection() {
           <div className="flex space-x-4 items-center justify-center">
             <button
               onClick={() => handleTabChange("customized")}
-              className={`px-7 py-3 rounded-full font-lato font-bold texxt-sm sm:text-[20px] ${
+              className={`px-7 py-2 rounded-full font-lato font-bold texxt-sm sm:text-[20px] ${
                 activeTab === 'customized'
                   ? 'bg-primary text-white'
                   : 'bg-gray-50 text-gray-800'

@@ -147,7 +147,7 @@ function Navbar() {
                   Mutual Fund
                 </Link>
                 <Link
-                  href="portfolio-management-services"
+                  href="/portfolio-management-services"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
@@ -160,7 +160,7 @@ function Navbar() {
                   Portfolio Management
                 </Link>
                 <Link
-                  href="fixeddeposits"
+                  href="/fixeddeposits"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
@@ -173,7 +173,7 @@ function Navbar() {
                   Fixed Deposit
                 </Link>
                 <Link
-                  href="bonds"
+                  href="/bonds"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
@@ -188,7 +188,7 @@ function Navbar() {
               <div className="bg-[#DCFCFF] w-[45%] h-56  px-5 py-3 rounded-lg flex flex-col  gap-4">
                 <div className="flex justify-between items-center">
                   <Link 
-                  href="portfolio-health-checker"
+                  href="/portfolio-health-checker"
                   onClick={closeInstrumentBanner}
                   className="font-lato font-semibold text-xs italic text-accentOrange-200">
                     Portfolio Health Checker
@@ -282,18 +282,21 @@ function Navbar() {
                   href="/calculators/sukanya-samriddhi-yojana-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
-                >
+                  >
                   <span className="w-10 h-10 rounded-full bg-gray-200"></span>
                   SSY Calculator
                 </Link>
               </div>
             </div>
-            <p className="text-accentOrange-200 font-lato text-center mt-5 flex justify-center items-center gap-2">
+            <Link 
+            href="/calculators"
+            onClick={closeCalculatorBanner}
+            className="text-accentOrange-200 font-lato text-center mt-5 flex justify-center items-center gap-2">
               See All Calculators{' '}
               <span>
                 <IoIosArrowRoundForward size={25} />
               </span>
-            </p>
+            </Link>
           </div>
         </div>
       </div>
@@ -356,7 +359,7 @@ function Navbar() {
                 Bonds
               </Link>
               <Link
-                href="portfolio-health-checker"
+                href="/portfolio-health-checker"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >
@@ -402,8 +405,8 @@ function Navbar() {
               >
                 HRA Calculator
               </Link>
-              <Link
-                href="#"
+            <Link 
+            href="/calculators"
                 className="font-lato font-medium text-base text-orange-400 flex items-center gap-28"
                 onClick={closeMenu}
               >
