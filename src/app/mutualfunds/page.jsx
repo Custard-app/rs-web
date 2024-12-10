@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/sections/mutualFunds/HeroSection';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
@@ -14,7 +15,10 @@ import AdvntMfSection from '@/sections/mutualFunds/AdvntMfSection';
 import MFCarouselSection from '@/sections/mutualFunds/MFCarouselSection';
 import AnimatedCards from '@/sections/mutualFunds/carousel/AnimatedCards';
 import ExploreMFSection from '@/sections/mutualFunds/ExploreMFSection';
-import ExploreCalculatorsSection from '@/sections/mutualFunds/ExploreCalculatorsSection';
+// import ExploreCalculatorsSection from '@/sections/mutualFunds/ExploreCalculatorsSection';
+const ExploreCalculatorsSection = dynamic(() => import('@/sections/mutualFunds/ExploreCalculatorsSection'), {
+  ssr: false,
+});
 import JourneyMFSection from '@/sections/mutualFunds/JourneyMFSection';
 import GuideMFSection from '@/sections/mutualFunds/GuideMFSection';
 import FAQSection from '@/sections/mutualFunds/FAQSection';
