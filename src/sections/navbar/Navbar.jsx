@@ -7,7 +7,7 @@ import fixedDepositIcon from '@/assets/images/money-bag.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   IoIosArrowDown,
   IoIosArrowRoundForward,
@@ -23,6 +23,7 @@ function Navbar() {
   const [isHamOpen, setIsHamOpen] = useState(false);
   const [showInstrumentsNested, setShowInstrumentsNested] = useState(false);
   const [showCalculatorsNested, setShowCalculatorsNested] = useState(false);
+  const navRef = useRef();
 
   const toggleInstrumentsBanner = () => {
     if (showCalculatorsBanner) {
@@ -70,8 +71,24 @@ function Navbar() {
     return () => document.body.classList.remove('no-scroll');
   }, [isHamOpen]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        if(showInstrumentsBanner) closeInstrumentBanner();
+        if(showCalculatorsBanner) closeCalculatorBanner();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+
+  },[showInstrumentsBanner,showCalculatorsBanner])
+
   return (
-    <div className="relative bg-red-700">
+    <div className="relative" ref={navRef}>
       <div className="w-full bg-primary bg-opacity-30 backdrop-blur-md border-b border-black z-50 fixed top-0">
         <div className="relative">
           <WidthXL>
