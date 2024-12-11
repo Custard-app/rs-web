@@ -5,7 +5,6 @@ import { GoArrowRight } from 'react-icons/go';
 import heroImage from '@/assets/images/heroImage.png';
 import Width3XL from '@/wrapper/widths/Width3XL';
 import axios from 'axios';
-import cheerio from 'cheerio';
 
 function Herosection() {
   useEffect(() => {
