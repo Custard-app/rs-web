@@ -192,7 +192,7 @@ function Calculator() {
               <div className="w-full p-3 bg-accentGreen rounded-xl flex items-center justify-center flex-col gap-2">
                 <p className="font-lato font-medium text-sm text-nowrap">
                   {' '}
-                  Estimated Returnsss
+                  Estimated Returns
                 </p>
                 <p className="font-lato font-bold text-2xl">
                   ₹{Number(estimatedReturns).toLocaleString('en-IN')}
