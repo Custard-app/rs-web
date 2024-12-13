@@ -27,15 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Build the project
-      run: npm run build --if-present
-
-    # Optional: Run tests (if required)
-    # - run: npm test
-
     - name: Set up SSH key
       uses: webfactory/ssh-agent@v0.5.3
       with:
@@ -43,10 +34,28 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@16.171.107.245 "cd /home/ubuntu/rs-web && git pull origin main && pm2 restart rs-web"
+        ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOSTNAME }} << 'EOF'
+          # Navigate to the project directory
+          cd /home/ubuntu/rs-web || exit 1
+
+          # Pull the latest changes from the main branch
+          git pull origin main || exit 1
+
+          # Install dependencies
+          npm ci || exit 1
+
+          # Build the project
+          npm run build --if-present || exit 1
+
+          # Restart the application using PM2
+          pm2 restart rs-web || pm2 start npm --name "rs-web" -- run start
+
+          # Ensure PM2 is running correctly
+          pm2 save || exit 1
+        EOF
         
     - name: Ensure PM2 is running
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@16.171.107.245 "pm2 list || pm2 start /home/ubuntu/rs-web/startup_script.js"  
-      
+        ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOSTNAME }} "pm2 list || pm2 start /home/ubuntu/rs-web/startup_script.js"
+
 
