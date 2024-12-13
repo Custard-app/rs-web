@@ -28,8 +28,8 @@ function Herosection() {
     <div className="bg-teal-900 overflow-hidden relative w-full z-0">
       {/* <Width3XL> */}
       <div className="w-full flex flex-col items-center relative overflow-hidden pb-20 pt-12 sm:pt-20">
-        <h1 className="text-accentGray-400 text-center uppercase font-poppins font-bold sm:font-extrabold text-[54px] sm:text-7xl mt-20">
-          Choose Freedom
+        <h1 className="text-accentGray-400 text-center font-poppins font-bold sm:font-extrabold text-[54px] sm:text-7xl mt-20">
+          Choose Freedom 
         </h1>
         <p className="text-accentGray-400 font-poppins text-base sm:text-xl font-light mt-4">
           Automate your financial decisions with us
