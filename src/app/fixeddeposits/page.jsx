@@ -1,20 +1,19 @@
-import HeroSection from '@/sections/fixedDeposits/HeroSection';
-import Image from 'next/image';
-import React from 'react';
+import benifits from '@/assets/icons/benifits.png';
+import diverse from '@/assets/icons/diverse.png';
+import flexibility from '@/assets/icons/flexibility.png';
+import hightreturn from '@/assets/icons/hightreturn.png';
+import safety from '@/assets/icons/safety.png';
+import bajaj from '@/assets/images/bajaj.png';
 import hdfc from '@/assets/images/hdfc.png';
 import mahindra from '@/assets/images/mahindra.png';
 import pnb from '@/assets/images/pnb.png';
-import bajaj from '@/assets/images/bajaj.png';
 import waterLogo from '@/assets/images/waterLogo.png';
+import FAQSection from '@/sections/fixedDeposits/FAQSection';
+import HeroSection from '@/sections/fixedDeposits/HeroSection';
 import InterestRateSection from '@/sections/fixedDeposits/IntrestRateSection';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import hightreturn from '@/assets/icons/hightreturn.png';
-import diverse from '@/assets/icons/diverse.png';
-import safety from '@/assets/icons/safety.png';
-import flexibility from '@/assets/icons/flexibility.png';
-import benifits from '@/assets/icons/benifits.png';
-import FAQSection from '@/sections/fixedDeposits/FAQSection';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
+import Image from 'next/image';
 import { GoArrowRight } from 'react-icons/go';
 
 function page() {

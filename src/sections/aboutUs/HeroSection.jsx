@@ -1,6 +1,4 @@
-import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
 
 function HeroSection() {
   return (

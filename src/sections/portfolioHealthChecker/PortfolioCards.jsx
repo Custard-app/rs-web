@@ -1,18 +1,17 @@
 'use client';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import { useState,useRef  } from 'react';
-import phcvector from '@/assets/icons/phcvector.png';
 import phcasset from '@/assets/icons/phcasset.png';
-import phcgoal from '@/assets/icons/phcgoal.png';
 import phcdiverse from '@/assets/icons/phcdiverse.png';
-import phcrisk from '@/assets/icons/phcrisk.png';
+import phcgoal from '@/assets/icons/phcgoal.png';
 import phcmetrics from '@/assets/icons/phcmetrics.png';
+import phcrisk from '@/assets/icons/phcrisk.png';
+import phcvector from '@/assets/icons/phcvector.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import { useRef, useState } from 'react';
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { GoArrowRight } from 'react-icons/go';
-import Slider from 'react-slick'; 
-import 'slick-carousel/slick/slick.css';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
-import { FaAngleLeft } from "react-icons/fa6";
-import { FaAngleRight  } from "react-icons/fa6";
+import 'slick-carousel/slick/slick.css';
 
 const PortfolioCards = () => {
   const [activeCard, setActiveCard] = useState(0);

@@ -1,10 +1,9 @@
-import WidthXL from '@/wrapper/widths/WidthXL'
-import Image from 'next/image'
-import React from 'react'
 import assets from '@/assets/images/assets.png'
 import calender from '@/assets/images/calender.png'
 import client from '@/assets/images/client.png'
 import mapIndia from '@/assets/images/mapIndia.png'
+import WidthXL from '@/wrapper/widths/WidthXL'
+import Image from 'next/image'
 
 
 function MapDataSection() {

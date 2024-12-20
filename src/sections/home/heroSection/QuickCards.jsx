@@ -1,8 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
-import './QuickCards.css';
 import Link from 'next/link';
 import { GoArrowRight } from 'react-icons/go';
+import './QuickCards.css';
 
 const QuickCards = ({ product }) => {
   return (

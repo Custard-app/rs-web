@@ -1,26 +1,23 @@
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useState } from 'react';
-import BuldingImg from '@/assets/icons/buil.svg';
-import gov from '@/assets/icons/mingcute_government-line.svg';
-import tax from '@/assets/icons/tabler_tax.svg';
 import Image from 'next/image';
+import { useState } from 'react';
 import { GiVikingLonghouse } from 'react-icons/gi';
 import { LuBuilding2 } from 'react-icons/lu';
 import { TbMoneybag } from 'react-icons/tb';
 
 import Calendar from '@/assets/icons/Calendar.png';
-import Taxes from '@/assets/icons/Taxes.png';
 import Frame from '@/assets/icons/Frame.png';
 import hhh from '@/assets/icons/hhh.png';
+import Taxes from '@/assets/icons/Taxes.png';
 
 import Briefing from '@/assets/icons/Briefing.png';
-import Team from '@/assets/icons/Team.png';
 import Flash from '@/assets/icons/Flash.png';
 import Invesstment from '@/assets/icons/Invesstment.png';
+import Team from '@/assets/icons/Team.png';
 
-import Taxes2 from '@/assets/icons/Taxes2.png';
 import Dollar from '@/assets/icons/Dollar.png';
+import Taxes2 from '@/assets/icons/Taxes2.png';
 
 const bondData = {
   governmentSecurities: [

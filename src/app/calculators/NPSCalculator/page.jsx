@@ -1,10 +1,10 @@
 'use client';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React, { useState } from 'react';
-import { GoArrowRight } from 'react-icons/go';
 import npsbg from '@/assets/images/npsbg.png';
 import '@/sections/home/calculatorSection/Calculator.css';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import WidthXXL from '@/wrapper/widths/WidthXXL';
+import { useState } from 'react';
+import { GoArrowRight } from 'react-icons/go';
 
 const calculators = [
   {

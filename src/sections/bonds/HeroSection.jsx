@@ -1,10 +1,8 @@
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
 import bonds_hero from '@/assets/images/bonds_hero.png';
-import { GoArrowRight } from 'react-icons/go';
+import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
+import { GoArrowRight, GoDotFill } from 'react-icons/go';
 import '../../app/bonds/bonds.css';
-import { GoDotFill } from "react-icons/go";
 
 export default function HeroSection() {
   return (

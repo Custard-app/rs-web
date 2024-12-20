@@ -1,16 +1,16 @@
 'use client';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import Image from 'next/image';
-import React, { useState, useEffect, useRef } from 'react';
-import pmsMain from '@/assets/images/pms-main.png';
-import logo from '@/assets/images/waterLogo.png';
 import Vector from '@/assets/icons/Vector.png';
 import balance from '@/assets/icons/cil_balance-scale.png';
 import pageImg from '@/assets/icons/oui_page-select.png';
-import './WhatPmsSection.css';
-import TeamPresentation from '@/assets/images/TeamPresentation.png';
 import FinanceAnalysis from '@/assets/images/FinanceAnalysis.png';
+import TeamPresentation from '@/assets/images/TeamPresentation.png';
+import pmsMain from '@/assets/images/pms-main.png';
+import logo from '@/assets/images/waterLogo.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { FaCircleCheck } from 'react-icons/fa6';
+import './WhatPmsSection.css';
 
 function WhatPmsSection() {
   const [activeTab, setActiveTab] = useState('customized');

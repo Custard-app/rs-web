@@ -1,6 +1,6 @@
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ExploreMFSection = () => {
   const [activeTab, setActiveTab] = useState('Debt Funds');

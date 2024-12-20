@@ -1,8 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
 import pms from '@/assets/images/pms-hero.png';
+import Image from 'next/image';
 import { GoArrowRight } from 'react-icons/go';
-import WidthXL from '@/wrapper/widths/WidthXL';
 
 function HeroSection() {
   return (

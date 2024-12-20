@@ -1,11 +1,10 @@
-import WidthXL from '@/wrapper/widths/WidthXL';
-import Image from 'next/image';
-import React from 'react';
-import octiconGoal from '@/assets/icons/octicon_goal.png';
-import hexagon from '@/assets/icons/mdi_professional-hexagon.png';
 import cil_zoom from '@/assets/icons/cil_zoom.png';
 import foundation_torso from '@/assets/icons/foundation_torso-business.png';
+import hexagon from '@/assets/icons/mdi_professional-hexagon.png';
+import octiconGoal from '@/assets/icons/octicon_goal.png';
 import ph_fediverse from '@/assets/icons/ph_fediverse-logo-fill.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
 
 function WhyPmsSection() {
   return (

@@ -3,7 +3,6 @@ import HeroSection from '@/sections/pms/HeroSection';
 import WhatPmsSection from '@/sections/pms/WhatPmsSection';
 import WhyPmsSection from '@/sections/pms/WhyPmsSection';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
 import { GoArrowRight } from 'react-icons/go';
 
 function page() {

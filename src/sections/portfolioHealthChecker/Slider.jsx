@@ -67,7 +67,7 @@ const Slider = ({ items: sliderItems }) => {
   return (
     <div
       ref={carouselRef}
-      className="w-full flex h-[340px] md:-translate-y-12 -translate-y-6 items-center hide_scrollbar gap-6 overflow-auto"
+      className="w-full flex h-[340px] sm:-translate-y-12 -translate-y-6 items-center hide_scrollbar gap-6 overflow-auto"
     >
       {items?.map((icon, index) => (
         <div

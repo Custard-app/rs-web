@@ -1,6 +1,5 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
-import React from 'react';
 
 const testimonialsData = [
   {

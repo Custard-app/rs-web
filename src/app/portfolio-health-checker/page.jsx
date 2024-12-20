@@ -6,7 +6,6 @@ import PortfolioCards from '@/sections/portfolioHealthChecker/PortfolioCards';
 import TestimonialSection from '@/sections/portfolioHealthChecker/TestimonialSection';
 import UsePhcSection from '@/sections/portfolioHealthChecker/UsePhcSection';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
 import { GoArrowRight } from 'react-icons/go';
 
 function page() {

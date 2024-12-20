@@ -1,5 +1,4 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
 import TeamCard from './cards/TeamCard';
 
 function TeamSection() {

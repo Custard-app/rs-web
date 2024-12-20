@@ -1,7 +1,7 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { config } from 'react-spring';
 import Carousel from 'react-spring-3d-carousel';
 

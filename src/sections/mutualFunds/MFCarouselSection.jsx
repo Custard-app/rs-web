@@ -1,6 +1,5 @@
-import React from 'react';
-import AnimatedCards from './carousel/AnimatedCards';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import AnimatedCards from './carousel/AnimatedCards';
 
 function MFCarouselSection() {
   return (

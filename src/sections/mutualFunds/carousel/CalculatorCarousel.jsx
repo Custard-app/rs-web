@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Carousel from 'react-spring-3d-carousel';
-import { config } from 'react-spring';
+import { useEffect, useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
+import { config } from 'react-spring';
+import Carousel from 'react-spring-3d-carousel';
 
 function CalculatorCarousel() {
   const [goToSlide, setGoToSlide] = useState(0);
@@ -264,7 +264,7 @@ function CalculatorCarousel() {
         offsetRadius={offsetRadius}
         animationConfig={animationConfig}
       />
-      <div className=" w-1/2 mx-auto mt-5 md:-mt-14 lg:mt-32 flex justify-center">
+      <div className=" w-1/2 mx-auto mt-5 sm:-mt-14 lg:mt-32 flex justify-center">
         <div className="text-white">
           <button
             className=" text-3xl font-bold text-blue-800"

@@ -1,5 +1,4 @@
-import WidthXL from '@/wrapper/widths/WidthXL'
-import React from 'react'
+import WidthXL from '@/wrapper/widths/WidthXL';
 import { GoArrowRight } from 'react-icons/go';
 
 function HeroSection() {

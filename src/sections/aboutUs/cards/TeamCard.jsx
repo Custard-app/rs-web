@@ -1,8 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
 import profileImg from '@/assets/images/profile1.png';
-import { FaTwitter,FaLinkedin  } from 'react-icons/fa';
+import Image from 'next/image';
 import Link from 'next/link';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 function TeamCard() {
   return (

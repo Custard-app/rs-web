@@ -1,8 +1,8 @@
 'use client'
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useEffect, useRef, useState } from 'react';
-import { RxTriangleRight } from 'react-icons/rx';
 import '@/sections/pms/GetstartSection.css';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import { useEffect, useRef, useState } from 'react';
+import { RxTriangleRight } from 'react-icons/rx';
 
 export default function GetstartSection2() {
   const ref = useRef(null);

@@ -1,8 +1,8 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import '@/sections/home/calculatorSection/Calculator.css';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import { useEffect, useState } from 'react';
 
 export default function SimpleInterestCalculator() {
   const [principalAmount, setPrincipalAmount] = useState(50000); // Default principal amount

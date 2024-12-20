@@ -1,7 +1,6 @@
 import CalculatorsSection from '@/sections/calculators/CalculatorsSection';
 import HeroSection from '@/sections/calculators/HeroSection';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
 import { GoArrowRight } from 'react-icons/go';
 
 function Calculators() {

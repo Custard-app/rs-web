@@ -1,12 +1,12 @@
 'use client';
+import graph from '@/assets/images/graph.png';
+import logo from '@/assets/images/Logo.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
-import React, { useState } from 'react';
-import { RxCross2 } from 'react-icons/rx';
-import logo from '@/assets/images/Logo.png';
-import { MdArrowForwardIos } from 'react-icons/md';
 import Link from 'next/link';
-import graph from '@/assets/images/graph.png';
+import { useState } from 'react';
+import { MdArrowForwardIos } from 'react-icons/md';
+import { RxCross2 } from 'react-icons/rx';
 
 function HowItWorks() {
   const [values, setValues] = useState([60, 80]);

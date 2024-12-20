@@ -1,6 +1,6 @@
 'use client';
-import React, { useState, useEffect } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import { useEffect, useState } from 'react';
 // import '@/sections/home/tdsCalculatorSection/TDSCalculator.css';
 
 export default function TDSCalculator() {

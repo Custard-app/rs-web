@@ -1,6 +1,5 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Link from 'next/link';
-import React from 'react';
 
 const calculators = [
   {

@@ -1,7 +1,6 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
-import './Footer.css';
 import Image from 'next/image';
+import './Footer.css';
 
 import logo from '@/assets/images/Logo.png';
 import Link from 'next/link';

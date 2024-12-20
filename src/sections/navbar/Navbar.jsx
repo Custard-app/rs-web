@@ -7,15 +7,14 @@ import fixedDepositIcon from '@/assets/images/money-bag.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
-import {
-  IoIosArrowDown,
-  IoIosArrowRoundForward,
-  IoIosArrowUp,
-} from 'react-icons/io';
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { useEffect, useRef, useState } from 'react';
 import { GoArrowRight } from 'react-icons/go';
-import { RxCross2 } from 'react-icons/rx';
+import {
+    IoIosArrowDown,
+    IoIosArrowRoundForward,
+    IoIosArrowUp,
+} from 'react-icons/io';
+import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 
 function Navbar() {
   const [showInstrumentsBanner, setShowInstrumentsBanner] = useState(false);

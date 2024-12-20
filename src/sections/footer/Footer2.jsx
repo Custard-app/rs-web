@@ -1,12 +1,11 @@
 'use client'
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
-import './Footer.css';
-import Image from 'next/image';
 import logo from '@/assets/images/Logo.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
 import Link from 'next/link';
-import { FiMail, FiArrowRight } from 'react-icons/fi';
 import { usePathname } from 'next/navigation';
+import { FiMail } from 'react-icons/fi';
+import './Footer.css';
 
 function Footer2() {
   const pathname = usePathname();

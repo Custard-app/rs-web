@@ -1,11 +1,11 @@
 
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import lumsum from '@/assets/icons/lumsum.png';
 import sip from '@/assets/icons/sip.png';
-import swp from '@/assets/icons/swp.png';
 import stp from '@/assets/icons/stp.png';
+import swp from '@/assets/icons/swp.png';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 const AnimatedCards = () => {
   const cardsRef = useRef(null);

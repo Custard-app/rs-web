@@ -1,5 +1,4 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
 import { RiDoubleQuotesL } from 'react-icons/ri';
 import FeedbackTestimonials from './testimonials/FeedbackTestimonials';
 

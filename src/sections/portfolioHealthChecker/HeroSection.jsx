@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import phcimage from '@/assets/images/phcimage.png'; // Replace with your image path
-import { GoArrowRight } from 'react-icons/go';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { GoArrowRight } from 'react-icons/go';
 // import user from '@/assets/icons/user.png'
 import bot from '@/assets/icons/bot.png';
 

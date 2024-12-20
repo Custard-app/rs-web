@@ -1,9 +1,8 @@
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useState } from 'react';
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { GrSubtractCircle } from "react-icons/gr";
+import { useState } from 'react';
 import { CgAdd } from "react-icons/cg";
+import { GrSubtractCircle } from "react-icons/gr";
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);

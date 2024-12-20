@@ -1,29 +1,27 @@
-import dynamic from 'next/dynamic';
-import HeroSection from '@/sections/mutualFunds/HeroSection';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import Image from 'next/image';
-import React from 'react';
-import mutualfund2 from '@/assets/images/mutualfund2.png';
+import axismf from '@/assets/images/axismf.png';
 import birlamf from '@/assets/images/birlamf.png';
 import hdfcmf from '@/assets/images/hdfcmf.png';
-import sbimf from '@/assets/images/sbimf.png';
 import icicimf from '@/assets/images/icicimf.png';
+import mutualfund2 from '@/assets/images/mutualfund2.png';
 import reliancemf from '@/assets/images/reliancemf.png';
-import axismf from '@/assets/images/axismf.png';
-import './mutualfunds.css';
+import sbimf from '@/assets/images/sbimf.png';
 import AdvntMfSection from '@/sections/mutualFunds/AdvntMfSection';
-import MFCarouselSection from '@/sections/mutualFunds/MFCarouselSection';
-import AnimatedCards from '@/sections/mutualFunds/carousel/AnimatedCards';
 import ExploreMFSection from '@/sections/mutualFunds/ExploreMFSection';
+import FAQSection from '@/sections/mutualFunds/FAQSection';
+import GuideMFSection from '@/sections/mutualFunds/GuideMFSection';
+import HeroSection from '@/sections/mutualFunds/HeroSection';
+import JourneyMFSection from '@/sections/mutualFunds/JourneyMFSection';
+import MFCarouselSection from '@/sections/mutualFunds/MFCarouselSection';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import WidthXXL from '@/wrapper/widths/WidthXXL';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { GoArrowRight } from 'react-icons/go';
+import './mutualfunds.css';
 // import ExploreCalculatorsSection from '@/sections/mutualFunds/ExploreCalculatorsSection';
 const ExploreCalculatorsSection = dynamic(() => import('@/sections/mutualFunds/ExploreCalculatorsSection'), {
   ssr: false,
 });
-import JourneyMFSection from '@/sections/mutualFunds/JourneyMFSection';
-import GuideMFSection from '@/sections/mutualFunds/GuideMFSection';
-import FAQSection from '@/sections/mutualFunds/FAQSection';
-import WidthXXL from '@/wrapper/widths/WidthXXL';
-import { GoArrowRight } from 'react-icons/go';
 
 function page() {
   return (

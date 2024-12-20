@@ -1,8 +1,7 @@
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
-import { GoArrowRight } from 'react-icons/go';
-import Image from 'next/image';
 import mutualFundHero from '@/assets/images/mutualfund-hero.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
+import { GoArrowRight } from 'react-icons/go';
 
 function HeroSection() {
   return (

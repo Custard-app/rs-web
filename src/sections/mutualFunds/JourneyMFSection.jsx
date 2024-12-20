@@ -104,7 +104,7 @@
 
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './JourneyMFSection.css';
 
 const cards = [

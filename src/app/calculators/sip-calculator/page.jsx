@@ -1,8 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import WidthXL from '@/wrapper/widths/WidthXL';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
+import { useEffect, useState } from 'react';
 import { GoArrowRight } from 'react-icons/go';
 
 const calculators = [

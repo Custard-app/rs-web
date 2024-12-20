@@ -1,7 +1,5 @@
 'use client';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import WidthXXL from '@/wrapper/widths/WidthXXL';
-import { GoArrowRight } from 'react-icons/go';
 import React, { useEffect, useState } from 'react';
 import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';

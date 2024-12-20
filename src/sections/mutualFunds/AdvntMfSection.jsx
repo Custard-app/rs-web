@@ -1,11 +1,10 @@
-import WidthXL from '@/wrapper/widths/WidthXL'
-import React from 'react'
 import card from '@/assets/icons/card.png';
 import cart from '@/assets/icons/cart.png';
 import flex from '@/assets/icons/flex.png';
 import man from '@/assets/icons/man.png';
 import money from '@/assets/icons/money.png';
 import tax from '@/assets/icons/tax.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 
 function AdvntMfSection() {

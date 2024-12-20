@@ -1,9 +1,8 @@
+import moneyImg from '@/assets/images/money-element.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
-import React from 'react';
-import { GoArrowRight } from 'react-icons/go';
 import Image from 'next/image';
-import moneyImg from '@/assets/images/money-element.png';
+import { GoArrowRight } from 'react-icons/go';
 
 function MagicOfCompounding() {
   return (

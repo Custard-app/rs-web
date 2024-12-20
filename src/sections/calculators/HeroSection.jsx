@@ -1,5 +1,4 @@
 'use client';
-import React, { useState, useEffect } from 'react';
 import one from '@/assets/calculatorIcons/1.svg';
 import two from '@/assets/calculatorIcons/2.svg';
 import four from '@/assets/calculatorIcons/4.svg';
@@ -19,6 +18,7 @@ import dollar2 from '@/assets/calculatorIcons/dollar2.svg';
 import hand from '@/assets/calculatorIcons/hand.svg';
 import plane from '@/assets/calculatorIcons/plane.svg';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 function HeroSection() {
   const [animateArrows, setAnimateArrows] = useState(false);

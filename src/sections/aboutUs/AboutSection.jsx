@@ -1,7 +1,6 @@
+import aboutImg from '@/assets/images/about1.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
-import React from 'react';
-import aboutImg from '@/assets/images/about1.png';
 
 function AboutSection() {
   return (

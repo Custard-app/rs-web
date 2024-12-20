@@ -1,9 +1,8 @@
-import WidthXL from '@/wrapper/widths/WidthXL'
-import Image from 'next/image'
-import React from 'react'
 import moneyBonds from '@/assets/images/bonds-money.png';
 import building from '@/assets/images/building.png';
 import pexels from '@/assets/images/pexels-rdne.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
 
 export default function BasicbondSection() {
   return (

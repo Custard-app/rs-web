@@ -1,9 +1,7 @@
-import React from 'react';
 import heroSectionImage from '@/assets/images/heroImage.png';
-import './Trailblazors.css';
-import { BsPlay } from 'react-icons/bs';
-import { BsPause } from 'react-icons/bs';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
+import { BsPlay } from 'react-icons/bs';
+import './Trailblazors.css';
 
 function TrailblazorsSection() {
   const products = [

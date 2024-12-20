@@ -1,7 +1,6 @@
+import usephcimage from '@/assets/images/usephcimage.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
-import React from 'react';
-import usephcimage from '@/assets/images/usephcimage.png';
 
 function UsePhcSection() {
   return (

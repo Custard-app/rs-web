@@ -1,10 +1,9 @@
 'use client';
-import { useState, useEffect } from 'react';
-import WidthXL from '@/wrapper/widths/WidthXL';
-import React from 'react';
 import dream1 from '@/assets/images/dream1.png';
 import dream2 from '@/assets/images/dream2.png';
 import dream3 from '@/assets/images/dream3.png';
+import WidthXL from '@/wrapper/widths/WidthXL';
+import { useEffect, useState } from 'react';
 
 function Dreamsection() {
   const [activeIndex, setActiveIndex] = useState(0);

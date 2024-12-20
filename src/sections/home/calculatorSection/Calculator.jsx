@@ -1,9 +1,9 @@
 'use client';
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import './Calculator.css';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
+import { useState } from 'react';
+import { Doughnut } from 'react-chartjs-2';
+import './Calculator.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

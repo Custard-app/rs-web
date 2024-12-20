@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import { useState } from 'react';
 
 export default function SalaryCalculator() {
   const [ctc, setCtc] = useState(600000); // CTC input

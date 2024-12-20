@@ -1,10 +1,9 @@
-import React from 'react';
+import bajaj from '@/assets/images/bajaj.png';
 import hdfc from '@/assets/images/hdfc.png';
 import mahindra from '@/assets/images/mahindra.png';
 import pnb from '@/assets/images/pnb.png';
-import bajaj from '@/assets/images/bajaj.png';
-import Image from 'next/image';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import Image from 'next/image';
 
 const InterestRateSection = () => {
   return (
