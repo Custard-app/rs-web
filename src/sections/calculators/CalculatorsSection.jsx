@@ -36,7 +36,7 @@ const calculators = [
         title: 'SSY Calculator',
         description:
           'Should you invest in Sukanya Samriddhi Yojana (SSY)? Check now!',
-        navigation: 'calculators/sukanya samriddhi yojana-calculator',
+        navigation: 'calculators/sukanya-samriddhi-yojana-calculator',
       },
       {
         title: 'SIP Calculator',
@@ -134,7 +134,7 @@ const calculators = [
         title: 'Post Office MIS Calculator',
         description:
           'Calculate returns from the Post Office Monthly Income Scheme (MIS).',
-        navigation: 'calculators/post-office-income-scheme-calculator',
+        navigation: 'calculators/post-office-monthly-income-scheme-calculator',
       },
       {
         title: 'PPF Calculator',
