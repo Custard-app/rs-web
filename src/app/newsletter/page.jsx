@@ -1,7 +1,8 @@
+import dynamic from 'next/dynamic';
 import BecomerichSection from '@/sections/newsLetter/BecomerichSection';
 import FinanceTetrisSection from '@/sections/newsLetter/financeTetris/FinanceTetrisSection';
 import HeroSection from '@/sections/newsLetter/HeroSection';
-import JourneyCarousel from '@/sections/newsLetter/journeyCarousel/JourneyCarousel';
+const JourneyCarousel = dynamic(() => import('@/sections/newsLetter/journeyCarousel/JourneyCarousel'), {  ssr: false,});  
 import PastNewsletterSection from '@/sections/newsLetter/PastNewsletterSection';
 import RoadmapSection from '@/sections/newsLetter/RoadmapSection';
 import React from 'react';
