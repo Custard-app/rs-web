@@ -71,7 +71,7 @@ function JourneyCarousel() {
                 key: index,
                 content: (
                   <div
-                    className={`relative w-[384px] h-[544px] flex flex-col items-center rounded-[20px] shadow-sm ${
+                    className={`relative w-[341px] sm:w-[384px] h-[453px] sm:h-[544px] flex flex-col items-center rounded-[20px] shadow-sm ${
                       index === (goToSlide + 1) % cardData.length
                         ? 'opacity-95'
                         : index === goToSlide
@@ -93,14 +93,15 @@ function JourneyCarousel() {
                     </div>
 
                      {/* Text Overlay */}
-                    <div className=" absolute bg-white bottom-10 -left-20 w-[322px] rounded-xl flex items-center justify-center p-5 z-10">
-                      <p className="font-lato font-semibold text-[20px] text-black">
+                     <div className="absolute bg-white -bottom-10 sm:bottom-2 left-1/2 transform sm:transform-none -translate-x-1/2 sm:-left-28 w-[286px] sm:w-[322px] rounded-xl flex items-center justify-center p-5 z-10">
+
+                      <p className="font-lato font-semibold text-base sm:text-[20px] text-black">
                         {card.text}
                       </p>
                     </div>
 
                      {/* Background Box */}
-                    <div className="w-[384px] h-[544px] rounded-[20px] bg-[#1d716c] absolute left-5 top-5 z-0"></div>
+                    <div className="w-[341px] sm:w-[384px] h-[453px] sm:h-[544px] rounded-[20px] bg-[#1d716c] absolute left-5 top-5 z-0"></div>
                   </div>
                 ),
               }))}
@@ -113,8 +114,8 @@ function JourneyCarousel() {
         </div>
       </WidthXL>
 
-      {/* Circle */}
-      <div className="z-10 absolute bottom-20 left-1/2 transform -translate-x-1/2 flex justify-center items-center gap-5">
+      {/* Button */}
+      <div className="z-10 absolute bottom-10 sm:bottom-20 left-1/2 transform -translate-x-1/2 flex justify-center items-center gap-5">
         <button
           onClick={() => setGoToSlide((prev) => (prev - 1) % cardData.length)}
           className="p-[10px] rounded-full bg-primary text-white flex items-center justify-center shadow-sm hover:bg-teal-800"
@@ -128,7 +129,9 @@ function JourneyCarousel() {
           <GoArrowRight size={25} />
         </button>
       </div>
-      <div className="absolute -left-60 -bottom-8 sm:-left-48 sm:-bottom-72 z-0 w-[690px] h-[690px] sm:w-[1050px] sm:h-[1050px] border-[150px] border-[#03524D] bg-transparent rounded-full"></div>
+
+      {/* Circle */}
+      <div className="absolute -left-60 -bottom-8 sm:-left-48 sm:-bottom-72 z-0 w-[690px] h-[690px] sm:w-[1050px] sm:h-[1050px] border-[110px] sm:border-[150px] border-[#03524D] bg-transparent rounded-full"></div>
     </div>
   );
 }

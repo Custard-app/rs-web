@@ -16,24 +16,23 @@ function RoadmapSection() {
   return (
     <div className="bg-[#1E1E1E]">
       <WidthXXL>
-        <div className="flex flex-col items-center justify-center relative pt-10">
+        <div className="flex flex-col items-center justify-center relative pt-10 h-[680px] sm:h-[880px]">
           {/* Title */}
-          <h1 className="absolute left-2 top-10 text-white font-bold text-4xl sm:text-5xl text-center w-[600px]">
+          <h1 className="absolute left-10 top-10 text-white font-bold text-2xl sm:text-5xl text-start w-[345px] sm:w-[600px] z-10">
           Imagine Having a Clear Roadmap to Navigate your Financial Journey
           </h1>
 
           {/* Roadmap Container */}
-
-          <div className='w-full relative overflow-hidden'>
+          <div className='w-[680px] sm:w-full relative overflow-y-hidden z-0 overflow-x-auto sm:overflow-x-hidden'>
             <Image
               src={newletterSubtract}
               alt="Image"
-              className="object-cover w-full"
+              className="object-cover w-full sm:w-full"
             />
             <Image
               src={newsletterArrow}
               alt="Image"
-              className="absolute top-5 left-4 object-cover w-full"
+              className="absolute top-5 left-4 object-cover w-auto sm:w-full"
             /> 
             {/* Pigi Bank */}
             <Image 
