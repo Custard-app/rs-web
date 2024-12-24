@@ -6,6 +6,7 @@ import Matter from 'matter-js';
 export default function FinanceTetrisSection() {
   const sceneRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  // const hasDropped = useRef(false);
 
   const labels = [
     'Asset Allocation',
@@ -48,7 +49,9 @@ export default function FinanceTetrisSection() {
   }, []);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView ) return;
+
+    // hasDropped.current = true;
 
     // Module aliases
     const Engine = Matter.Engine;
@@ -61,6 +64,7 @@ export default function FinanceTetrisSection() {
 
     // Create engine
     const engine = Engine.create();
+    engine.world.gravity.y = 1; 
 
     // Get container dimensions for responsiveness
     const container = sceneRef.current;
@@ -105,6 +109,8 @@ export default function FinanceTetrisSection() {
       const boxHeight = 46;
       const pill = Bodies.rectangle(x, y, boxWidth, boxHeight, {
         chamfer: { radius: 22 },
+        friction: 0.01, 
+        restitution: 0.5, 
         render: {
           fillStyle: color,
           strokeStyle: '#2c3e50', // Border color
