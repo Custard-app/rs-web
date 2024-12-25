@@ -15,7 +15,7 @@ function RoadmapSection() {
   return (
     <div className="bg-[#1E1E1E]">
       <WidthXXL>
-        <div className="flex flex-col items-center justify-center relative pt-10 h-[680px] sm:h-[880px] ">
+        <div className="flex flex-col items-center justify-center relative pt-8 sm:pt-6 h-[680px] sm:h-[880px] ">
           {/* Title */}
           <h1 className="absolute left-10 top-10 text-white font-bold text-2xl sm:text-5xl text-start w-[345px] sm:w-[600px] z-10">
             Imagine Having a Clear Roadmap to Navigate your Financial Journey

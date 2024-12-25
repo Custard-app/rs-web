@@ -63,18 +63,18 @@ function HeroSection() {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   const videoSources = [
-    '/videos/video-1.mp4',
-    '/videos/video-2.mp4',
-    '/videos/video-3.mp4',
+    '/videos/output-1.mp4',
+    '/videos/output-2.mp4',
+    '/videos/output-3.mp4',
   ];
 
   useEffect(() => {
-    // Play the first video when the component loads
+   
     if (videoRefs[0].current) videoRefs[0].current.play();
 
-    // Event listener for handling video transitions
+    
     const handleVideoEnd = (index) => {
-      const nextVideo = (index + 1) % videoRefs.length; // Calculate the next video index
+      const nextVideo = (index + 1) % videoRefs.length; 
       setCurrentVideo(nextVideo);
       videoRefs[nextVideo].current.play();
     };
@@ -99,7 +99,7 @@ function HeroSection() {
   }, [videoRefs]);
 
   return (
-    <div className="relative h-full sm:h-[100vh] flex flex-col items-center justify-center px-5 sm:px-0">
+    <div className="relative h-full sm:h-[100vh] flex flex-col items-center justify-center px-5 sm:px-0 bg-gray-400">
       {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {videoSources.map((videoSrc, index) => (
@@ -107,6 +107,9 @@ function HeroSection() {
             key={index}
             ref={videoRefs[index]}
             muted
+            playsInline
+            autoPlay
+            preload={currentVideo === index ? "auto" : "none"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
               currentVideo === index ? 'opacity-100' : 'opacity-0'
             }`}
