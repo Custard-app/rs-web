@@ -49,7 +49,7 @@ function Footer2() {
               <Image
                 src={logo}
                 alt="Rupeestop"
-                className="w-[139px] h-[28px] sm:w-49 sm:h-7"
+                className="w-[136px] h-[23px] sm:w-48 sm:h-8"
               />
             </Link>
             <p className="text-xs sm:text-lg font-lato text-justify text-white text-wrap">
