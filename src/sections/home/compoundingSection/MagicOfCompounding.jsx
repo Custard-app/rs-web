@@ -1,15 +1,34 @@
+'use client'
 import moneyImg from '@/assets/images/money-element.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import Image from 'next/image';
 import { GoArrowRight } from 'react-icons/go';
+import Lottie from 'lottie-react'
 
 function MagicOfCompounding() {
   return (
-    <div className="py-24 pt-48 px-5 sm:px-0 bg-accentGray-300 flex flex-col justify-between">
+    <div className="py-24 px-5 sm:px-0 bg-accentGray-300 flex flex-col justify-between">
       <WidthXL>
-        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between mb-20 bg-accentGray-300">
-          <div className='hidden sm:block'>Lottie file animation</div>
+        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between mb-20 bg-accentGray-300 relative">
+          {/* Lottie Animation */}
+          <div className=" w-32 h-32 absolute -top-10 left-[50%] z-10">
+            <Lottie
+              animationData={require('/public/animation/clock.json')} 
+              autoplay
+              loop={true}
+              style={{ width: '100%', height: '100%' }}
+            />
+          </div>
+          {/* Lottie Animation */}
+          <div className="w-full sm:w-[620px] h-96">
+            <Lottie
+              animationData={require('/public/animation/moneyBag.json')} 
+              autoplay
+              loop={true}
+              style={{ width: '100%', height: '100%' }}
+            />
+          </div>
           <div className="flex flex-col items-center sm:items-end justify-start gap-3 sm:gap-10">
             <p className="font-poppins font-bold sm:font-extrabold text-4xl sm:text-6xl flex flex-col items-center sm:items-end justify-center gap-4">
               The Magic of <span>Compounding</span>
@@ -31,7 +50,7 @@ function MagicOfCompounding() {
 
       {/* Card */}
       <WidthXXL>
-        <div className=" bg-primary rounded-[60px] -mb-44 flex flex-col sm:flex-row items-center sm:items-end justify-center gap-10 py-24 relative z-20">
+        <div className=" bg-primary rounded-[60px] -mb-44 flex flex-col sm:flex-row items-center sm:items-end justify-center gap-10 py-24 relative z-20 overflow-hidden">
           <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-6xl flex flex-col items-start justify-center text-gray-200 gap-4 mt-10 sm:mt-0">
             I am gonna make an <span>offer you can&#39;t refuse...</span>
           </p>

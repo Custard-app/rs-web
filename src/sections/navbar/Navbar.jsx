@@ -15,6 +15,7 @@ import {
     IoIosArrowUp,
 } from 'react-icons/io';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
+import AuthModal from '@/app/auth/AuthModal';
 
 function Navbar() {
   const [showInstrumentsBanner, setShowInstrumentsBanner] = useState(false);
@@ -22,6 +23,7 @@ function Navbar() {
   const [isHamOpen, setIsHamOpen] = useState(false);
   const [showInstrumentsNested, setShowInstrumentsNested] = useState(false);
   const [showCalculatorsNested, setShowCalculatorsNested] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navRef = useRef();
 
   const toggleInstrumentsBanner = () => {
@@ -117,12 +119,12 @@ function Navbar() {
                   <Link href="/community">Community</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                  <Link
-                    href="/login"
+                  <button
+                  onClick={() => setIsModalOpen(true)}
                     className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
                   >
                     Login
-                  </Link>
+                  </button>
                   <button
                     onClick={toggleHamburgerMenu}
                     className="block sm:hidden"
@@ -442,6 +444,11 @@ function Navbar() {
           </Link>
         </div>
       </div>
+
+      {/* Render Login Modal */}
+      {isModalOpen && (
+        <AuthModal onClose={() => setIsModalOpen(false)} />
+      )}
     </div>
   );
 }
