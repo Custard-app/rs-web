@@ -119,12 +119,13 @@ function Navbar() {
                   <Link href="/community">Community</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                  <button
-                  onClick={() => setIsModalOpen(true)}
+                  <Link
+                  href="https://invest.rupeestop.com/client-login"
+                  // onClick={() => setIsModalOpen(true)}
                     className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
                   >
                     Login
-                  </button>
+                  </Link>
                   <button
                     onClick={toggleHamburgerMenu}
                     className="block sm:hidden"
