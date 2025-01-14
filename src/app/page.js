@@ -176,10 +176,10 @@ function Home() {
           alt="logo"
           className="w-[136px] h-[23px] sm:w-48 sm:h-8"
         />
-        <h1 className="text-2xl sm:text-3xl font-bold">We'll Be Back Soon!</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold">We&#39;ll Be Back Soon!</h1>
         <p className="text-center text-base sm:text-lg text-wrap text-gray-600">
           Our website is currently undergoing scheduled maintenance. Thank you
-          for your patience. We'll be back online shortly!
+          for your patience. We&#39;ll be back online shortly!
         </p>
         <Link
           href="https://invest.rupeestop.com/client-login"
