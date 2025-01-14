@@ -164,7 +164,7 @@
 
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/Logo.png';
 import Link from 'next/link';
 
 function Home() {
