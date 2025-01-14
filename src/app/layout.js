@@ -1,6 +1,7 @@
 import Footer2 from '@/sections/footer/Footer2';
 import Navbar from '@/sections/navbar/Navbar';
 import './globals.css';
+import Home from './page';
 
 export const metadata = {
   title: 'Rupeestop',
@@ -16,9 +17,10 @@ export default function RootLayout({ children }) {
       {/* <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > */}
-        <Navbar />
-        {children}
-        <Footer2 />
+        {/* <Navbar /> */}
+        {/* {children} */}
+        <Home/>
+        {/* <Footer2 /> */}
       </body>
     </html>
   );
