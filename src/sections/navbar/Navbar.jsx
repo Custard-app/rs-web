@@ -437,11 +437,11 @@ function Navbar() {
             </div>
           )}
           <Link
-            href="/community"
+            href="/newsletter"
             className="font-lato font-semibold text-xl"
             onClick={closeMenu}
           >
-            Community
+            Newsletter
           </Link>
         </div>
       </div>

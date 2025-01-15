@@ -7,12 +7,42 @@
   );
 }
 
-@keyframes slide-back-and-forth {
+/* @keyframes slide-back-and-forth {
     0%, 100% {
       transform: translateX(30%);
     }
     50% {
-      transform: translateX(-30%); /* Adjust distance as needed */
+      transform: translateX(-30%); 
+    }
+  } */
+
+
+  @keyframes slide-pendulum {
+    0% {
+      transform: translateX(30%); /* Start with the first card fully visible */
+    }
+    50% {
+      transform: translateX(-30%) ; /* Move to show the last card */
+    }
+    100% {
+      transform: translateX(30%); /* Return to the first card */
     }
   }
+
+
+  @media (max-width: 768px) {
+    @keyframes slide-pendulum {
+      0% {
+        transform: translateX(200%); /* Start with the first card fully visible */
+      }
+      50% {
+        transform: translateX(-200%) ; /* Move to show the last card */
+      }
+      100% {
+        transform: translateX(200%); /* Return to the first card */
+      }
+    }
+  }
+  
+  
   

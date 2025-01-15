@@ -66,16 +66,16 @@ function Footer2() {
               <div className="w-14 h-[1px] bg-accentOrange-200 rounded-md"></div>
             </div>
             <div className="flex flex-col items-start justify-center gap-3">
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/aboutus" className="font-lato font-medium text-sm">
                 About us
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/calculators" className="font-lato font-medium text-sm">
                 Calculators
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
-                Community
+              <Link href="/newsletter" className="font-lato font-medium text-sm">
+                Newsletter
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/portfolio-health-checker" className="font-lato font-medium text-sm">
                 Portfolio Health Checker
               </Link>
             </div>
@@ -88,16 +88,16 @@ function Footer2() {
               <div className="w-14 h-[1px] bg-accentOrange-200 rounded-md"></div>
             </div>
             <div className="flex flex-col items-start justify-center gap-3">
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/mutualfunds" className="font-lato font-medium text-sm">
                 Mutual Funds
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/fixeddeposits" className="font-lato font-medium text-sm">
                 Fixed Deposits
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/portfolio-management-services" className="font-lato font-medium text-sm">
                 Portfolio Management System
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/bonds" className="font-lato font-medium text-sm">
                 Bonds
               </Link>
             </div>
@@ -133,16 +133,16 @@ function Footer2() {
                   <div className="w-12 h-[1px] bg-accentOrange-200 rounded-md"></div>
                 </div>
                 <div className="flex flex-col items-start justify-center gap-3">
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/aboutus" className="font-lato font-medium text-xs">
                     About us
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/calculators" className="font-lato font-medium text-xs">
                     Calculators
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
-                    Community
+                  <Link href="/newsletter" className="font-lato font-medium text-xs">
+                  Newsletter
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/portfolio-health-checker" className="font-lato font-medium text-xs">
                     Portfolio Health Checker
                   </Link>
                 </div>
@@ -157,16 +157,16 @@ function Footer2() {
                   <div className="w-12 h-[1px] bg-accentOrange-200 rounded-md"></div>
                 </div>
                 <div className="flex flex-col items-start justify-center gap-3">
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/mutualfunds" className="font-lato font-medium text-xs">
                     Mutual Funds
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/fixeddeposits" className="font-lato font-medium text-xs">
                     Fixed Deposits
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/portfolio-management-services" className="font-lato font-medium text-xs">
                     Portfolio Management System
                   </Link>
-                  <Link href="#" className="font-lato font-medium text-xs">
+                  <Link href="/bonds" className="font-lato font-medium text-xs">
                     Bonds
                   </Link>
                 </div>

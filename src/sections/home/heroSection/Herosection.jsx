@@ -7,22 +7,6 @@ import Width3XL from '@/wrapper/widths/Width3XL';
 import axios from 'axios';
 
 function Herosection() {
-  useEffect(() => {
-    const NSE_URL =
-      'https://www.nseindia.com/live_market/dynaContent/live_watch/stock_watch/niftyStockWatch.json';
-
-    const getNiftyMarquee = async () => {
-      try {
-        const response = axios.get(NSE_URL);
-        const data = response.data;
-        console.log('Nifthy data:', data);
-      } catch (error) {
-        console.error('Error scraping NSE data', error);
-      }
-    };
-
-    getNiftyMarquee();
-  }, []);
 
   return (
     <div className="bg-teal-900 overflow-hidden relative w-full z-0">

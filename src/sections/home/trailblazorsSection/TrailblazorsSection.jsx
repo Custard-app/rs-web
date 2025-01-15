@@ -1,4 +1,10 @@
-import heroSectionImage from '@/assets/images/heroImage.png';
+import client1 from '@/assets/clientsImages/client1.jpg';
+import client2 from '@/assets/clientsImages/client2.jpg';
+import client3 from '@/assets/clientsImages/client3.jpg';
+import client4 from '@/assets/clientsImages/client4.jpg';
+import client5 from '@/assets/clientsImages/client5.jpg';
+import client6 from '@/assets/clientsImages/client6.jpg';
+import client7 from '@/assets/clientsImages/client7.jpg';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { BsPlay } from 'react-icons/bs';
 import './Trailblazors.css';
@@ -6,52 +12,46 @@ import './Trailblazors.css';
 function TrailblazorsSection() {
   const products = [
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client1,
+      heading: 'Dr. Aman Setia',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        'CA. ,CS.',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client2,
+      heading: 'Dharmendra Shekhar',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        'CA',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client3,
+      heading: 'Neha Jhunjhunwala',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        ' Energy consultant',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client4,
+      heading: 'Rohit',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        'Silver Jeweller in Jaipur and have passion to travel.',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client5,
+      heading: 'Shakti Singh',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        'A young business guy dealing in medical equipment supplies.',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client6,
+      heading: 'Shardha',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        'CA works in mnc and Puneet marketing Personal in Big Indian company.',
     },
     {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
+      image: client7,
+      heading: 'Sunny ',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
-    },
-    {
-      image: heroSectionImage,
-      heading: 'Robert Fox',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+        ' IT professional in Delhi.',
     },
   ];
   return (
@@ -71,7 +71,7 @@ function TrailblazorsSection() {
         <div
           className="flex items-center justify-center gap-10 animate-slide-back-and-forth"
           style={{
-            animation: 'slide-back-and-forth 20s ease-in-out infinite',
+            animation: 'slide-pendulum 10s ease-in-out infinite',
           }}
         >
           {products.map((product, index) => (

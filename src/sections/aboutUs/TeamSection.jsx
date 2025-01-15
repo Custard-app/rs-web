@@ -1,5 +1,39 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import TeamCard from './cards/TeamCard';
+import team1 from '@/assets/teamsImages/team1.jpg';
+import team2 from '@/assets/teamsImages/team2.jpg';
+import team3 from '@/assets/teamsImages/team3.jpg';
+
+const teamsData = [
+  {
+    name: 'Mohit Sharma',
+    position: 'Position',
+    img: team1,
+    twitter: '#',
+    linkedin: '#',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+  },
+  {
+    name: 'Pamita Sharma',
+    position: 'Position',
+    img: team2,
+    twitter: '#',
+    linkedin: '#',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+  },
+  {
+    name: 'Dhiraj Sharma',
+    position: 'Position',
+    img: team3,
+    twitter: '#',
+    linkedin: '#',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+  },
+  
+]
 
 function TeamSection() {
   return (
@@ -21,9 +55,14 @@ function TeamSection() {
             </p>
           </div>
           <div className='flex flex-col sm:flex-row gap-4 sm:gap-10'>
-            <TeamCard />
-            <TeamCard />
-            <TeamCard />
+            {
+              teamsData.map((team, index) => (
+                <TeamCard
+                  key={index}
+                  team={team}
+                />
+              ))
+            }
           </div>
         </div>
       </WidthXL>
