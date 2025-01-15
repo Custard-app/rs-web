@@ -116,7 +116,7 @@ function Navbar() {
                   >
                     Calculators {showCalculatorsBanner ? <IoIosArrowUp size={20}/> : <IoIosArrowDown size={20}/>}
                   </button>
-                  <Link href="/community">Community</Link>
+                  <Link href="/newsletter">Newsletter</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <Link

@@ -38,16 +38,16 @@ function Footer() {
               <div className="w-14 h-[1px] bg-accentOrange-200 rounded-md"></div>
             </div>
             <div className="flex flex-col items-start justify-center gap-3">
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/aboutus" className="font-lato font-medium text-sm">
                 About us
               </Link>
               <Link href="#" className="font-lato font-medium text-sm">
                 Calculators
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
-                Community
+              <Link href="/newsletter" className="font-lato font-medium text-sm">
+                Newsletter
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/" className="font-lato font-medium text-sm">
                 Portfolio Health Checker
               </Link>
             </div>
