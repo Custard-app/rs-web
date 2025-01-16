@@ -168,7 +168,7 @@
 
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/Logo.png';
 import Link from 'next/link';
 
 function Home() {
@@ -180,10 +180,10 @@ function Home() {
           alt="logo"
           className="w-[136px] h-[23px] sm:w-48 sm:h-8"
         />
-        <h1 className="text-2xl sm:text-3xl font-bold">We'll Be Back Soon!</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold">We&quot;ll Be Back Soon!</h1>
         <p className="text-center text-gray-600">
           Our website is currently undergoing scheduled maintenance. Thank you
-          for your patience. We'll be back online shortly!
+          for your patience. We&quot;ll be back online shortly!
         </p>
         <Link
           href="https://invest.rupeestop.com/client-login"
