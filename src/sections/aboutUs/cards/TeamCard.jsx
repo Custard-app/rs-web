@@ -8,7 +8,7 @@ function TeamCard({ team }) {
       <div className="w-full flex items-start justify-between">
         <div>
           <p className="font-lato font-medium text-[22px]">{team.name}</p>
-          <p className="font-lato text-base text-primary">{team.position}</p>
+          {/* <p className="font-lato text-base text-primary">{team.position}</p> */}
         </div>
         <div className="flex items-center gap-2">
           <Link href={team.twitter}>
