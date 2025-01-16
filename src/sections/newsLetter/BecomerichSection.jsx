@@ -3,6 +3,7 @@ import React from 'react';
 import { FiMail } from 'react-icons/fi';
 import undrawUunderline from '@/assets/icons/undraw_fun-underline.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BecomerichSection = () => {
   return (
@@ -28,7 +29,7 @@ const BecomerichSection = () => {
             early retirement or something you don&#39;t even know of.
           </p>
           <div className="flex items-center gap-4 flex-col sm:flex-row mt-10">
-            <div className="flex items-start justify-center backdrop-blur-sm rounded-full border border-white">
+            <div className="hidden items-start justify-center backdrop-blur-sm rounded-full border border-white">
               <div className="relative w-full max-w-md flex items-center justify-between">
                 {/* Email Icon and Placeholder */}
                 <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
@@ -43,10 +44,13 @@ const BecomerichSection = () => {
                 />
               </div>
             </div>
-            <button className="relative flex items-center justify-center w-[80%] sm:w-full bg-[#698f1c] py-[12px] px-5 rounded-full z-5 appearance-none border-transparent border-b-[6px] font-bold text-black text-base sm:text-[20px] capitalize transform transition-transform duration-200">
+            <Link
+             href="https://rupeesorted.substack.com/"
+          target='_blank'
+            className="relative flex items-center justify-center w-[100%] sm:w-full bg-[#698f1c] py-[12px] px-5 rounded-full z-5 appearance-none border-transparent border-b-[6px] font-semibold text-black text-base sm:text-[20px] capitalize transform transition-transform duration-200">
               <p>Yes, I Want To Build Health!</p>
               <span className="absolute inset-0 rounded-full bg-accentLime border-transparent border-b-4 -z-10"></span>
-            </button>
+            </Link>
           </div>
         </div>
       </WidthXL>

@@ -1,5 +1,6 @@
 import pms from '@/assets/images/pms-hero.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoArrowRight } from 'react-icons/go';
 
 function HeroSection() {
@@ -12,14 +13,17 @@ function HeroSection() {
         <h3 className="font-poppins font-semibold text-[28px] sm:text-[34px] text-wrap text-center text-gray-100">
           Customized investment solutions for high net-worth individuals
         </h3>
-        <button className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
+        <Link
+        href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+        className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
           <p className="text-black font-semibold text-base capitalize">
             Invest in PMS
           </p>
           <span className="bg-gray-50 rounded-full text-black p-2 ml-4">
             <GoArrowRight size={25} />
           </span>
-        </button>
+        </Link>
       </div>
 
       {/*(Image with Overlay) */}

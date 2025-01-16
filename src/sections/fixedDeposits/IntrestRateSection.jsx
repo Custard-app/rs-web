@@ -4,12 +4,13 @@ import mahindra from '@/assets/images/mahindra.png';
 import pnb from '@/assets/images/pnb.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const InterestRateSection = () => {
   return (
     <div className="bg-[#FFFBF7] py-14 sm:py-24 px-5 sm:px-0">
       <WidthXL>
-        <div className='flex flex-col gap-24'>
+        <div className="flex flex-col gap-24">
           {/* HDFC */}
           <div className="flex flex-col sm:flex-row items-center gap-10">
             {/* Left Section */}
@@ -21,9 +22,9 @@ const InterestRateSection = () => {
                 HDFC Limited
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
-                by two leading credit rating agencies (CRISIL and ICRA) for the
-                last 23 years.
+                Corporate Fixed Deposits of HDFC Limited have been rated
+                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
+                ICRA) for the last 23 years.
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
@@ -39,9 +40,13 @@ const InterestRateSection = () => {
                   Quick loan against deposit facility
                 </li>
               </ul>
-              <button className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl">
+              <Link
+                href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+                className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl"
+              >
                 Invest Now
-              </button>
+              </Link>
             </div>
 
             {/* Right Section */}
@@ -131,9 +136,9 @@ const InterestRateSection = () => {
                 Mahindra & Mahindra
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
-                by two leading credit rating agencies (CRISIL and ICRA) for the
-                last 23 years.
+                Corporate Fixed Deposits of HDFC Limited have been rated
+                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
+                ICRA) for the last 23 years.
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
@@ -149,9 +154,13 @@ const InterestRateSection = () => {
                   Quick loan against deposit facility
                 </li>
               </ul>
-              <button className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl">
+              <Link
+                href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+                className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl"
+              >
                 Invest Now
-              </button>
+              </Link>
             </div>
 
             {/* Right Section */}
@@ -241,9 +250,9 @@ const InterestRateSection = () => {
                 PNB Housing Finance
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
-                by two leading credit rating agencies (CRISIL and ICRA) for the
-                last 23 years.
+                Corporate Fixed Deposits of HDFC Limited have been rated
+                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
+                ICRA) for the last 23 years.
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
@@ -259,9 +268,13 @@ const InterestRateSection = () => {
                   Quick loan against deposit facility
                 </li>
               </ul>
-              <button className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl">
+              <Link
+                href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+                className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl"
+              >
                 Invest Now
-              </button>
+              </Link>
             </div>
 
             {/* Right Section */}
@@ -351,9 +364,9 @@ const InterestRateSection = () => {
                 Bajaj Finserv
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated &#39;AAA&#39;
-                by two leading credit rating agencies (CRISIL and ICRA) for the
-                last 23 years.
+                Corporate Fixed Deposits of HDFC Limited have been rated
+                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
+                ICRA) for the last 23 years.
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
@@ -369,9 +382,13 @@ const InterestRateSection = () => {
                   Quick loan against deposit facility
                 </li>
               </ul>
-              <button className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl">
+              <Link
+                href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+                className="mt-6 bg-primary text-white px-6 py-2 rounded-3xl"
+              >
                 Invest Now
-              </button>
+              </Link>
             </div>
 
             {/* Right Section */}

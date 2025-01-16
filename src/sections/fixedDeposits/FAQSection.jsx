@@ -9,34 +9,29 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'Is there a free trial available?',
+      question: "What is a fixed deposit (FD)?",
       answer:
-        'Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.',
+        "A fixed deposit is a financial instrument where you deposit a lump sum for a fixed period at a predetermined interest rate, earning guaranteed returns.",
     },
     {
-      question: 'Can I change my plan later?',
+      question: "What is the minimum and maximum tenure for an FD?",
       answer:
-        'To start investing, you can consult a financial advisor or choose a trusted platform to create an account, research funds, and make your first investment.',
+        "The tenure varies between financial institutions, usually ranging from 7 days to 10 years.",
     },
     {
-      question: 'What is your cancellation policy?',
+      question: "Are the returns on fixed deposits taxable?",
       answer:
-        'Benefits include professional management, diversification, transparency, flexibility, tax efficiency, and liquidity.',
+        "Yes, the interest earned on FDs is taxable as per your income tax slab. Tax-saving FDs offer deductions under Section 80C, but the interest is still taxable.",
     },
     {
-      question: 'Can other info be added to an invoice?',
+      question: "Can I withdraw my FD before maturity?",
       answer:
-        'Yes, mutual funds offer flexibility in withdrawal. However, there might be some exit load charges depending on the fund and holding period.',
+        "Yes, but premature withdrawals may incur penalties, and you may earn a lower interest rate than agreed.",
     },
     {
-      question: 'How does billing work?',
+      question: "How does a fixed deposit compare with other investments?",
       answer:
-        'While all investments carry some risk, mutual funds are managed by professional fund managers and offer various levels of risk to suit different investors.',
-    },
-    {
-      question: 'How do I change my account email?',
-      answer:
-        'While all investments carry some risk, mutual funds are managed by professional fund managers and offer various levels of risk to suit different investors.',
+        "FDs are low-risk investments offering guaranteed returns, but they generally provide lower returns compared to market-linked options like mutual funds or bonds.",
     },
   ];
 

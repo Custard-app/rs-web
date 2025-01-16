@@ -164,8 +164,8 @@ function Calculator() {
           </div>
 
           {/* Right part */}
-          <div className="flex flex-col items-center w-full sm:w-[45%] gap-9">
-            <div className='w-[280px] h-[280px] mx-auto'>
+          <div className="flex flex-col items-center justify-center w-full sm:w-[45%] gap-9">
+            <div className='w-[280px] h-[280px] mx-0 sm:mx-auto'>
               <Doughnut data={doughnutData} options={doughnutOptions} />
             </div>
 

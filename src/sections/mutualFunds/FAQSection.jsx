@@ -8,29 +8,29 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is a mutual fund?",
+      question: "What are mutual funds, and how do they work?",
       answer:
-        "A mutual fund is a type of investment where money from multiple investors is pooled together to buy securities like stocks, bonds, and other assets.",
+        "Mutual funds pool money from multiple investors to invest in a diversified portfolio of stocks, bonds, or other securities. Professional fund managers manage these investments.",
     },
     {
-      question: "How do I start investing in mutual funds?",
+      question: "What types of mutual funds are available?",
       answer:
-        "To start investing, you can consult a financial advisor or choose a trusted platform to create an account, research funds, and make your first investment.",
+        "There are various types, including equity funds, debt funds, hybrid funds, and sectoral/thematic funds, each with different risk and return profiles.",
     },
     {
-      question: "What are the benefits of investing in mutual funds?",
+      question: "How are mutual fund returns taxed?",
       answer:
-        "Benefits include professional management, diversification, transparency, flexibility, tax efficiency, and liquidity.",
+        "Taxation depends on the type of fund and holding period. For example, short-term and long-term capital gains on equity and debt funds are taxed differently.",
     },
     {
-      question: "Can I withdraw my money from a mutual fund anytime?",
+      question: "Are mutual funds safe to invest in?",
       answer:
-        "Yes, mutual funds offer flexibility in withdrawal. However, there might be some exit load charges depending on the fund and holding period.",
+        "Mutual funds are subject to market risks. The level of risk depends on the type of fund. Equity funds carry higher risks, while debt funds are relatively safer.",
     },
     {
-      question: "Are mutual funds safe?",
+      question: "How do I choose the right mutual fund for my goals?",
       answer:
-        "While all investments carry some risk, mutual funds are managed by professional fund managers and offer various levels of risk to suit different investors.",
+        "Consider your financial goals, risk tolerance, investment horizon, and the fund's past performance before selecting a mutual fund.",
     },
   ];
 

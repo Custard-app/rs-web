@@ -322,7 +322,7 @@ function Navbar() {
 
       {/* Full-Screen Hamburger Menu */}
       <div
-        className={`fixed w-full inset-y-0 right-0 bg-[#151515] z-50 transition-transform transform ${
+        className={`fixed w-full inset-y-0 right-0 bg-[#151515] z-50 overflow-y-auto transition-transform transform ${
           isHamOpen ? 'translate-x-0' : 'translate-x-full'
         } sm:hidden`}
       >
@@ -426,7 +426,7 @@ function Navbar() {
               </Link>
             <Link 
             href="/calculators"
-                className="font-lato font-medium text-base text-orange-400 flex items-center gap-28"
+                className="font-lato font-medium text-base text-orange-400 flex items-center gap-24"
                 onClick={closeMenu}
               >
                 Explore All Calculators{' '}

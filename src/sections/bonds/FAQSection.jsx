@@ -9,30 +9,31 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is a portfolio health checker?",
+      question: "What are bonds, and how do they work?",
       answer:
-        "A portfolio health checker is a tool or service that analyzes your investment portfolio to assess its performance, diversification, risk level, and alignment with your financial goals.",
+        "Bonds are fixed-income securities where investors lend money to issuers (corporations or governments) in exchange for periodic interest payments and principal repayment at maturity.",
     },
     {
-      question: "How does a portfolio health checker work?",
+      question: "What types of bonds can I invest in?",
       answer:
-        "It evaluates key factors such as asset allocation, historical performance, risk exposure, and alignment with market conditions. Some tools provide recommendations to optimize the portfolio.",
+        "Bonds include government bonds, corporate bonds, municipal bonds, and tax-free bonds, each with different risk levels and returns.",
     },
     {
-      question: "What information do I need to provide for a portfolio health check?",
+      question: "Are bonds risk-free investments?",
       answer:
-        "You typically need to share details about your current investments, such as asset classes (equity, debt, etc.), fund names, investment amounts, and holding periods.",
+        "Bonds carry risks such as credit risk, interest rate risk, and inflation risk. Government bonds are considered safer than corporate bonds.",
     },
     {
-      question: "How often should I use a portfolio health checker?",
+      question: "How are bond returns taxed?",
       answer:
-        "It's advisable to review your portfolio health at least annually or when there are significant changes in your financial goals, market conditions, or income levels.",
+        "Interest earned from bonds is taxable as per your income tax slab. Some bonds, like tax-free bonds, are exempt from income tax on interest.",
     },
     {
-      question: "Is the portfolio health checker suitable for all types of investors?",
+      question: "How do bonds compare with fixed deposits?",
       answer:
-        "Yes, it benefits all investors, from beginners to seasoned investors, by providing insights into improving returns, managing risks, and achieving financial goals efficiently.",
-    }
+        "Bonds may offer higher returns than fixed deposits but with higher risks. They also provide potential capital appreciation, unlike fixed deposits.",
+    },
+    
   ];
 
   const toggleFAQ = (index) => {

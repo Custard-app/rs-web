@@ -12,7 +12,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+      "Mohit Sharma",
   },
   {
     name: 'Pamita Sharma',
@@ -21,7 +21,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+      "Pamita, joyful and ever ready to help; make team understand the female perspective and adding ‘Naari’ shakti to RupeeStop’s attitude.  A service enthusiast always working on making investment journey smooth & rewarding for our clients and adding Softness & Joy to RupeeStop's service attitude.",
   },
   {
     name: 'Dhiraj Sharma',
@@ -30,7 +30,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dui libero, rhoncus in ullamcorper vitae, pharetra vel nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere ',
+      "With two decades of experience in Financial and hospitality Industry, Dhiraj brings in customer first attitude. His unbiased approach, his illogical questions and novice thinking about the investment products gives us understanding to serve you with our best.",
   },
   
 ]

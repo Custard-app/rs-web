@@ -53,11 +53,11 @@ export default function Home() {
               <div className="absolute sm:hidden top-14 left-4 w-14 h-14">
                 <Image src={arrow} alt="icon" />
               </div>
-              <div className="flex flex-col items-center justify-center mt-20 gap-8">
+              <div className="flex flex-col items-center justify-center mt-20 gap-8 ">
                 <h1 className="hidden sm:block font-extrabold font-poppins text-5xl sm:text-7xl uppercase text-white text-center">
                   Aaj ki taaza khabar
                 </h1>
-                <h1 className="flex flex-col items-center sm:hidden font-extrabold font-poppins text-5xl sm:text-7xl uppercase text-white text-center">
+                <h1 className="flex flex-col items-center sm:hidden font-extrabold font-poppins text-[43px] sm:text-7xl uppercase text-white text-center">
                   Aaj ki
                   <span>taaza khabar</span>
                 </h1>
@@ -65,7 +65,7 @@ export default function Home() {
                   Stay Updated with the Latest News in Finance.
                 </p>
                 <div className="flex items-center justify-center">
-                  <div className="relative w-[80%] sm:w-full max-w-md flex items-center justify-between">
+                  <div className="relative w-[70%] sm:w-full max-w-md flex items-center justify-between">
                     {/* Email Icon and Placeholder */}
                     <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
                       <FiMail className="text-gray-500" />

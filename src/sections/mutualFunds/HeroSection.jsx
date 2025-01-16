@@ -1,6 +1,7 @@
 import mutualFundHero from '@/assets/images/mutualfund-hero.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoArrowRight } from 'react-icons/go';
 
 function HeroSection() {
@@ -19,14 +20,17 @@ function HeroSection() {
             Mutual funds are completely transparent, professionally managed, and
             provide easy withdrawals and better tax-efficient returns.
           </p>
-          <button className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+          target='_blank'
+          className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
             <p className="text-black font-semibold text-sm sm:text-base capitalize">
               Chat With Us
             </p>
             <span className="bg-gray-50 rounded-full text-black p-2 ml-4">
               <GoArrowRight size={24} />
             </span>
-          </button>
+          </Link>
         </div>
       </WidthXL>
       {/* Right Section (Image with Overlay) */}

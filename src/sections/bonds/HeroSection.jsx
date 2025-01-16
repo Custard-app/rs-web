@@ -3,6 +3,7 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import { GoArrowRight, GoDotFill } from 'react-icons/go';
 import '../../app/bonds/bonds.css';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -19,14 +20,17 @@ export default function HeroSection() {
             They are often categorized based on tax status, credit quality,
             issuer type, maturity, and whether they are secured or unsecured.
           </p>
-          <button className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+                target="_blank"
+          className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
             <p className="text-black font-semibold text-sm sm:text-base capitalize">
               Chat With Us
             </p>
             <span className="bg-gray-50 rounded-full text-black p-2 ml-4">
               <GoArrowRight size={24} />
             </span>
-          </button>
+          </Link>
         </div>
       </WidthXL>
       {/* Right Section (Image) */}

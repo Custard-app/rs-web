@@ -16,7 +16,7 @@ export default function BasicbondSection() {
                     <p>These bonds also trade in the secondary market, where you can <strong>buy and sell them even before maturity.</strong> Their prices may be impacted by interest rate movements; as interest rates rise, bond prices fall, and vice versa. However, if you hold your bond until maturity, the principal along with the <strong>promised interest will be paid in full.</strong></p>
                 </div>
                 <div className='bg-primary py-5 sm:py-12 px-5 sm:px-7 flex flex-col gap-[26px] rounded-[20px]'>
-                    <div className='w-[353px] sm:w-[427px] h-full sm:h-[300px] flex gap-3'>
+                    <div className='w-full sm:w-[427px] h-full sm:h-[300px] flex gap-3'>
                         <Image src={moneyBonds} alt='images' className='h-[214px] sm:h-full w-[143px] sm:w-[195px] rounded-[10px]'/>
                         <div className='flex flex-col gap-3'>
                             <Image src={building} alt='images' className='w-[175px] sm:w-[222px] h-[102px] sm:h-[140px] rounded-[10px]'/>

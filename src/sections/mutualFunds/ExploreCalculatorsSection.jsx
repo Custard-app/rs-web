@@ -58,7 +58,7 @@ const ExploreCalculatorsSection = () => {
   }, []);
 
   return (
-    <div className="relative bg-white pb-14 sm:pb-24 pt-0 sm:pt-24 px-5 sm:px-0 h-[100vh] sm:h-[500px]">
+    <div className="relative bg-white pb-14 sm:pb-24 pt-0 sm:pt-24 px-5 sm:px-0 h-[120vh] sm:h-[500px]">
       <WidthXL>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-52 sm:gap-20">
           {/* Left Heading */}

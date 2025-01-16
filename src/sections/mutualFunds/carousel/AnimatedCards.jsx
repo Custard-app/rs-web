@@ -5,6 +5,7 @@ import sip from '@/assets/icons/sip.png';
 import stp from '@/assets/icons/stp.png';
 import swp from '@/assets/icons/swp.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 const AnimatedCards = () => {
@@ -53,9 +54,12 @@ const AnimatedCards = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <button className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+          target='_blank'
+          className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
             Invest Now
-          </button>
+          </Link>
         </div>
       </div>
       {/* card 1 end */}
@@ -77,9 +81,12 @@ const AnimatedCards = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <button className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+          target='_blank'
+          className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
             Invest Now
-          </button>
+          </Link>
         </div>
       </div>
       {/* card 2 end */}
@@ -101,9 +108,12 @@ const AnimatedCards = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <button className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+          target='_blank'
+          className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
             Invest Now
-          </button>
+          </Link>
         </div>
       </div>
       {/* card 3 end */}
@@ -125,9 +135,12 @@ const AnimatedCards = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <button className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
+          <Link
+          href="https://calendly.com/llprupeestop/30min"
+          target='_blank'
+          className="px-8 py-2 bg-[#C1F558] font-lato font-medium text-[20px] text-black rounded-3xl">
             Invest Now
-          </button>
+          </Link>
         </div>
       </div>
       {/* card 4 end */}

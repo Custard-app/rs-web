@@ -5,6 +5,7 @@ import { GoArrowRight } from 'react-icons/go';
 import heroImage from '@/assets/images/heroImage.png';
 import Width3XL from '@/wrapper/widths/Width3XL';
 import axios from 'axios';
+import Link from 'next/link';
 
 function Herosection() {
 
@@ -18,14 +19,17 @@ function Herosection() {
         <p className="text-accentGray-400 font-poppins text-base sm:text-xl font-light mt-4">
           Automate your financial decisions with us
         </p>
-        <button className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
+        <Link 
+        href="https://calendly.com/llprupeestop/30min"
+        target='_blank'
+        className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
           <p className="text-black font-semibold text-sm sm:text-base capitalize">
             I want to invest{' '}
           </p>
           <span className="bg-gray-50 rounded-full text-black p-2 ml-4">
             <GoArrowRight size={24} />
           </span>
-        </button>
+        </Link>
 
         <div className="mt-10 bg-gradient1 z-10 rounded-t-xl">
           <Image

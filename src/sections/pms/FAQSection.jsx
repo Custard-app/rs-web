@@ -9,30 +9,31 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is a portfolio health checker?",
+      question: "What is Portfolio Management Services (PMS)?",
       answer:
-        "A portfolio health checker is a tool or service that analyzes your investment portfolio to assess its performance, diversification, risk level, and alignment with your financial goals.",
+        "PMS is a tailored investment service where professional portfolio managers create and manage a customized portfolio of stocks, bonds, or other assets for high-net-worth individuals (HNIs).",
     },
     {
-      question: "How does a portfolio health checker work?",
+      question: "What is the minimum investment required for PMS?",
       answer:
-        "It evaluates key factors such as asset allocation, historical performance, risk exposure, and alignment with market conditions. Some tools provide recommendations to optimize the portfolio.",
+        "As per SEBI regulations, the minimum investment required to avail of PMS is ₹50 lakhs.",
     },
     {
-      question: "What information do I need to provide for a portfolio health check?",
+      question: "How does PMS differ from mutual funds?",
       answer:
-        "You typically need to share details about your current investments, such as asset classes (equity, debt, etc.), fund names, investment amounts, and holding periods.",
+        "PMS offers a personalized investment strategy and direct ownership of securities, whereas mutual funds pool investments from various investors into a common portfolio.",
     },
     {
-      question: "How often should I use a portfolio health checker?",
+      question: "What are the charges for PMS?",
       answer:
-        "It's advisable to review your portfolio health at least annually or when there are significant changes in your financial goals, market conditions, or income levels.",
+        "PMS charges typically include a fixed management fee and a performance fee based on returns. Additional charges may apply for transactions and custody.",
     },
     {
-      question: "Is the portfolio health checker suitable for all types of investors?",
+      question: "Is PMS suitable for all investors?",
       answer:
-        "Yes, it benefits all investors, from beginners to seasoned investors, by providing insights into improving returns, managing risks, and achieving financial goals efficiently.",
-    }
+        "PMS is best suited for HNIs with a high-risk appetite and a desire for personalized portfolio management. Retail investors may find mutual funds or other instruments more suitable.",
+    },
+    
   ];
 
   const toggleFAQ = (index) => {

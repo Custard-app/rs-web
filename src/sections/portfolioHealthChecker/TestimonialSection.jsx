@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 const testimonialsData = [
   {
-    name: 'Investor A',
-    username: 'investorA',
+    name: 'Dr. Aman Setia',
+    username: '...',
     image: 'https://via.placeholder.com/48', // Replace with actual image URLs
     stars: 3,
     feedback:
       'The Portfolio Health Checker helped me understand where my investments were falling short. The recommendations were spot on and easy to implement.',
   },
   {
-    name: 'Investor B',
-    username: 'investorB',
+    name: 'Dharmendra ',
+    username: '...',
     image: 'https://via.placeholder.com/48', // Replace with actual image URLs
     stars: 5,
     feedback:
@@ -22,15 +22,16 @@ const testimonialsData = [
 
 const TestimonialSection = () => {
   return (
-    <section className="bg-[#FFFBF7] py-16 px-8 text-center">
+    <section className="bg-[#FFFBF7] py-16 text-center">
       <WidthXL>
+        <div className='w-full flex flex-col items-center justify-center'>
         <h2 className="font-poppins font-semibold text-[32px] sm:text-5xl text-gray-800 mb-2">
           Clients Cheers for us!
         </h2>
         <p className="font-lato text-sm sm:text-[20px] text-gray-600 mb-8">
           Find out how our clients are spreading the word
         </p>
-        <div className="flex flex-col sm:flex-row justify-center mx-auto gap-6">
+        <div className="flex flex-col sm:flex-row justify-center mx-0 sm:mx-auto gap-6">
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}
@@ -72,6 +73,7 @@ const TestimonialSection = () => {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </WidthXL>
     </section>

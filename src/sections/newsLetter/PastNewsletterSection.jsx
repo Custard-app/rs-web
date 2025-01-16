@@ -2,32 +2,20 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import React from 'react';
 import arrow from '@/assets/images/newsletterArrow.png';
+import Link from 'next/link';
 
 const data = [
   {
     id: 1,
-    date: '21 October 2024',
-    title: 'Starting a New thread with Big News',
+    date: 'Jan 04, 2025',
+    title: 'Achieving 1cr without going to KBC',
+    link: "https://rupeesorted.substack.com/p/achieving-1cr-without-going-to-kbc"
   },
   {
     id: 2,
-    date: '21 October 2024',
-    title: 'Starting a New thread with Big News',
-  },
-  {
-    id: 3,
-    date: '21 October 2024',
-    title: 'Starting a New thread with Big News',
-  },
-  {
-    id: 4,
-    date: '21 October 2024',
-    title: 'Starting a New thread with Big News',
-  },
-  {
-    id: 5,
-    date: '21 October 2024',
-    title: 'Starting a New thread with Big News',
+    date: 'Dec 27, 2024',
+    title: 'FIRE a 30yr old with ₹1.5 Cr Corpus by 45',
+    link: "https://rupeesorted.substack.com/p/fire-a-30yr-old-with-15-cr-corpus"
   },
 ];
 
@@ -63,9 +51,12 @@ export default function PastNewsletterSection() {
                 </div>
 
                 {/* Button */}
-                <button className="mt-2 sm:mt-0 bg-primary text-white px-5 py-2 rounded-full hover:bg-teal-800">
+                <Link
+                href={item.link}
+                target='_blank'
+                className="mt-2 sm:mt-0 bg-primary text-white px-5 py-2 rounded-full hover:bg-teal-800">
                   Read
-                </button>
+                </Link>
               </div>
             ))}
           </div>

@@ -15,43 +15,43 @@ function TrailblazorsSection() {
       image: client1,
       heading: 'Dr. Aman Setia',
       content:
-        'CA. ,CS.',
+      "Rupeestop simplified my investment journey and helped me achieve consistent growth. Their personalized advice is top-notch!",
     },
     {
       image: client2,
       heading: 'Dharmendra Shekhar',
       content:
-        'CA',
+      "Thanks to Rupeestop, my portfolio is diversified and aligned with my long-term financial goals. I feel confident about my future.",
     },
     {
       image: client3,
       heading: 'Neha Jhunjhunwala',
       content:
-        ' Energy consultant',
+      "The team at Rupeestop is knowledgeable and approachable. They made wealth management easy to understand for someone like me.",
     },
     {
       image: client4,
       heading: 'Rohit',
       content:
-        'Silver Jeweller in Jaipur and have passion to travel.',
+      "With Rupeestop's guidance, I’ve seen significant returns on my investments. Their expertise in mutual funds and bonds is exceptional!",
     },
     {
       image: client5,
       heading: 'Shakti Singh',
       content:
-        'A young business guy dealing in medical equipment supplies.',
+      "I was new to investing, but Rupeestop walked me through every step. Their portfolio health checker gave me a clear roadmap to improve my finances.",
     },
     {
       image: client6,
       heading: 'Shardha',
       content:
-        'CA works in mnc and Puneet marketing Personal in Big Indian company.',
+      "The personalized attention I received from Rupeestop is unparalleled. They treat every client like a priority!",
     },
     {
       image: client7,
       heading: 'Sunny ',
       content:
-        ' IT professional in Delhi.',
+      "Rupeestop's fixed deposit strategies helped me balance risk and returns perfectly. I highly recommend their services.",
     },
   ];
   return (
@@ -71,7 +71,7 @@ function TrailblazorsSection() {
         <div
           className="flex items-center justify-center gap-10 animate-slide-back-and-forth"
           style={{
-            animation: 'slide-pendulum 10s ease-in-out infinite',
+            animation: 'slide-card 20s linear infinite',
           }}
         >
           {products.map((product, index) => (
@@ -85,11 +85,11 @@ function TrailblazorsSection() {
               >
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
-                <button className="absolute bottom-2 right-2 border-2 border-white w-9 h-9 rounded-full text-white flex items-center justify-center font-bold">
+                {/* <button className="absolute bottom-2 right-2 border-2 border-white w-9 h-9 rounded-full text-white flex items-center justify-center font-bold">
                   <BsPlay size={20} />
-                </button>
+                </button> */}
               </div>
-              <div className="w-64 h-28 p-2 rounded-br-3xl rounded-tl-3xl bg-white flex flex-col justify-center items-center gap-2">
+              <div className="w-64 p-2 rounded-br-3xl rounded-tl-3xl bg-white flex flex-col justify-center items-center gap-2">
                 <h3 className="text-black font-semibold font-lato text-xl text-center">
                   {product.heading}
                 </h3>

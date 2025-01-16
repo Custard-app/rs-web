@@ -10,9 +10,9 @@ import './Footer.css';
 function Footer2() {
   const pathname = usePathname();
   const isHomepage = pathname === '/';
-  const isNewsletter = pathname === '/newsletter';
+  const isNewsletter = true;
   return (
-    <div className={`w-full ${isHomepage && 'hidden'} bg-footer py-20 px-5 sm:px-0 z-10`}>
+    <div className={`w-full ${isHomepage && 'hidden'} bg-footer py-14 px-5 sm:px-0 z-10`}>
       <WidthXL>
 
         <div className={`w-full ${isNewsletter && 'hidden'} flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 bg-[#FFFBF7] py-7 px-5 sm:px-9 rounded-xl`}>
