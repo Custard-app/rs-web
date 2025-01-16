@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import { GoArrowRight } from 'react-icons/go';
-import heroImage from '@/assets/images/heroImage.png';
+import heroImage2 from '@/assets/images/heroImage2.jpg';
 import Width3XL from '@/wrapper/widths/Width3XL';
 import axios from 'axios';
 import Link from 'next/link';
@@ -32,12 +32,13 @@ function Herosection() {
         </Link>
 
         <div className="mt-10 bg-gradient1 z-10 rounded-t-xl">
-          <Image
-            src={heroImage}
-            alt="Investment Image"
-            className="rounded-xl shadow-lg h-[200px] sm:h-[477px] w-[351px] sm:w-[967px]"
-          />
-        </div>
+  <Image
+    src={heroImage2}
+    alt="Investment Image"
+    className="rounded-xl shadow-lg h-[200px] sm:h-[477px] w-[351px] sm:w-[967px] object-cover"
+  />
+</div>
+
 
         {/* Curved Background (Semi-circle) */}
         <div className="absolute w-full h-[300px] bottom-0 left-0 bg-accentGray-300 curve-bg z-0"></div>

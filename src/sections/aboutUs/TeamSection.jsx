@@ -12,7 +12,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      "Mohit Sharma",
+      "Mohit, with his sharp analytical mind and a passion for simplifying finance, ensures that RupeeStop’s strategies are both insightful and effective. His deep understanding of investment trends, combined with a practical approach, helps clients make informed financial decisions with confidence. Always eager to innovate, Mohit brings clarity and structure to the team, making wealth-building an achievable goal for all.",
   },
   {
     name: 'Pamita Sharma',
