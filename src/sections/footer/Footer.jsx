@@ -82,10 +82,10 @@ function Footer() {
               <div className="w-14 h-[1px] bg-accentOrange-200 rounded-md"></div>
             </div>
             <div className="flex flex-col items-start justify-center gap-3">
-              <Link href="#" className="font-lato font-medium text-sm">
-                Term and Conditions
+              <Link href="/terms&conditions" className="font-lato font-medium text-sm">
+                Terms and Conditions
               </Link>
-              <Link href="#" className="font-lato font-medium text-sm">
+              <Link href="/privacy-policy" className="font-lato font-medium text-sm">
                 Privacy Policy
               </Link>
               <Link href="#" className="font-lato font-medium text-sm">
@@ -147,10 +147,10 @@ function Footer() {
             {/* Trems and conditions */}
             <div className="w-full mx-auto">
               <div className='flex items-center justify-center gap-3 text-gray-400'>
-                <Link href="#" className="font-lato font-medium text-xs ">
+                <Link href="/terms&conditions" className="font-lato font-medium text-xs ">
                   Terms and Conditions
                 </Link>
-                <Link href="#" className="font-lato font-medium text-xs">
+                <Link href="/privacy-policy" className="font-lato font-medium text-xs">
                   Privacy Policy
                 </Link>
                 <Link href="#" className="font-lato font-medium text-xs">
