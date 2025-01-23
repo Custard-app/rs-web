@@ -48,7 +48,7 @@ const BecomerichSection = () => {
              href="https://rupeesorted.substack.com/"
           target='_blank'
             className="relative flex items-center justify-center w-[100%] sm:w-full bg-[#698f1c] py-[12px] px-5 rounded-full z-5 appearance-none border-transparent border-b-[6px] font-semibold text-black text-base sm:text-[20px] capitalize transform transition-transform duration-200">
-              <p>Yes, I Want To Build Health!</p>
+              <p>Yes, I Want To Build Wealth!</p>
               <span className="absolute inset-0 rounded-full bg-accentLime border-transparent border-b-4 -z-10"></span>
             </Link>
           </div>

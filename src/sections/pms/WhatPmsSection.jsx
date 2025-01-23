@@ -90,8 +90,8 @@ function WhatPmsSection() {
               Portfolio Management Services (PMS) provide customized investment
               planning, which includes a mix of both equity (shares) and debt
               instruments. Designed for institutions, high net worth
-              individuals, or anyone ready to invest a minimum amount of ₹25
-              lakhs, PMS offers tailored investment solutions.
+              individuals, or anyone ready to invest a minimum amount of 50
+              Lacs, PMS offers tailored investment solutions.
             </p>
           </div>
           <div className="relative w-[333px] sm:w-[537px] h-[277px] sm:h-[368px]">

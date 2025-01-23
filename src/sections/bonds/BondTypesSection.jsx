@@ -37,7 +37,7 @@ const bondData = {
       id: 2,
       title: 'RBI Bonds',
       description:
-        'Bonds issued by the Reserve Bank of India, offering a fixed rate of interest with a tenure of 7 years.',
+        'Bonds issued by the Reserve Bank of India, offering a fixed rate of interest with a tenure of 6 years.',
       benefits: [
         'Safe and secure investment',
         'Fixed interest rate',

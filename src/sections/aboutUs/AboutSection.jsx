@@ -9,10 +9,10 @@ function AboutSection() {
         <div className="w-full flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-11 sm:gap-0 relative">
           <div className="w-full sm:w-1/2 flex flex-col items-center-center sm:items-start flex-wrap gap-6">
             <h2 className="font-poppins font-semibold text-4xl sm:text-5xl text-center sm:text-start">
-              About Our Company
+              About Rupeestop
             </h2>
             <p className="font-lato font-medium text-sm sm:text-xl text-wrap text-center sm:text-start">
-              Rupeestop is a wealth management firm dedicated to simplifying
+              Rupeestop is a investment firm dedicated to simplifying
               investment decisions for individuals and institutions. Our mission
               is to provide comprehensive investment solutions that are tailored
               to meet the specific needs of our clients. With our diverse
@@ -52,7 +52,7 @@ function AboutSection() {
               Expertise
               </p>
               <p className="font-lato font-semibold text-xs sm:text-sm text-gray-700">
-              Our Team’s Varied experience ensure well-rounded financial advice              </p>
+              Our Team’s Varied experience ensure well-rounded financial plan              </p>
             </div>
           </div>
 

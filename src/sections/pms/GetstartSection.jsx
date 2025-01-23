@@ -126,8 +126,7 @@ export default function GetstartSection() {
                   Consult with Experts
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Talk to our advisors to select the best portfolio manager and
-                  investment strategy.
+                Talk to us to select the best portfolio manager and investment strategy.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text3' : 'opacity-100 bg-white'}  `}></div>
               </div>
@@ -143,7 +142,7 @@ export default function GetstartSection() {
                   Start Investing
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Begin with a minimum investment of ₹25 lakhs and monitor your
+                  Begin with a minimum investment of 50 Lacs and monitor your
                   portfolio&#39;s performance.
                 </p>
                 <div className={`absolute top-0 w-full h-full ${ inView ? 'animate-text4' : 'opacity-100 bg-white'}  `}></div>
@@ -213,8 +212,7 @@ export default function GetstartSection() {
                   Consult with Experts
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Talk to our advisors to select the best portfolio manager and
-                  investment strategy.
+                Talk to us to select the best portfolio manager and investment strategy.
                 </p>
               </div>
             </div>
@@ -229,7 +227,7 @@ export default function GetstartSection() {
                   Start Investing
                 </p>
                 <p className="font-lato font-medium text-base text-gray-800 text-center">
-                  Begin with a minimum investment of ₹25 lakhs and monitor your
+                  Begin with a minimum investment of 40 Lacs and monitor your
                   portfolio&#39;s performance.
                 </p>
               </div>

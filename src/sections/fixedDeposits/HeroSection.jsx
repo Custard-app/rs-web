@@ -11,7 +11,7 @@ function HeroSection() {
             Fixed Deposits
           </h1>
           <h2 className="font-poppins font-semibold text-[28px] sm:text-5xl text-gray-50 text-center">
-            Safe and secure investments <br></br> with guaranteed returns
+          Invest for Guaranteed Higher Returns
           </h2>
           <p className="font-lato font-medium text-sm sm:text-[20px] text-gray-100 text-center text-wrap">
             Invest in Corporate Fixed Deposits from various institutions and

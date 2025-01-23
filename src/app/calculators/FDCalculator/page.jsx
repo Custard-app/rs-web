@@ -101,8 +101,9 @@ export default function FDCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={principal}
+                    value={principal > 0 ? principal : ''}
                     onChange={(e) => setPrincipal(Number(e.target.value))}
+                    min="1000"
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -113,8 +114,10 @@ export default function FDCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={rate}
-                    onChange={(e) => setRate(Number(e.target.value))}
+                    value={rate > 0 ? rate : ''}
+                    min="1"
+                    max="15"
+                    onChange={(e) => setRate(Number(e.target.value) > 15 ? 15 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -125,8 +128,10 @@ export default function FDCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={tenure}
-                    onChange={(e) => setTenure(Number(e.target.value))}
+                    value={tenure > 0 ? tenure : ''}
+                    min="1"
+                    max="25"
+                    onChange={(e) => setTenure(Number(e.target.value) > 25 ? 25 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>

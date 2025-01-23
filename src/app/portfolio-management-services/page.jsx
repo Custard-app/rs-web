@@ -24,8 +24,7 @@ function page() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-[20px] text-wrap text-center text-gray-100">
-                Get personalized advice from our expert advisors and secure
-                your investment!
+              Connect with our experts and secure your investment!
               </p>
             </div>
 

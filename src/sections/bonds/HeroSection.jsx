@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <div className="relative h-full sm:h-[90vh] flex items-center bg-gradient-to-r from-[#014e44] 38% to-[#006563] 100% sm:bg-[#014e44] sm:bg-none flex-col pt-10 rounded-b-[50px]">
+    <div className="relative h-full sm:h-[90vh] flex items-center bg-gradient-to-r from-[#014e44] 38% to-[#006563] 100% sm:bg-[#014e44] sm:bg-none flex-col pt-10 ">
       <WidthXL>
         {/* Left Section (Text Content) */}
         <div className="flex flex-col items-center sm:items-start gap-4 sm:py-36 pt-28 sm:pt-32 relative w-full sm:w-1/2 px-5 sm:px-0">
@@ -55,7 +55,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className='absolute bottom-4'>
+      <div className='absolute bottom-4 hidden'>
         <div className='text-gray-50 font-lato font-extrabold text-2xl sm:text-[38px] flex whitespace-nowrap gap-10 animate-bondsHorizontalScroll'>
           <p className='flex items-center gap-3'><GoDotFill/>STABLE INCOME WITH LOWER RISKS</p>
           <p className='flex items-center gap-3'><GoDotFill/>STABLE INCOME WITH LOWER RISKS</p>

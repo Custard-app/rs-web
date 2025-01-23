@@ -149,7 +149,8 @@ export default function BrokerageCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={quantity}
+                  value={quantity > 0 ? quantity : ''}
+                  min="1"
                   onChange={(e) => setQuantity(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Enter quantity"
@@ -163,7 +164,8 @@ export default function BrokerageCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={buyPrice}
+                  value={buyPrice > 0 ? buyPrice : ''}
+                  min="1"
                   onChange={(e) => setBuyPrice(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Buy price per share"
@@ -177,7 +179,8 @@ export default function BrokerageCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={sellPrice}
+                  value={sellPrice > 0 ? sellPrice : ''}
+                  min="1"
                   onChange={(e) => setSellPrice(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Sell price per share"

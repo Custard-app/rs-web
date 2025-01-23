@@ -55,7 +55,7 @@ function MagicOfCompounding() {
       </WidthXL>
 
       {/* Card */}
-      <WidthXXL>
+      {/* <WidthXXL>
         <div className=" bg-primary rounded-[60px] -mb-32 sm:-mb-44 flex flex-col sm:flex-row items-center sm:items-end justify-center gap-10 py-5 sm:py-24 relative z-20 overflow-hidden">
           <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-6xl flex flex-col items-start justify-center text-gray-200 gap-4 mt-10 sm:mt-0">
             I am gonna make an <span>offer you can&#39;t refuse...</span>
@@ -82,12 +82,12 @@ function MagicOfCompounding() {
             />
           </div>
           {/* Big circle */}
-          <div className="absolute -left-8 sm:-left-10 -top-16 sm:-top-48 w-[260px] sm:w-[470px] h-[260px] sm:h-[470px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>
+          {/*<div className="absolute -left-8 sm:-left-10 -top-16 sm:-top-48 w-[260px] sm:w-[470px] h-[260px] sm:h-[470px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>*/}
 
           {/* small circle */}
-          <div className="absolute -left-10 -top-24  sm:-top-52 w-[201px] sm:w-[350px] h-[201px] sm:h-[350px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>
+          {/*<div className="absolute -left-10 -top-24  sm:-top-52 w-[201px] sm:w-[350px] h-[201px] sm:h-[350px] rounded-full border-[1px] border-accentGray-300 opacity-25"></div>
         </div>
-      </WidthXXL>
+      </WidthXXL> */}
     </div>
   );
 }

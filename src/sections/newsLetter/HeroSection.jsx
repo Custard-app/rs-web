@@ -68,7 +68,7 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl flex flex-col items-center justify-center gap-3 sm:gap-5 py-20">
         <h1 className="font-poppins font-bold text-[32px] sm:text-7xl text-center text-white mt-10 sm:mt-20">
-          Your friendly neighborhood Personal finance advisor
+          Your Friendly Neighbourhood Personal Finance Specialist.
         </h1>
         <p className="font-lato font-medium text-[16px] sm:text-[20px] text-wrap text-center text-white">
           Join 1400+ people who subscribed to get wealthy.

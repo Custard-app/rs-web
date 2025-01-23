@@ -25,8 +25,7 @@ export default function page() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-[20px] text-wrap text-center text-gray-100">
-                Get personalized advice from our expert advisors and secure
-                your investment in corporate bonds!
+              Connect with us and secure your investment in corporate bonds!
               </p>
             </div>
 

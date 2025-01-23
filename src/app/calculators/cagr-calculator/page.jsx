@@ -105,7 +105,8 @@ export default function CAGRCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={initialValue}
+                    value={initialValue > 0 ? initialValue : '' }
+                    min="1000"
                     step="100"
                     onChange={(e) => setInitialValue(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
@@ -118,7 +119,8 @@ export default function CAGRCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={finalValue}
+                    value={finalValue > 0 ? finalValue : '' }
+                    min="1000"
                     step="100"
                     onChange={(e) => setFinalValue(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
@@ -131,8 +133,10 @@ export default function CAGRCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={years}
-                    onChange={(e) => setYears(Number(e.target.value))}
+                    value={years > 0 ? years : '' }
+                    min="1"
+                    max="40"
+                    onChange={(e) => setYears(Number(e.target.value) > 40 ? 40 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>

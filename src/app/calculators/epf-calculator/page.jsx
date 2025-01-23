@@ -22,7 +22,8 @@ const calculators = [
       },
       {
         title: 'NSC Calculator',
-        description: 'Calculate the maturity amount of your National Savings Certificate (NSC) investment. ',
+        description:
+          'Calculate the maturity amount of your National Savings Certificate (NSC) investment. ',
         button: 'Calculate',
       },
       {
@@ -52,28 +53,29 @@ export default function EPFCalculator() {
     let totalContributions = 0;
     let currentSalary = monthlySalary;
 
-    // Loop for each year till retirement
     for (let year = 0; year < yearsToRetirement; year++) {
-      // Employee and Employer contribution each year
-      const yearlyContribution =
+      // Employee contribution
+      const employeeContribution =
         (currentSalary * contributionPercentage * 12) / 100;
-      const totalYearlyContribution = yearlyContribution * 2; // Employee + Employer
 
-      // Add contribution to total contributions and balance
+      // Employer contribution (3.67% to EPF, 8.33% to EPS capped at ₹15,000/month)
+      const employerContribution = (currentSalary * 3.67 * 12) / 100;
+
+      const totalYearlyContribution =
+        employeeContribution + employerContribution;
+
+      // Add contributions and calculate interest
       totalContributions += totalYearlyContribution;
       balance += totalYearlyContribution;
 
-      // Apply interest on the balance after contribution
-      balance = Math.floor(balance + (balance * epfInterestRate) / 100); // Apply yearly interest
+      balance = Math.floor(balance + (balance * epfInterestRate) / 100);
 
-      // Increase salary for the next year based on annual increment
+      // Annual salary increment
       currentSalary += (currentSalary * annualIncrement) / 100;
     }
 
-    // Calculate total interest earned
     const totalInterest = Math.ceil(balance - totalContributions);
 
-    // Set the final maturity value and total interest
     setMaturityValue(balance);
     setTotalInterest(totalInterest);
   };
@@ -112,7 +114,8 @@ export default function EPFCalculator() {
                   <input
                     type="number"
                     min="1000"
-                    value={monthlySalary}
+                    max="500000"
+                    value={monthlySalary > 0 ? monthlySalary : ''}
                     onChange={(e) => setMonthlySalary(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -126,8 +129,14 @@ export default function EPFCalculator() {
                     type="number"
                     min="15"
                     max="58"
-                    value={userAge}
-                    onChange={(e) => setUserAge(Number(e.target.value))}
+                    value={userAge > 0 ? userAge : ''}
+                    onChange={(e) =>
+                      setUserAge(
+                        Number(e.target.value) > 58
+                          ? 58
+                          : Number(e.target.value),
+                      )
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -140,9 +149,15 @@ export default function EPFCalculator() {
                     type="number"
                     min="12"
                     max="20"
-                    value={contributionPercentage}
+                    value={
+                      contributionPercentage > 0 ? contributionPercentage : ''
+                    }
                     onChange={(e) =>
-                      setContributionPercentage(Number(e.target.value))
+                      setContributionPercentage(
+                        Number(e.target.value) > 20
+                          ? 20
+                          : Number(e.target.value),
+                      )
                     }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -156,8 +171,14 @@ export default function EPFCalculator() {
                     type="number"
                     min="0"
                     max="15"
-                    value={annualIncrement}
-                    onChange={(e) => setAnnualIncrement(Number(e.target.value))}
+                    value={annualIncrement > 0 ? annualIncrement : ''}
+                    onChange={(e) =>
+                      setAnnualIncrement(
+                        Number(e.target.value) > 15
+                          ? 15
+                          : Number(e.target.value),
+                      )
+                    }
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -178,7 +199,7 @@ export default function EPFCalculator() {
                       Your accumulated maturity amount will be
                     </h3>
                     <p className="font-lato font-bold text-[25px] text-accentOrange-200">
-                      ₹{maturityValue}
+                      ₹{Number(maturityValue).toLocaleString('en-In')}
                     </p>
                     <h3 className="font-lato text-lg font-semibold">
                       by the time you retire
@@ -188,8 +209,8 @@ export default function EPFCalculator() {
               </div>
             </div>
           </div>
-        {/* CAROUSEL START */}
-        <div className=" mt-20">
+          {/* CAROUSEL START */}
+          <div className=" mt-20">
             {calculators.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="font-poppins text-[20px] sm:text-[32px] font-semibold mb-4">
@@ -230,7 +251,8 @@ export default function EPFCalculator() {
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
                 Get personalized advice from our expert advisors. Click the
-                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
+                button below to chat with us directly on WhatsApp and start your
+                investment journey with Rupeestop!
               </p>
             </div>
 

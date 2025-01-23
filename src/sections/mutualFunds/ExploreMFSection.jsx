@@ -9,7 +9,7 @@ const ExploreMFSection = () => {
     'Debt Funds': {
       title: 'Steady Returns, Lower Risk – Debt Funds',
       description:
-        'Debt funds are a better option than Bank Fixed Deposits (FD) as they provide better returns and are more tax-efficient. These funds do not invest in the share markets.',
+        'Debt funds are a better option than Bank Fixed Deposits (FD) as they provide better returns. These funds do not invest in the share markets.',
       benefits: [
         'Relatively stable and consistent in nature',
         'Flexible in investing and withdrawal',
@@ -17,7 +17,7 @@ const ExploreMFSection = () => {
       ],
     },
     'Liquid Funds': {
-      title: 'Maximize Growth with Equity Investments.',
+      title: 'Quick Access, Secure Growth – Liquid Funds',
       description:
         'Liquid funds are the best investment alternative to saving and current bank accounts, generating better interest than banks. They are the safest product in the mutual fund industry, with no money invested in share markets.',
       benefits: [
@@ -27,14 +27,13 @@ const ExploreMFSection = () => {
       ],
     },
     'Equity Funds': {
-      title: 'Quick Access, Secure Growth – Liquid Funds',
+      title: 'Maximize Growth with Equity Investments',
       description:
         'Equity funds allow you to be part of the companies performance by investing a maximum amount into the share market, involving risk and volatility. These products are suitable for those looking to invest for a longer period (more than 5 years).',
       benefits: [
         'Ownership in companies',
         'Investment linked to the profit and loss of the companies in the selected scheme',
-        'Long-term capital gains on equity are taxable at 10% beyond ₹100,000 per financial year',
-        'Dividends paid on equity are taxable at 10%',
+        'Long-term capital gains on equity are taxable at 12.5% beyond ₹1,25,000 per financial year',
         'Best suited for long-term investments',
         'Compounding multiplies your returns',
       ],
@@ -47,7 +46,6 @@ const ExploreMFSection = () => {
         'Highest purity guaranteed (99.5%)',
         'Start buying paper gold with as low as ₹500 monthly',
         'Easy liquidity similar to physical gold',
-        'Tax-efficient',
         'Cost-efficient with no storage or locker expenses',
         'No impact from the devaluation cycle compared to physical gold',
       ],

@@ -22,8 +22,8 @@ function Herosection() {
         <Link 
         href="https://calendly.com/llprupeestop/30min"
         target='_blank'
-        className="flex items-center gap-3 sm:gap-4 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
-          <p className="text-black font-semibold text-sm sm:text-base capitalize">
+        className="flex items-center gap-2 sm:gap-3 bg-accentLime pl-[20px] py-[10px] pr-[10px] rounded-full mt-8">
+          <p className="text-black font-semibold text-sm sm:text-base ">
             I want to invest{' '}
           </p>
           <span className="bg-gray-50 rounded-full text-black p-2 ml-4">

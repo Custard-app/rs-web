@@ -68,7 +68,8 @@ export default function CompoundInterestCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={principalAmount}
+                    value={principalAmount > 0 ? principalAmount : ''} 
+                    min="1000"
                     step="1000"
                     onChange={(e) => setPrincipalAmount(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
@@ -81,9 +82,11 @@ export default function CompoundInterestCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={interestRate}
+                    value={interestRate > 0 ? interestRate : ''}
+                    min="1"
+                    max="50"
                     step="0.1"
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    onChange={(e) => setInterestRate(Number(e.target.value) > 50 ? 50 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -94,8 +97,10 @@ export default function CompoundInterestCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={timePeriod}
-                    onChange={(e) => setTimePeriod(Number(e.target.value))}
+                    value={timePeriod > 0 ? timePeriod : ''}
+                    min="1"
+                    max="30"
+                    onChange={(e) => setTimePeriod(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>

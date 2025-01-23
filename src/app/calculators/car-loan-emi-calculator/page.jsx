@@ -64,7 +64,8 @@ export default function CarLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={loanAmount}
+                    value={loanAmount > 0 ? loanAmount : ''}
+                    min="100000"
                     step="1000"
                     onChange={(e) => setLoanAmount(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
@@ -77,9 +78,11 @@ export default function CarLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={interestRate}
+                    value={interestRate > 0 ? interestRate : ''}
+                    min="1"
+                    max="30"
                     step="0.1"
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    onChange={(e) => setInterestRate(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -90,8 +93,10 @@ export default function CarLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={loanTenure}
-                    onChange={(e) => setLoanTenure(Number(e.target.value))}
+                    value={loanTenure > 0 ? loanTenure : ''}
+                    min="1"
+                    max="30"
+                    onChange={(e) => setLoanTenure(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>

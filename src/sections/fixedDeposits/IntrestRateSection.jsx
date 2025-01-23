@@ -1,5 +1,5 @@
 import bajaj from '@/assets/images/bajaj.png';
-import hdfc from '@/assets/images/hdfc.png';
+import shriram from '@/assets/images/shriram.png';
 import mahindra from '@/assets/images/mahindra.png';
 import pnb from '@/assets/images/pnb.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
@@ -11,18 +11,18 @@ const InterestRateSection = () => {
     <div className="bg-[#FFFBF7] py-14 sm:py-24 px-5 sm:px-0">
       <WidthXL>
         <div className="flex flex-col gap-24">
-          {/* HDFC */}
+          {/* Shriram */}
           <div className="flex flex-col sm:flex-row items-center gap-10">
             {/* Left Section */}
             <div className="w-full sm:w-[602px] flex flex-col items-start gap-4">
               <div className="mb-4">
-                <Image src={hdfc} alt="hdfc" className="w-28 h-auto" />
+                <Image src={shriram} alt="hdfc" className="w-28 h-auto" />
               </div>
               <h2 className="font-poppins text-[28px] sm:text-4xl font-bold mb-4 text-start">
-                HDFC Limited
+                Shriram Finance
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated
+                Corporate Fixed Deposits of Shriram Finance have been rated
                 &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
                 ICRA) for the last 23 years.
               </p>
