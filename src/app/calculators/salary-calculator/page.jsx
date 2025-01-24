@@ -1,6 +1,7 @@
 'use client';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function SalaryCalculator() {
   const [ctc, setCtc] = useState(600000); // CTC input
@@ -61,6 +62,10 @@ export default function SalaryCalculator() {
     });
   };
 
+  useEffect(() => {
+    calculateSalary();
+  }, []);
+
   return (
     <div className="w-full bg-white">
       <div className="pt-24 px-5 sm:px-0">
@@ -81,7 +86,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={ctc}
+                  value={ctc > 0 ? ctc : ''} 
+                  min="100000"
                   onChange={(e) => setCtc(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Enter CTC"
@@ -103,8 +109,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={bonus}
-                  min={1}
+                  value={bonus > 0 ? bonus : ''}
+                  min={bonusType === 'percentage' ? '1' : '100'}
                   step={bonusType === 'percentage' ? '0.1' : '100'}
                   onChange={(e) => setBonus(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
@@ -119,7 +125,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={monthlyProfessionalTax}
+                  value={monthlyProfessionalTax > 0 ? monthlyProfessionalTax : ''}
+                  min="0"
                   onChange={(e) =>
                     setMonthlyProfessionalTax(Number(e.target.value))
                   }
@@ -135,7 +142,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={monthlyEmployerPf}
+                  value={monthlyEmployerPf > 0 ? monthlyEmployerPf : ''}
+                  min="0"
                   onChange={(e) => setMonthlyEmployerPf(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Employer PF"
@@ -149,7 +157,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={monthlyEmployeePf}
+                  value={monthlyEmployeePf > 0 ? monthlyEmployeePf : ''}
+                  min="0"
                   onChange={(e) => setMonthlyEmployeePf(Number(e.target.value))}
                   className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   placeholder="Employee PF"
@@ -163,7 +172,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={monthlyAdditionalDeduction}
+                  value={monthlyAdditionalDeduction > 0 ? monthlyAdditionalDeduction : ''}
+                  min="0"
                   onChange={(e) =>
                     setMonthlyAdditionalDeduction(Number(e.target.value))
                   }
@@ -179,7 +189,8 @@ export default function SalaryCalculator() {
                 </label>
                 <input
                   type="number"
-                  value={monthlyAdditionalDeduction2}
+                  value={monthlyAdditionalDeduction2 > 0 ? monthlyAdditionalDeduction2 : ''}
+                  min="0"
                   onChange={(e) =>
                     setMonthlyAdditionalDeduction2(Number(e.target.value))
                   }
@@ -224,6 +235,7 @@ export default function SalaryCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators />
         </WidthXL>
       </div>
     </div>

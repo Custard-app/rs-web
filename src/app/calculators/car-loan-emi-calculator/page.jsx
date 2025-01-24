@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function CarLoanCalculator() {
   const [loanAmount, setLoanAmount] = useState(500000); 
@@ -146,6 +147,7 @@ export default function CarLoanCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </>

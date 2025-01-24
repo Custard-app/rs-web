@@ -34,7 +34,7 @@ const GuideMFSection = () => {
   return (
     <div className="w-full bg-white py-14 sm:py-24 px-5 sm:px-0">
       <WidthXL>
-        <h1 className="text-[32px] sm:text-[42px] font-poppins font-semibold text-center mb-4">
+        {/* <h1 className="text-[32px] sm:text-[42px] font-poppins font-semibold text-center mb-4">
           Your Guide to Smart Mutual Fund Investing
         </h1>
         <p className="text-center font-lato font-medium text-sm sm:text-lg text-gray-600 mb-8">
@@ -59,7 +59,7 @@ const GuideMFSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* //Client says */}
         <div className="mt-14">

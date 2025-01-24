@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function GSTCalculator() {
   const [totalAmount, setTotalAmount] = useState(5000); // This is the total amount (including or excluding GST)
@@ -87,8 +88,10 @@ export default function GSTCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={totalAmount}
-                    onChange={(e) => setTotalAmount(Number(e.target.value))}
+                    value={totalAmount > 0 ? totalAmount : ""}
+                    min="5000"
+                    max="5000000"
+                    onChange={(e) => setTotalAmount(Number(e.target.value) > 5000000 ? 5000000 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -134,6 +137,7 @@ export default function GSTCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </>

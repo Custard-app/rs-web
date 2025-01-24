@@ -1,4 +1,5 @@
 'use client';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import { useEffect, useState } from 'react';
 // import '@/sections/home/tdsCalculatorSection/TDSCalculator.css';
@@ -89,7 +90,8 @@ export default function TDSCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={totalAmount}
+                    min="100"
+                    value={totalAmount > 0 ? totalAmount : ''} 
                     onChange={(e) => setTotalAmount(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -101,8 +103,10 @@ export default function TDSCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={tdsRate}
-                    onChange={(e) => setTdsRate(Number(e.target.value))}
+                    value={tdsRate > 0 ? tdsRate : ''}
+                    min="1"
+                    max="50"
+                    onChange={(e) => setTdsRate(Number(e.target.value) > 50 ? 50 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -136,6 +140,7 @@ export default function TDSCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </>

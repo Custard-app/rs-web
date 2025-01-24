@@ -238,7 +238,7 @@ function Navbar() {
               {/* Left side options */}
               <div className="space-y-4 text-lg text-gray-900 font-semibold w-[45%] flex flex-col items-start justify-evenly gap-4">
                 <Link
-                  href="/calculators/FDCalculator"
+                  href="/calculators/fd-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -246,7 +246,7 @@ function Navbar() {
                   FD Calculator
                 </Link>
                 <Link
-                  href="/calculators/NPSCalculator"
+                  href="/calculators/nps-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -397,14 +397,14 @@ function Navbar() {
           {showCalculatorsNested && (
             <div className="pl-5 flex flex-col gap-5 -mt-8">
               <Link
-                href="/calculators/FDCalculator"
+                href="/calculators/fd-calculator"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >
                 FD Calculator
               </Link>
               <Link
-                href="/calculators/NPSCalculator"
+                href="/calculators/nps-calculator"
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function CompoundInterestCalculator() {
   const [principalAmount, setPrincipalAmount] = useState(50000); // Default principal amount
@@ -184,6 +185,7 @@ export default function CompoundInterestCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </>

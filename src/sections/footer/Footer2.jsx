@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiMail } from 'react-icons/fi';
 import './Footer.css';
+import appstore from '@/assets/icons/appstore.png';
+import playstore from '@/assets/icons/playstore.webp';
 
 function Footer2() {
   const pathname = usePathname();
@@ -68,6 +70,14 @@ function Footer2() {
               At Rupeestop, we are dedicated to helping you achieve financial
               freedom. Our team of experts happily provides personalized investment solutions that align with your goals.
             </p>
+            <div className='flex gap-3 items-center -mb-10 -mt-6'>
+                <Link href="https://play.google.com/store/apps/details?id=com.rupeestopapp.rupeestop&hl=en_IN" target="_blank">
+                <Image src={playstore} alt="playstore" width={120} height={40} className='' />
+                </Link>
+                <Link href="https://apps.apple.com/in/app/rupeestop/id1542012621" target="_blank">
+                <Image src={appstore} alt="appstore" width={120} height={40} className=''/>
+                </Link>
+              </div>
           </div>
 
           {/* Navigation */}
@@ -248,7 +258,7 @@ function Footer2() {
             </div>
           </div>
         </div>
-        <p className='hidden sm:block font-lato font-medium text-base mt-5 text-gray-400'>*Mutual Fund investments are subject to market risks, read all scheme-related documents carefully.</p>
+        <p className='hidden sm:block font-lato font-medium text-base mt-5 text-gray-400 text-center'>*Mutual Fund investments are subject to market risks, read all scheme-related documents carefully.</p>
         </div>
       </WidthXL>
     </div>

@@ -3,6 +3,7 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import React, { useEffect, useState } from 'react';
 import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 // APY Contribution Table: Joining Age -> Pension -> Monthly Contribution
 const APY_CONTRIBUTION_TABLE = {
@@ -184,6 +185,7 @@ const APY_CONTRIBUTION_TABLE = {
             </div>
           </div>
           {/* HEROSECTION END */}
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </>

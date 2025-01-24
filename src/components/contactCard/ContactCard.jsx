@@ -1,37 +1,26 @@
-import BasicbondSection from '@/sections/bonds/BasicbondSection'
-import BondTypesSection from '@/sections/bonds/BondTypesSection'
-import FAQSection from '@/sections/bonds/FAQSection'
-import HeroSection from '@/sections/bonds/HeroSection'
-import GetstartSection from '@/sections/bonds/GetstartSection'
-import WidthXXL from '@/wrapper/widths/WidthXXL'
-import Link from 'next/link'
 import React from 'react'
+import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { GoArrowRight } from 'react-icons/go';
+import Link from 'next/link';
 
-export default function page() {
+function ContactCard({value}) {
   return (
-    <>
-        <HeroSection/>
-        <BasicbondSection/>
-        <BondTypesSection/>  
-        <GetstartSection/>
-        <FAQSection/>
-        {/* Card */}
-      <div className="bg-white py-14 sm:py-24 px-5 sm:px-0">
+    <div className="bg-white py-14 sm:py-24 px-5 sm:px-0">
         <WidthXXL>
           <div className=" bg-primary rounded-[60px] flex flex-col items-center justify-center gap-8 py-14 sm:py-24 relative px-5">
             <p className="font-poppins font-bold sm:font-extrabold text-2xl sm:text-5xl text-gray-50 text-center">
-              Ready to Invest?
+              {`Contact us for personalized ${value} advice`}
             </p>
             <div className="w-full sm:w-[756px]">
-              <p className="w-full font-lato font-medium text-[20px] text-wrap text-center text-gray-100">
-              Connect with us and secure your investment in corporate bonds!
+              <p className="w-full font-lato font-medium text-xs sm:text-[20px] text-wrap text-center text-gray-100 leading-6">
+                Get personalized advice from our expert advisors. Click the
+                button below to chat with us directly on WhatsApp and start your investment journey with Rupeestop!
               </p>
             </div>
 
             <Link
-                href="https://calendly.com/llprupeestop/30min"
-                target="_blank"
+            href="https://calendly.com/llprupeestop/30min"
+            target='_blank'
             className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
               <p className="text-black font-semibold text-base capitalize">
                 Chat With Us
@@ -56,6 +45,7 @@ export default function page() {
           </div>
         </WidthXXL>
       </div>
-    </>
   )
 }
+
+export default ContactCard

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
 import DoughnutChart from '@/components/chart/DoughnutChart';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function HomeLoanCalculator() {
   const [loanAmount, setLoanAmount] = useState(3000000); // Default loan amount
@@ -63,8 +64,8 @@ export default function HomeLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={loanAmount}
-                    step="10000"
+                    value={loanAmount > 0 ? loanAmount : ''}
+                    step="100000"
                     onChange={(e) => setLoanAmount(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -76,9 +77,11 @@ export default function HomeLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={interestRate}
+                    value={interestRate > 0 ? interestRate : ''}
                     step="0.1"
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    min="1"
+                    max="30"
+                    onChange={(e) => setInterestRate(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -89,8 +92,10 @@ export default function HomeLoanCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={loanTenure}
-                    onChange={(e) => setLoanTenure(Number(e.target.value))}
+                    value={loanTenure > 0 ? loanTenure : ''}
+                    min="1"
+                    max="30"
+                    onChange={(e) => setLoanTenure(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -140,6 +145,7 @@ export default function HomeLoanCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators />
         </WidthXL>
       </div>
     </>

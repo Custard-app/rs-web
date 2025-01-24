@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import '@/sections/home/calculatorSection/Calculator.css';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function GratuityCalculator() {
   const [basicSalary, setBasicSalary] = useState(50000);
@@ -37,7 +38,8 @@ export default function GratuityCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={basicSalary}
+                    value={basicSalary > 0 ? basicSalary : ''}
+                    min="10000"
                     onChange={(e) => setBasicSalary(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
@@ -49,8 +51,10 @@ export default function GratuityCalculator() {
                   </label>
                   <input
                     type="number"
-                    value={yearsOfService}
-                    onChange={(e) => setYearsOfService(Number(e.target.value))}
+                    value={yearsOfService > 0 ? yearsOfService : ''}
+                    min="5"
+                    max="50"
+                    onChange={(e) => setYearsOfService(Number(e.target.value) > 50 ? 50 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -76,6 +80,7 @@ export default function GratuityCalculator() {
               </div>
             </div>
           </div>
+          <AllOtherCalculators />
         </WidthXL>
       </div>
     </>

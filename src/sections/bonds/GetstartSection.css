@@ -1,0 +1,54 @@
+@keyframes moveline {
+    0% {
+      transform: translateX(0); /* Start at the top */
+    }
+    100% {
+      transform: translateX(180px); /* Move down by 200px */
+    }
+  }
+  
+  .arrow-timeline {
+    background-color: white;
+    animation: moveline 1s linear forwards;
+  }
+  .arrow-timeline2 {
+    background-color: white;
+    animation: moveline 1s linear forwards;
+    animation-delay: 1s;
+  }
+  .arrow-timeline3 {
+    background-color: white;
+    animation: moveline 1s linear forwards;
+    animation-delay: 2s;
+  }
+  
+  
+  
+  @keyframes movetext {
+    0% {
+      transform: translateX(0); /* Start at the top */
+    }
+    100% {
+      transform: translateX(200px); /* Move down by 200px */
+    }
+  }
+  
+  .animate-text {
+    background-color: white;
+    animation: movetext 1s linear forwards;
+  }
+  .animate-text2 {
+    background-color: white;
+    animation: movetext 1s linear forwards;
+    animation-delay: 1s;
+  }
+  .animate-text3 {
+    background-color: white;
+    animation: movetext 1s linear forwards;
+    animation-delay: 2s;
+  }
+  .animate-text4 {
+    background-color: white;
+    animation: movetext 1s linear forwards;
+    animation-delay: 3s;
+  }

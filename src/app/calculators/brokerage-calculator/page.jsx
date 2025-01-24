@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
+import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 
 export default function BrokerageCalculator() {
   const [tab, setTab] = useState('delivery'); // Tabs: delivery, intraday, f&o
@@ -298,6 +299,7 @@ export default function BrokerageCalculator() {
               </table>
             </div>
           </div>
+          <AllOtherCalculators/>
         </WidthXL>
       </div>
     </div>
