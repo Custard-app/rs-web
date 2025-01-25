@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import newletterSubtract from '@/assets/images/newletterSubtract.png';
-import newsletterArrow from '@/assets/images/newsletter-arrow.png';
-import pigiBank from '@/assets/images/pigiBank.png';
-import trandingImage from '@/assets/images/trandingImage.png';
-import walletImage from '@/assets/images/walletImage.png';
-import scooterImage from '@/assets/images/scooterImage.png';
+import newletterSubtract from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/Roadmap.svg';
+import pigiBank from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/savings.svg';
+import trandingImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/investing.svg';
+import walletImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/spending.svg';
+import scooterImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/travelling.svg';
 import archedArrow from '@/assets/images/undraw_arched-arrow.png';
 import Image from 'next/image';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
@@ -27,11 +26,6 @@ function RoadmapSection() {
               src={newletterSubtract}
               alt="Image"
               className="object-cover w-full "
-            />
-            <Image
-              src={newsletterArrow}
-              alt="Image"
-              className="absolute top-5 left-4 object-cover w-full"
             />
             {/* Pigi Bank */}
             <Image
@@ -92,12 +86,6 @@ function RoadmapSection() {
                 className="object-contain w-full h-full"
                 layout="fill"
                 priority
-              />
-              <Image
-                src={newsletterArrow}
-                alt="Image"
-                className="absolute top-[53%] left-[51%] translate-x-[-50%] translate-y-[-50%] w-[1050px] h-full"
-                layout="intrinsic"
               />
 
               {/* Pigi Bank */}

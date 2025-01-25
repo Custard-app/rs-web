@@ -1,23 +1,29 @@
 'use client';
-import logo from '@/assets/images/Logo.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
 import portfolioIcon from '@/assets/images/computer-video-call.png';
 import bondsIcon from '@/assets/images/document-add-outline.png';
 import mutualFundIcon from '@/assets/images/icon-park_funds.png';
-import fixedDepositIcon from '@/assets/images/money-bag.png';
+import fixedDepositIcon from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/hybrid.svg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { GoArrowRight } from 'react-icons/go';
 import {
-    IoIosArrowDown,
-    IoIosArrowRoundForward,
-    IoIosArrowUp,
+  IoIosArrowDown,
+  IoIosArrowRoundForward,
+  IoIosArrowUp,
 } from 'react-icons/io';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 import AuthModal from '@/app/auth/AuthModal';
+import { LiaCoinsSolid } from 'react-icons/lia';
+import { BsPersonVcard } from 'react-icons/bs';
+import { LuNotebookPen } from 'react-icons/lu';
+import { TbMoneybag } from 'react-icons/tb';
+import { usePathname } from 'next/navigation';
 
 function Navbar() {
+  const pathname = usePathname();
   const [showInstrumentsBanner, setShowInstrumentsBanner] = useState(false);
   const [showCalculatorsBanner, setShowCalculatorsBanner] = useState(false);
   const [isHamOpen, setIsHamOpen] = useState(false);
@@ -75,22 +81,38 @@ function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
-        if(showInstrumentsBanner) closeInstrumentBanner();
-        if(showCalculatorsBanner) closeCalculatorBanner();
+        if (showInstrumentsBanner) closeInstrumentBanner();
+        if (showCalculatorsBanner) closeCalculatorBanner();
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
+  }, [showInstrumentsBanner, showCalculatorsBanner]);
 
-  },[showInstrumentsBanner,showCalculatorsBanner])
+  const isNewsletterPage = pathname === '/newsletter';
 
   return (
     <div className="relative" ref={navRef}>
       <div className="w-full bg-primary bg-opacity-30 backdrop-blur-md border-b border-black z-50 fixed top-0">
+        {/* BANNER START*/}
+        {isNewsletterPage && (
+          <div
+            className="w-full text-black p-2 text-center shadow-lg"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(193,245,88,1) 0%, rgba(219,249,144,1) 45%, rgba(255,255,221,1) 87%)',
+            }}
+          >
+            <p className="text-sm sm:text-base font-semibold">
+              Watch Money Grow - an Initiative by Rupeestop
+            </p>
+          </div>
+        )}
+        {/* BANNER END */}
         <div className="relative">
           <WidthXL>
             <div className="relative flex items-center justify-between py-5 px-5 sm:px-0 sm:py-5">
@@ -108,20 +130,30 @@ function Navbar() {
                     onClick={toggleInstrumentsBanner}
                     className="flex items-center gap-2 focus:outline-none"
                   >
-                    Instruments {showInstrumentsBanner ? <IoIosArrowUp size={20}/> : <IoIosArrowDown size={20}/>}
+                    Instruments{' '}
+                    {showInstrumentsBanner ? (
+                      <IoIosArrowUp size={20} />
+                    ) : (
+                      <IoIosArrowDown size={20} />
+                    )}
                   </button>
                   <button
                     onClick={toggleCalculatorsBanner}
                     className="flex items-center gap-2"
                   >
-                    Calculators {showCalculatorsBanner ? <IoIosArrowUp size={20}/> : <IoIosArrowDown size={20}/>}
+                    Calculators{' '}
+                    {showCalculatorsBanner ? (
+                      <IoIosArrowUp size={20} />
+                    ) : (
+                      <IoIosArrowDown size={20} />
+                    )}
                   </button>
                   <Link href="/newsletter">Newsletter</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
                   <Link
-                  href="https://invest.rupeestop.com/client-login"
-                  // onClick={() => setIsModalOpen(true)}
+                    href="https://invest.rupeestop.com/client-login"
+                    // onClick={() => setIsModalOpen(true)}
                     className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
                   >
                     Login
@@ -157,12 +189,9 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
-                  <Image
-                    src={mutualFundIcon}
-                    alt="Mutual Fund"
-                    width={30}
-                    height={30}
-                  />
+                  <div className="w-8 h-8 bg-accentOrange-200 rounded-full flex items-center justify-center text-white">
+                    <LiaCoinsSolid size={25} />
+                  </div>
                   Mutual Fund
                 </Link>
                 <Link
@@ -170,12 +199,9 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
-                  <Image
-                    src={portfolioIcon}
-                    alt="Portfolio Management"
-                    width={30}
-                    height={30}
-                  />
+                  <div className="w-8 h-8 bg-accentOrange-200 rounded-full flex items-center justify-center text-white">
+                    <BsPersonVcard size={20} />
+                  </div>
                   Portfolio Management
                 </Link>
                 <Link
@@ -183,12 +209,9 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
-                  <Image
-                    src={fixedDepositIcon}
-                    alt="Fixed Deposit"
-                    width={30}
-                    height={30}
-                  />
+                  <div className="w-8 h-8 bg-accentOrange-200 rounded-full flex items-center justify-center text-white">
+                    <TbMoneybag size={20} />
+                  </div>
                   Fixed Deposit
                 </Link>
                 <Link
@@ -196,7 +219,9 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeInstrumentBanner}
                 >
-                  <Image src={bondsIcon} alt="Bonds" width={30} height={30} />
+                  <div className="w-8 h-8 bg-accentOrange-200 rounded-full flex items-center justify-center text-white">
+                    <LuNotebookPen size={20} />
+                  </div>
                   Bonds
                 </Link>
               </div>
@@ -206,10 +231,11 @@ function Navbar() {
               {/* Right side message */}
               <div className="bg-[#DCFCFF] w-[45%] h-56  px-5 py-3 rounded-lg flex flex-col  gap-4">
                 <div className="flex justify-between items-center">
-                  <Link 
-                  href="/portfolio-health-checker"
-                  onClick={closeInstrumentBanner}
-                  className="font-lato font-semibold text-xs italic text-accentOrange-200">
+                  <Link
+                    href="#"
+                    onClick={closeInstrumentBanner}
+                    className="font-lato font-semibold text-xs italic text-accentOrange-200"
+                  >
                     Portfolio Health Checker
                   </Link>
                   <div className="w-12 h-12 rounded-full bg-primary"></div>
@@ -290,7 +316,7 @@ function Navbar() {
                   HRA Calculator
                 </Link>
                 <Link
-                   href="/calculators/mutual-fund-calculator"
+                  href="/calculators/mutual-fund-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
@@ -301,16 +327,17 @@ function Navbar() {
                   href="/calculators/sukanya-samriddhi-yojana-calculator"
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
-                  >
+                >
                   <span className="w-10 h-10 rounded-full bg-gray-200"></span>
                   SSY Calculator
                 </Link>
               </div>
             </div>
-            <Link 
-            href="/calculators"
-            onClick={closeCalculatorBanner}
-            className="text-accentOrange-200 font-lato text-center mt-5 flex justify-center items-center gap-2">
+            <Link
+              href="/calculators"
+              onClick={closeCalculatorBanner}
+              className="text-accentOrange-200 font-lato text-center mt-5 flex justify-center items-center gap-2"
+            >
               See All Calculators{' '}
               <span>
                 <IoIosArrowRoundForward size={25} />
@@ -368,7 +395,7 @@ function Navbar() {
                 className="font-lato font-medium text-base text-gray-200"
                 onClick={closeMenu}
               >
-                Portfolio Management System
+                Portfolio Management Services
               </Link>
               <Link
                 href="/bonds"
@@ -377,13 +404,13 @@ function Navbar() {
               >
                 Bonds
               </Link>
-              <Link
+              {/* <Link
                 href="/portfolio-health-checker"
-                className="font-lato font-medium text-base text-gray-200"
+                className="font-lato font-medium text-base text-gray-200 "
                 onClick={closeMenu}
               >
                 Portfolio Health Checker
-              </Link>
+              </Link> */}
             </div>
           )}
 
@@ -424,8 +451,8 @@ function Navbar() {
               >
                 HRA Calculator
               </Link>
-            <Link 
-            href="/calculators"
+              <Link
+                href="/calculators"
                 className="font-lato font-medium text-base text-orange-400 flex items-center gap-24"
                 onClick={closeMenu}
               >
@@ -447,9 +474,7 @@ function Navbar() {
       </div>
 
       {/* Render Login Modal */}
-      {isModalOpen && (
-        <AuthModal onClose={() => setIsModalOpen(false)} />
-      )}
+      {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }

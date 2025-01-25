@@ -1,11 +1,11 @@
 'use client';
-import Vector from '@/assets/icons/Vector.png';
-import balance from '@/assets/icons/cil_balance-scale.png';
-import pageImg from '@/assets/icons/oui_page-select.png';
-import FinanceAnalysis from '@/assets/images/FinanceAnalysis.png';
-import TeamPresentation from '@/assets/images/TeamPresentation.png';
-import pmsMain from '@/assets/images/pms-main.png';
-import logo from '@/assets/images/waterLogo.png';
+import Vector from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/grommet-icons_select.svg';
+import balance from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/cil_balance-scale.svg';
+import pageImg from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/page.svg';
+import FinanceAnalysis from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/predesigned pms.png';
+import TeamPresentation from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/customised pms.png';
+import pmsMain from '@/assets/rupeestop_assets/Portfolio Management System/Images/pms about.jpg';
+import logo from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/rupeestop.svg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';

@@ -1,6 +1,6 @@
-import moneyBonds from '@/assets/images/bonds-money.png';
-import building from '@/assets/images/building.png';
-import pexels from '@/assets/images/pexels-rdne.png';
+import moneyBonds from '@/assets/rupeestop_assets/Bonds/Images/rupee note.png';
+import building from '@/assets/rupeestop_assets/Bonds/Images/parliment.png';
+import pexels from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/contract.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 
@@ -20,7 +20,7 @@ export default function BasicbondSection() {
                         <Image src={moneyBonds} alt='images' className='h-[214px] sm:h-full w-[143px] sm:w-[195px] rounded-[10px]'/>
                         <div className='flex flex-col gap-3'>
                             <Image src={building} alt='images' className='w-[175px] sm:w-[222px] h-[102px] sm:h-[140px] rounded-[10px]'/>
-                            <Image src={pexels} alt='images' className='w-[175px] sm:w-[222px] h-[102px] sm:h-[140px] rounded-[10px]'/>
+                            <Image src={pexels} alt='images' className='w-[175px] sm:w-[222px] h-[102px] sm:h-[140px] rounded-[10px] object-cover'/>
                         </div>
                     </div>
                     <p className='font-lato font-extrabold text-[32px] sm:text-[38px] text-start text-white italic'>Steady returns, guaranteed principal!</p>

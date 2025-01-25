@@ -10,29 +10,40 @@ const cardData = [
     title: 'SIP Calculator',
     description: 'How much can you save by starting an SIP? Find out!',
     navigation: '/calculators/sip-calculator',
+    filter: ['Invest', 'Grow'],
+    plan: 'Best for Systematic Investing',
   },
   {
     title: 'Lumpsum Calculator',
     description:
       'Calculate the future value of a one-time lump sum investment.',
     navigation: '/calculators/lumsum-calculator',
+    filter: ['Investment', 'Growth'],
+    plan: 'Best for One-Time Investors',
   },
   {
     title: 'TDS Calculator',
     description:
       'Estimate the Tax Deducted at Source (TDS) for various incomes.',
     navigation: '/calculators/tds-calculator',
+    filter: ['Tax', 'Deduction'],
+    plan: 'Best for TDS Estimation',
   },
   {
     title: 'Compound Interest Calculator',
     description:
       'Find the compound interest and total value of your investments.',
     navigation: '/calculators/compound-interest-calculator',
-  },{
+    filter: ['Compound', 'Wealth'],
+    plan: 'Best for Advanced Savings',
+  },
+  {
     title: 'Income Tax Calculator',
     description:
       'Estimate your income tax liability based on current tax slabs.',
     navigation: '/calculators/income-tax-calculator',
+    filter: ['Income', 'Tax'],
+    plan: 'Best for Tax Planning',
   },
 ];
 
@@ -94,7 +105,19 @@ const ExploreCalculatorsSection = () => {
                     onTouchEnd={startAutoplay}
                   >
                     <div className="h-full rounded-xl flex flex-col items-start justify-between p-5">
-                      <div className="w-[95px] h-[95px] bg-[#C4C4C4] rounded-full"></div>
+                    <p className="w-full text-primary font-lato font-medium text-xs sm:text-sm text-end mb-2 -mt-6 ">
+                      {card.plan}
+                    </p>
+                    <div className="flex items-center -my-6">
+                      {card.filter.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="border-accentOrange-200 border-[1.5px] text-accentOrange-200 text-xs sm:text-[13px] px-2 py-1 rounded-full mr-2"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                       <div>
                         <h2 className="font-lato text-2xl font-semibold text-black">
                           {card.title}
@@ -104,8 +127,9 @@ const ExploreCalculatorsSection = () => {
                         </p>
                       </div>
                       <Link
-                      href={card.navigation}
-                       className="w-full text-center border-2 border-accentOrange-200 text-black rounded-full p-2 px-4">
+                        href={card.navigation}
+                        className="w-full text-center border-2 border-accentOrange-200 text-black rounded-full p-2 px-4"
+                      >
                         Calculate Now
                       </Link>
                     </div>

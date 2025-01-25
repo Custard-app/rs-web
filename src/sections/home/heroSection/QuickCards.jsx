@@ -18,7 +18,7 @@ const QuickCards = ({ product }) => {
       <div className="relative z-10 flex flex-col justify-center items-center text-black h-full gap-4">
         <h3 className="text-xl font-semibold font-lato text-center">{product.heading}</h3>
         <p className="text-base font-lato italic text-center">{product.content}</p>
-        <Link href="#" className='w-full flex justify-end items-center text-primary font-lato font-medium italic text-base gap-2'>Learn More <span><GoArrowRight size={30}/></span></Link>
+        <Link href={product.navigate} className='w-full flex justify-end items-center text-primary font-lato font-medium italic text-base gap-2'>Learn More <span><GoArrowRight size={30}/></span></Link>
       </div>
     </div>
   );

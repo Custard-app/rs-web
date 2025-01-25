@@ -1,5 +1,5 @@
 'use client';
-import logo from '@/assets/images/Logo.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -102,12 +102,12 @@ function Footer2() {
               >
                 Newsletter
               </Link>
-              <Link
+              {/* <Link
                 href="/portfolio-health-checker"
                 className="font-lato font-medium text-sm"
               >
                 Portfolio Health Checker
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -134,7 +134,7 @@ function Footer2() {
                 href="/portfolio-management-services"
                 className="font-lato font-medium text-sm"
               >
-                Portfolio Management System
+                Portfolio Management Services
               </Link>
               <Link href="/bonds" className="font-lato font-medium text-sm">
                 Bonds
@@ -192,12 +192,12 @@ function Footer2() {
                   >
                     Newsletter
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/portfolio-health-checker"
                     className="font-lato font-medium text-xs"
                   >
                     Portfolio Health Checker
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -226,8 +226,8 @@ function Footer2() {
                     href="/portfolio-management-services"
                     className="font-lato font-medium text-xs"
                   >
-                    Portfolio Management System
-                  </Link>
+                    Portfolio Management Services                  
+                    </Link>
                   <Link href="/bonds" className="font-lato font-medium text-xs">
                     Bonds
                   </Link>

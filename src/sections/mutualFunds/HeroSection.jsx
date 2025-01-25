@@ -1,4 +1,4 @@
-import mutualFundHero from '@/assets/images/mutualfund-hero.png';
+import mutualFundHero from '@/assets/rupeestop_assets/Mutual Funds/Images/coin stack.jpg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';

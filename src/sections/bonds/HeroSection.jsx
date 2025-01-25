@@ -1,4 +1,4 @@
-import bonds_hero from '@/assets/images/bonds_hero.png';
+import bonds_hero from '@/assets/rupeestop_assets/Bonds/Images/bonds_hero.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import { GoArrowRight, GoDotFill } from 'react-icons/go';

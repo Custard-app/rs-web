@@ -1,4 +1,4 @@
-import pms from '@/assets/images/pms-hero.png';
+import pms from '@/assets/rupeestop_assets/Portfolio Management System/Images/pms hero section.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoArrowRight } from 'react-icons/go';

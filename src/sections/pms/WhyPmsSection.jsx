@@ -1,8 +1,8 @@
-import cil_zoom from '@/assets/icons/cil_zoom.png';
-import foundation_torso from '@/assets/icons/foundation_torso-business.png';
-import hexagon from '@/assets/icons/mdi_professional-hexagon.png';
-import octiconGoal from '@/assets/icons/octicon_goal.png';
-import ph_fediverse from '@/assets/icons/ph_fediverse-logo-fill.png';
+import cil_zoom from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/cil_zoom.svg';
+import foundation_torso from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/foundation_torso-business.svg';
+import hexagon from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/mdi_professional-hexagon.svg';
+import octiconGoal from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/octicon_goal-24.svg';
+import ph_fediverse from '@/assets/rupeestop_assets/Portfolio Management System/Icons and Vectors/ph_fediverse-logo-fill.svg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 

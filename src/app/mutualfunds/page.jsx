@@ -2,7 +2,7 @@ import axismf from '@/assets/images/axismf.png';
 import birlamf from '@/assets/images/birlamf.png';
 import hdfcmf from '@/assets/images/hdfcmf.png';
 import icicimf from '@/assets/images/icicimf.png';
-import mutualfund2 from '@/assets/images/mutualfund2.png';
+import mutualfund2 from '@/assets/rupeestop_assets/Mutual Funds/Icons and Vectors/mutual funds.svg';
 import reliancemf from '@/assets/images/reliancemf.png';
 import sbimf from '@/assets/images/sbimf.png';
 import AdvntMfSection from '@/sections/mutualFunds/AdvntMfSection';

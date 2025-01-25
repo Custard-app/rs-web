@@ -6,18 +6,17 @@ import { GiVikingLonghouse } from 'react-icons/gi';
 import { LuBuilding2 } from 'react-icons/lu';
 import { TbMoneybag } from 'react-icons/tb';
 
-import Calendar from '@/assets/icons/Calendar.png';
-import Frame from '@/assets/icons/Frame.png';
-import hhh from '@/assets/icons/hhh.png';
-import Taxes from '@/assets/icons/Taxes.png';
+import Calendar from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/treasury bills.png';
+import Frame from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/government securities.svg';
+import hhh from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/state development tools.svg';
+import Taxes from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/rbi bonds.png';
 
-import Briefing from '@/assets/icons/Briefing.png';
-import Flash from '@/assets/icons/Flash.png';
-import Invesstment from '@/assets/icons/Invesstment.png';
-import Team from '@/assets/icons/Team.png';
+import Briefing from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/comercial papers.png';
+import Flash from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/zero coupon bonds.png';
+import Invesstment from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/non convertible.png';
+import Team from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/public sector.png';
 
-import Dollar from '@/assets/icons/Dollar.png';
-import Taxes2 from '@/assets/icons/Taxes2.png';
+import Dollar from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/oreference shares.png';
 
 const bondData = {
   governmentSecurities: [
@@ -131,7 +130,7 @@ const bondData = {
         ' Suitable for high net worth individuals',
         ' Long-term investment',
       ],
-      icon: Taxes2,
+      icon: Taxes,
     },
     {
       id: 2,

@@ -1,9 +1,15 @@
 'use client';
-import dream1 from '@/assets/images/dream1.png';
-import dream2 from '@/assets/images/dream2.png';
-import dream3 from '@/assets/images/dream3.png';
+import dream1 from '@/assets/rupeestop_assets/Home page/Images/travel.jpg';
+import dream2 from '@/assets/rupeestop_assets/Home page/Images/man-doing-household-tasks.jpg';
+import dream3 from '@/assets/rupeestop_assets/Home page/Images/buy car.jpg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import { useEffect, useState } from 'react';
+import QuickCards from './QuickCards';
+import mutualFundImg from '@/assets/rupeestop_assets/Home page/Icons/mutual funds.png';
+import fixedDepositImg from '@/assets/rupeestop_assets/Home page/Icons/fixed depostis.png';
+import pmsImg from '@/assets/rupeestop_assets/Home page/Icons/pms.png';
+import bonds from '@/assets/rupeestop_assets/Home page/Icons/bonds.png';
+import './Dreamsection.css';
 
 function Dreamsection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -42,17 +48,45 @@ function Dreamsection() {
     },
   ];
 
+  const products = [
+    {
+      image: mutualFundImg,
+      heading: 'Mutual Funds',
+      content: 'Invest in diversified portfolios to maximize returns.',
+      navigate: '/mutualfunds',
+    },
+    {
+      image: fixedDepositImg,
+      heading: 'Fixed Deposits',
+      content: 'Safe and secure investments with guaranteed returns.',
+      navigate: '/fixeddeposits',
+    },
+    {
+      image: pmsImg,
+      heading: 'Portfolio Management Services (PMS)',
+      content:
+        'Customized investment solutions for high net-worth individuals. ',
+        navigate: 'portfolio-management-services',
+    },
+    {
+      image: bonds,
+      heading: 'Bonds',
+      content: 'Consistent earnings with minimized financial risk.',
+      navigate: '/bonds',
+    },
+  ];
+
   // Auto-scroll logic
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(true); // Start fade-out
       setTimeout(() => {
-        setActiveIndex((prev) => (prev + 1) % data.length); 
-        setFade(false); 
+        setActiveIndex((prev) => (prev + 1) % data.length);
+        setFade(false);
       }, 300); // Match the fade duration
-    }, 3000); 
+    }, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [data.length]);
 
   return (
@@ -78,9 +112,11 @@ function Dreamsection() {
             <div
               className={`w-full sm:w-1/2 px-12 py-6 bg-teal-700 text-white rounded-[30px] h-[440px] flex flex-col gap-8 relative transition-opacity duration-500 `}
             >
-              <h3 className={`text-right font-lato italic text-xl transition-all duration-500 transform ${
-                fade ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
-              }`}>
+              <h3
+                className={`text-right font-lato italic text-xl transition-all duration-500 transform ${
+                  fade ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
+                }`}
+              >
                 {data[activeIndex].name}, {data[activeIndex].age} Yrs
               </h3>
               <div
@@ -141,6 +177,32 @@ function Dreamsection() {
                 className="rounded-[30px] w-full h-full object-cover"
               />
             </div>
+          </div>
+        </div>
+
+        {/* STOP DREAMING SECTION */}
+        <div className="my-10 sm:my-24">
+          <div className="w-full flex flex-col items-center mb-12 sm:mb-16 gap-5 ">
+            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase text-center">
+              STOP DREAMING,{' '}
+              <span className="text-primary font-protestRiot capitalize">
+                Invest With Us!{' '}
+              </span>
+            </h1>
+            <p className="text-sm sm:text-xl font-lato font-medium">
+              Join us to transform your dreams into reality
+            </p>
+          </div>
+          {/* CARDS */}
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-x-4">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="sm:flex-grow transition-all duration-300 ease-out group-hover:flex-[1] hover:flex-[2] cursor-pointer"
+              >
+                <QuickCards product={product} />
+              </div>
+            ))}
           </div>
         </div>
       </WidthXL>

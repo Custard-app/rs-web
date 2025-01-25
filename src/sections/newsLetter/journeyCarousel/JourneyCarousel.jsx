@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import WidthXL from '@/wrapper/widths/WidthXL';
-import bikeImage from '@/assets/images/newsletter-bike.png';
-import girlNewsletter from '@/assets/images/girlaNewsletter.png';
-import boyNewsletter from '@/assets/images/boyNewsletter.png';
+import bikeImage from '@/assets/rupeestop_assets/Newsletter/Images/Bike.jpeg';
+import girlNewsletter from '@/assets/rupeestop_assets/Newsletter/Images/invest.jpeg';
+import boyNewsletter from '@/assets/rupeestop_assets/Newsletter/Images/salary.jpeg';
 import Image from 'next/image';
 import { config } from 'react-spring';
 import Carousel from 'react-spring-3d-carousel';

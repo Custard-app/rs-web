@@ -50,7 +50,7 @@ const InterestRateSection = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-full sm:w-[506px] ">
+            {/* <div className="w-full sm:w-[506px] ">
               <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
                 Interest Rates
               </h3>
@@ -62,10 +62,10 @@ const InterestRateSection = () => {
                         Period
                       </th>
                       <th className="py-2 px-4 text-center border-r border-gray-300">
-                        Annual Income Plan
+                        Cumulative Option (p.a.)
                       </th>
                       <th className="py-2 px-4 text-center">
-                        Cumulative Option
+                        Amount Payable (₹)
                       </th>
                     </tr>
                   </thead>
@@ -73,14 +73,14 @@ const InterestRateSection = () => {
                   <tbody>
                     <tr className="font-lato font-medium text-sm sm:text-lg text-center">
                       <td className="py-2 px-4 border-r border-gray-300">
-                        15 Months
+                        12 Months
                       </td>
                       <td className="py-2 px-4 border-r border-gray-300">NA</td>
                       <td className="py-2 px-4">7.46%</td>
                     </tr>
                     <tr className="font-lato font-medium text-sm sm:text-lg text-center">
                       <td className="py-2 px-4 border-r border-gray-300">
-                        22 Months
+                        2 Months
                       </td>
                       <td className="py-2 px-4 border-r border-gray-300">
                         7.56%
@@ -122,7 +122,85 @@ const InterestRateSection = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
+            <div className="w-full sm:w-[506px] ">
+  <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
+    Interest Rates
+  </h3>
+  <div className="overflow-x-auto py-5 sm:py-10">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="text-black font-lato font-bold text-base sm:text-xl ">
+          <th className="py-2 px-4 text-center border-r border-gray-300 ">
+            Tenure (Months)
+          </th>
+          <th className="py-2 px-4 text-center border-r border-gray-300">
+            Cumulative ROI (p.a.)
+          </th>
+          <th className="py-2 px-4 text-center">
+            Amount Payable (₹)
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">12 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.85%</td>
+          <td className="py-2 px-4">5,392</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">18 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.00%</td>
+          <td className="py-2 px-4">5,612</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">24 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.15%</td>
+          <td className="py-2 px-4">5,849</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">30 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.35%</td>
+          <td className="py-2 px-4">6,110</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">36 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.70%</td>
+          <td className="py-2 px-4">6,423</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">42 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.75%</td>
+          <td className="py-2 px-4">6,706</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">50 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.80%</td>
+          <td className="py-2 px-4">7,107</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">60 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.80%</td>
+          <td className="py-2 px-4">7,625</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
+    <p className="italic">Notes:</p>
+    <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
+      
+      <li>Additional interest of 0.25% will be paid on renewals.</li>
+      <li>Additional interest of 0.10% will be paid to women depositors.</li>
+      <li>Minimum amount to start investment is ₹5,000.</li>
+      <li>Additional Interest of 0.50% will be paid to Senior Citizens.</li>
+      <li>Additional interest of 0.10% will be paid to Female Depositors.</li>
+      <li>Min amount to start investment Rs 5000.</li>
+    </ul>
+  </div>
+</div>
+
           </div>
 
           {/* MAHINDRA */}
@@ -164,7 +242,7 @@ const InterestRateSection = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-full sm:w-[506px] ">
+            {/* <div className="w-full sm:w-[506px] ">
               <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
                 Interest Rates
               </h3>
@@ -236,7 +314,92 @@ const InterestRateSection = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
+            <div className="w-full sm:w-[506px] ">
+  <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
+    Interest Rates
+  </h3>
+  <div className="overflow-x-auto py-5 sm:py-10">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="text-black font-lato font-bold text-base sm:text-xl ">
+          <th className="py-2 px-4 text-center border-r border-gray-300 ">
+            Tenure (Months)
+          </th>
+          <th className="py-2 px-4 text-center border-r border-gray-300">
+            Cumulative ROI (p.a.)
+          </th>
+          <th className="py-2 px-4 text-center">
+            Amount Payable (₹)
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">12 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.50%</td>
+          <td className="py-2 px-4">5,375</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">15 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.75%</td>
+          <td className="py-2 px-4">5,492</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">24 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.80%</td>
+          <td className="py-2 px-4">5,810</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">30 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.90%</td>
+          <td className="py-2 px-4">6,051</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">36 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.10%</td>
+          <td className="py-2 px-4">6,316</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">42 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.05%</td>
+          <td className="py-2 px-4">6,561</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">48 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.05%</td>
+          <td className="py-2 px-4">6,815</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">60 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.10%</td>
+          <td className="py-2 px-4">7,381</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
+    <p className="italic">Notes:</p>
+    <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
+     
+      <li>Minimum amount to start investment is ₹5,000 for cumulative option.</li>
+      <li>
+        Additional 0.25% p.a. for Senior Citizens for 12, 24, 36, 48 & 60 months
+        tenure.
+      </li>
+      <li>
+        Additional 0.10% p.a. for Senior Citizens for 15, 30 & 42 months tenure.
+      </li>
+      <li>
+        0.10% p.a. additional rate on renewal of deposits for Public & Senior
+        Citizens.
+      </li>
+      <li>Interest rates are subject to change as per the company&#39;s discretion.</li>
+    </ul>
+  </div>
+</div>
+
           </div>
 
           {/* PNB */}
@@ -279,78 +442,78 @@ const InterestRateSection = () => {
 
             {/* Right Section */}
             <div className="w-full sm:w-[506px] ">
-              <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
-                Interest Rates
-              </h3>
-              <div className="overflow-x-auto py-5 sm:py-10">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="text-black font-lato font-bold text-base sm:text-xl ">
-                      <th className="py-2 px-4 text-center border-r border-gray-300 ">
-                        Period
-                      </th>
-                      <th className="py-2 px-4 text-center border-r border-gray-300">
-                        Annual Income Plan
-                      </th>
-                      <th className="py-2 px-4 text-center">
-                        Cumulative Option
-                      </th>
-                    </tr>
-                  </thead>
+  <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
+    Interest Rates
+  </h3>
+  <div className="overflow-x-auto py-5 sm:py-10">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="text-black font-lato font-bold text-base sm:text-xl ">
+          <th className="py-2 px-4 text-center border-r border-gray-300 ">
+            Tenure (Months)
+          </th>
+          <th className="py-2 px-4 text-center border-r border-gray-300">
+            Cumulative ROI (p.a.)
+          </th>
+          <th className="py-2 px-4 text-center">
+            Amount Payable (₹)
+          </th>
+        </tr>
+      </thead>
 
-                  <tbody>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        15 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">NA</td>
-                      <td className="py-2 px-4">7.46%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        22 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        33 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.61%
-                      </td>
-                      <td className="py-2 px-4">7.61%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        44 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>Subject to TDS</li>
-                  <li>
-                    Senior citizens (60 years+) are eligible for an additional
-                    0.25% p.a. on deposits up to ₹2 crore.
-                  </li>
-                  <li>
-                    For cumulative interest options and recurring deposits
-                    plans, interest is compounded annually.
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <tbody>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">12 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.45%</td>
+          <td className="py-2 px-4">10,745.00</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">24 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.25%</td>
+          <td className="py-2 px-4">11,502.56</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">30 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.00%</td>
+          <td className="py-2 px-4">12,121.58</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">36 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.75%</td>
+          <td className="py-2 px-4">12,509.84</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">48 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.40%</td>
+          <td className="py-2 px-4">13,305.07</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">60 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.60%</td>
+          <td className="py-2 px-4">14,423.19</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
+    <p className="italic">Notes:</p>
+    <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
+      
+      <li>Minimum deposit amount: ₹10,000 for cumulative option.</li>
+      <li>
+        Interest rates are subject to change and applicable as per the rate
+        prevailing on the date of realization of cheque/transfer.
+      </li>
+      <li>
+      Senior Citizen (60 years & above) is eligible for an additional 0.25% interest for tenures 36 months & above from 01.04.2024.	
+      </li>
+      <li>
+      Interest rates are subject to change and applicable as per the rate prevailing on the date of realization of cheque/transfer.		
+      </li>
+    </ul>
+  </div>
+</div>
+
           </div>
 
           {/* BAJAJ */}
@@ -392,79 +555,83 @@ const InterestRateSection = () => {
             </div>
 
             {/* Right Section */}
-            <div className="w-full sm:w-[506px]">
-              <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
-                Intrest Rates
-              </h3>
-              <div className="overflow-x-auto py-5 sm:py-10">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="text-black font-lato font-bold text-base sm:text-xl ">
-                      <th className="py-2 px-4 text-center border-r border-gray-300 ">
-                        Period
-                      </th>
-                      <th className="py-2 px-4 text-center border-r border-gray-300">
-                        Annual Income Plan
-                      </th>
-                      <th className="py-2 px-4 text-center">
-                        Cumulative Option
-                      </th>
-                    </tr>
-                  </thead>
+            <div className="w-full sm:w-[506px] ">
+  <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
+    Interest Rates
+  </h3>
+  <div className="overflow-x-auto py-5 sm:py-10">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="text-black font-lato font-bold text-base sm:text-xl ">
+          <th className="py-2 px-4 text-center border-r border-gray-300 ">
+            Tenure (Months)
+          </th>
+          <th className="py-2 px-4 text-center border-r border-gray-300">
+            Cumulative ROI (p.a.)
+          </th>
+          <th className="py-2 px-4 text-center">
+            Amount Payable (₹)
+          </th>
+        </tr>
+      </thead>
 
-                  <tbody>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        15 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">NA</td>
-                      <td className="py-2 px-4">7.46%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        22 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        33 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.61%
-                      </td>
-                      <td className="py-2 px-4">7.61%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        44 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>Subject to TDS</li>
-                  <li>
-                    Senior citizens (60 years+) are eligible for an additional
-                    0.25% p.a. on deposits up to ₹2 crore.
-                  </li>
-                  <li>
-                    For cumulative interest options and recurring deposits
-                    plans, interest is compounded annually.
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <tbody>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">12 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.85%</td>
+          <td className="py-2 px-4">16,177.50</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">15 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">7.95%</td>
+          <td className="py-2 px-4">16,505.15</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">18 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.00%</td>
+          <td className="py-2 px-4">16,835.53</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">22 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.10%</td>
+          <td className="py-2 px-4">17,302.35</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">24 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.40%</td>
+          <td className="py-2 px-4">17,625.84</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">33 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.30%</td>
+          <td className="py-2 px-4">18,677.53</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">36 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.55%</td>
+          <td className="py-2 px-4">19,185.84</td>
+        </tr>
+        <tr className="font-lato font-medium text-sm sm:text-lg text-center">
+          <td className="py-2 px-4 border-r border-gray-300">44 months</td>
+          <td className="py-2 px-4 border-r border-gray-300">8.45%</td>
+          <td className="py-2 px-4">20,196.04</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
+    <p className="italic">Notes:</p>
+    <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
+      <li>
+        Minimum deposit amount: ₹15,000 for cumulative option.
+      </li>
+      <li>
+        Interest rates are subject to change as per the company&#39;s discretion.
+      </li>
+    </ul>
+  </div>
+</div>
+
           </div>
         </div>
       </WidthXL>
