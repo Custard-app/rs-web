@@ -1,8 +1,8 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import TeamCard from './cards/TeamCard';
-import team1 from '@/assets/teamsImages/team1.jpg';
-import team2 from '@/assets/teamsImages/team2.jpg';
-import team3 from '@/assets/teamsImages/team3.jpg';
+import team1 from '@/assets/rupeestop_assets/teamsImages/team1.jpg';
+import team2 from '@/assets/rupeestop_assets/teamsImages/team2.jpg';
+import team3 from '@/assets/rupeestop_assets/teamsImages/team3.jpg';
 
 const teamsData = [
   {
@@ -21,7 +21,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      "Pamita, joyful and ever ready to help; make team understand the female perspective and adding ‘Naari’ shakti to RupeeStop’s attitude.  A service enthusiast always working on making investment journey smooth & rewarding for our clients and adding Softness & Joy to RupeeStop's service attitude.",
+      "Pamita, joyful and ever ready to help; make team understand the female perspective. A service enthusiast always working on making investment journey smooth & rewarding for our clients and RupeeStop's Team also.",
   },
   {
     name: 'Dhiraj Sharma',
@@ -50,8 +50,7 @@ function TeamSection() {
               comprises friends who have worked across diverse fields, including
               investment companies, leading banks, and the hospitality sector.
               This unique combination gives us a holistic understanding of both
-              investments and investors, enabling us to offer tailored advice
-              and solutions.
+              investments and investors, enabling us to offer tailored solutions and services.
             </p>
           </div>
           <div className='flex flex-col sm:flex-row gap-4 sm:gap-10'>

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import React, { useRef, useEffect, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
@@ -14,12 +14,10 @@ function HeroSection() {
   ];
 
   useEffect(() => {
-   
     if (videoRefs[0].current) videoRefs[0].current.play();
 
-    
     const handleVideoEnd = (index) => {
-      const nextVideo = (index + 1) % videoRefs.length; 
+      const nextVideo = (index + 1) % videoRefs.length;
       setCurrentVideo(nextVideo);
       videoRefs[nextVideo].current.play();
     };
@@ -54,7 +52,7 @@ function HeroSection() {
             muted
             playsInline
             autoPlay
-            preload={currentVideo === index ? "auto" : "none"}
+            preload={currentVideo === index ? 'auto' : 'none'}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
               currentVideo === index ? 'opacity-100' : 'opacity-0'
             }`}
@@ -74,27 +72,26 @@ function HeroSection() {
           Join 1400+ people who subscribed to get wealthy.
         </p>
         <div className="flex items-center gap-4 flex-col sm:flex-row">
-          <div className="flex items-start justify-center backdrop-blur-sm rounded-full border border-white">
-            <div className="relative w-full max-w-md  items-center justify-between hidden">
-              {/* Email Icon and Placeholder */}
-              <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
+          {/* <div className="flex items-start justify-center backdrop-blur-sm rounded-full border border-white">
+            <div className="relative w-full max-w-md  items-center justify-between hidden"> */}
+          {/* Email Icon and Placeholder */}
+          {/* <div className="absolute inset-y-0 left-1 pl-3 flex items-center pointer-events-none">
                 <FiMail className="text-gray-100" />
-              </div>
-
-              {/* Input Field */}
-              <input
+              </div> */}
+          {/* Input Field */}
+          {/* <input
                 type="email"
                 placeholder="Enter your email"
                 className="block w-[380px] sm:w-[500px] py-4 pl-10 rounded-full bg-transparent text-white outline-none placeholder-white placeholder-opacity-80"
               />
             </div>
-          </div>
+          </div> */}
           <Link
-          href="https://rupeesorted.substack.com/"
-          target='_blank'
-          className="relative flex items-center justify-center w-[100%] sm:w-full bg-[#698f1c] py-[12px] px-5 rounded-full z-5 appearance-none border-transparent border-b-[6px] font-semibold text-black text-base sm:text-[20px] capitalize transform transition-transform duration-200 text-center
-          ">
-
+            href="https://rupeesorted.substack.com/"
+            target="_blank"
+            className="relative flex items-center justify-center w-[100%] sm:w-full bg-[#698f1c] py-[12px] px-5 rounded-full z-5 appearance-none border-transparent border-b-[6px] font-semibold text-black text-base sm:text-[20px] capitalize transform transition-transform duration-200 text-center
+          "
+          >
             <p>Subscribe to Newsletter</p>
             <span className="absolute inset-0 rounded-full bg-accentLime border-transparent border-b-4 -z-10"></span>
           </Link>

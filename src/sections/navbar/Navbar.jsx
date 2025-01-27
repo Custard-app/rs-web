@@ -1,9 +1,5 @@
 'use client';
 import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
-import portfolioIcon from '@/assets/images/computer-video-call.png';
-import bondsIcon from '@/assets/images/document-add-outline.png';
-import mutualFundIcon from '@/assets/images/icon-park_funds.png';
-import fixedDepositIcon from '@/assets/rupeestop_assets/Bonds/Icons and Vectors/hybrid.svg';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -108,7 +104,7 @@ function Navbar() {
             }}
           >
             <p className="text-sm sm:text-base font-semibold">
-              Watch Money Grow - an Initiative by Rupeestop
+            Rupee sorted - an Initiative by Rupeestop
             </p>
           </div>
         )}
@@ -169,9 +165,9 @@ function Navbar() {
             </div>
           </WidthXL>
 
-          {/* Instruments Slider Banner */}
+          {/* Instruments Slider Banner START*/}
           <div
-            className={`absolute -mt-10 right-2 z-20 mx-auto w-[650px] bg-gray-100 px-7 py-5 shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
+            className={`absolute -mt-10 right-80 z-20 mx-auto w-[350px] bg-gray-100 px-7 py-5 shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
               showInstrumentsBanner
                 ? 'translate-y-10 opacity-100'
                 : '-translate-y-10 opacity-0 pointer-events-none'
@@ -180,7 +176,7 @@ function Navbar() {
           >
             <div className="flex justify-between gap-7">
               {/* Left side options */}
-              <div className="space-y-4 text-lg text-gray-900 font-semibold w-[45%] flex flex-col items-start justify-evenly gap-4">
+              <div className="space-y-4 text-lg text-gray-900 font-semibold w-[100%] flex flex-col items-start justify-evenly gap-4">
                 <p className="font-lato font-bold text-lg border-b-2 border-green-950">
                   Instruments
                 </p>
@@ -226,10 +222,10 @@ function Navbar() {
                 </Link>
               </div>
 
-              <div className="w-[2px] bg-gray-200"></div>
+              {/* <div className="w-[2px] bg-gray-200"></div> */}
 
-              {/* Right side message */}
-              <div className="bg-[#DCFCFF] w-[45%] h-56  px-5 py-3 rounded-lg flex flex-col  gap-4">
+              {/* Right side message Portfolio Health hecker */}
+              {/* <div className="bg-[#DCFCFF] w-[45%] h-56  px-5 py-3 rounded-lg flex flex-col  gap-4">
                 <div className="flex justify-between items-center">
                   <Link
                     href="#"
@@ -247,11 +243,12 @@ function Navbar() {
                   Assess your investments with our Portfolio Health Checker for
                   personalized insights and tips.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
+          {/* Instruments Slider Banner END*/}
 
-          {/* Calculators Slider Banner */}
+          {/* Calculators Slider Banner START*/}
           <div
             className={`absolute -mt-10 right-2 mx-auto z-40 w-[510px] bg-gray-100 px-7 py-5 flex flex-col shadow-lg rounded-b-lg transition-all duration-300 ease-in-out ${
               showCalculatorsBanner
@@ -268,7 +265,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   FD Calculator
                 </Link>
                 <Link
@@ -276,7 +273,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   NPS Calculator
                 </Link>
                 <Link
@@ -284,7 +281,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   RD Calculator
                 </Link>
                 <Link
@@ -292,7 +289,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   CAGR Calculator
                 </Link>
               </div>
@@ -304,7 +301,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   NSC Calculator
                 </Link>
                 <Link
@@ -312,7 +309,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   HRA Calculator
                 </Link>
                 <Link
@@ -320,7 +317,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   MF Calculator
                 </Link>
                 <Link
@@ -328,7 +325,7 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  <span className="w-10 h-10 rounded-full bg-gray-200"></span>
+                  
                   SSY Calculator
                 </Link>
               </div>
@@ -344,10 +341,11 @@ function Navbar() {
               </span>
             </Link>
           </div>
+          {/* Calculators Slider Banner END*/}
         </div>
       </div>
 
-      {/* Full-Screen Hamburger Menu */}
+      {/* Full-Screen HAMEBURGER Menu */}
       <div
         className={`fixed w-full inset-y-0 right-0 bg-[#151515] z-50 overflow-y-auto transition-transform transform ${
           isHamOpen ? 'translate-x-0' : 'translate-x-full'

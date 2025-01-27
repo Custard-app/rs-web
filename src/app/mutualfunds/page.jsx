@@ -1,10 +1,4 @@
-import axismf from '@/assets/images/axismf.png';
-import birlamf from '@/assets/images/birlamf.png';
-import hdfcmf from '@/assets/images/hdfcmf.png';
-import icicimf from '@/assets/images/icicimf.png';
 import mutualfund2 from '@/assets/rupeestop_assets/Mutual Funds/Icons and Vectors/mutual funds.svg';
-import reliancemf from '@/assets/images/reliancemf.png';
-import sbimf from '@/assets/images/sbimf.png';
 import AdvntMfSection from '@/sections/mutualFunds/AdvntMfSection';
 import ExploreMFSection from '@/sections/mutualFunds/ExploreMFSection';
 import FAQSection from '@/sections/mutualFunds/FAQSection';
@@ -19,10 +13,14 @@ import Image from 'next/image';
 import { GoArrowRight } from 'react-icons/go';
 import './mutualfunds.css';
 import Link from 'next/link';
+import MfMarquee from '@/sections/mutualFunds/MfMarquee';
 // import ExploreCalculatorsSection from '@/sections/mutualFunds/ExploreCalculatorsSection';
-const ExploreCalculatorsSection = dynamic(() => import('@/sections/mutualFunds/ExploreCalculatorsSection'), {
-  ssr: false,
-});
+const ExploreCalculatorsSection = dynamic(
+  () => import('@/sections/mutualFunds/ExploreCalculatorsSection'),
+  {
+    ssr: false,
+  },
+);
 
 function page() {
   return (
@@ -49,81 +47,8 @@ function page() {
               </p>
             </div>
           </div>
-          <div className="relative w-full sm:w-[70%] mx-auto bg-white overflow-hidden">
-            <p className="text-center font-lato font-semibold text-primary text-2xl mb-4">
-              Compaines Providing Mutual Funds
-            </p>
-            {/* Gradient Fades */}
-            <div className="absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-
-            {/* Marquee Container */}
-            <div className="flex items-center animate-marquee whitespace-nowrap">
-              {/* Single Set of Images */}
-              <Image
-                src={birlamf}
-                alt="birla mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={axismf}
-                alt="axis mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={hdfcmf}
-                alt="hdfc mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={sbimf}
-                alt="sbi mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={icicimf}
-                alt="icici mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={reliancemf}
-                alt="reliance mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-
-              {/* Duplicate Set for Seamless Transition */}
-              <Image
-                src={birlamf}
-                alt="birla mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={axismf}
-                alt="axis mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={hdfcmf}
-                alt="hdfc mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={sbimf}
-                alt="sbi mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={icicimf}
-                alt="icici mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-              <Image
-                src={reliancemf}
-                alt="reliance mutualfund"
-                className="h-20 object-contain mx-4"
-              />
-            </div>
-          </div>
+          {/* MF MARQUEE START */}
+          <MfMarquee />
         </WidthXL>
       </div>
       <AdvntMfSection />
@@ -142,14 +67,15 @@ function page() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-[20px] text-wrap text-center text-gray-100">
-              Connect with us to start your investments in mutual funds.
+                Connect with us to start your investments in mutual funds.
               </p>
             </div>
 
             <Link
-            href="https://calendly.com/llprupeestop/30min"
-          target='_blank'
-            className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
+              href="https://calendly.com/llprupeestop/30min"
+              target="_blank"
+              className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5"
+            >
               <p className="text-black font-semibold text-base capitalize">
                 Chat With Us
               </p>

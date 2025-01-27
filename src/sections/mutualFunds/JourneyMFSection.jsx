@@ -178,7 +178,7 @@ function JourneyMFSection() {
                 className={`relative flex items-center gap-4 ${isInView ? 'container' : ''}`}
               >
                 <div className='w-3 h-3 rounded-full bg-white'></div>
-                <div className='px-6 py-[10px] w-[323px] sm:w-[535px] h-[125px] sm:h-[120px] bg-[#FFFBF7] rounded-[12px] flex items-center gap-4'>
+                <div className='px-6 py-[10px] w-[323px] sm:w-[535px] sm:h-[120px] bg-[#FFFBF7] rounded-[12px] flex items-center gap-4'>
                   <p className="p-1 px-2 bg-accentOrange-200 text-white rounded-full font-lato font-semibold">
                     0{index + 1}
                   </p>

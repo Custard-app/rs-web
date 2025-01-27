@@ -14,7 +14,7 @@ function AboutSection() {
             <p className="font-lato font-medium text-sm sm:text-xl text-wrap text-center sm:text-start">
               Rupeestop is a investment firm dedicated to simplifying
               investment decisions for individuals and institutions. Our mission
-              is to provide comprehensive investment solutions that are tailored
+              is to provide comprehensive investment solutions
               to meet the specific needs of our clients. With our diverse
               backgrounds and shared expertise, we aim to bridge the gap between
               complex financial instruments and everyday investors.

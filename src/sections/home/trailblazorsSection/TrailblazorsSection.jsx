@@ -1,10 +1,10 @@
-import client1 from '@/assets/clientsImages/client1.jpg';
-import client2 from '@/assets/clientsImages/client2.jpg';
-import client3 from '@/assets/clientsImages/client3.jpg';
-import client4 from '@/assets/clientsImages/client4.jpg';
-import client5 from '@/assets/clientsImages/client5.jpg';
-import client6 from '@/assets/clientsImages/client6.jpg';
-import client7 from '@/assets/clientsImages/client7.jpg';
+import client1 from '@/assets/rupeestop_assets/clientsImages/client1.jpg';
+import client2 from '@/assets/rupeestop_assets/clientsImages/client2.jpg';
+import client3 from '@/assets/rupeestop_assets/clientsImages/client3.jpg';
+import client4 from '@/assets/rupeestop_assets/clientsImages/client4.jpg';
+import client5 from '@/assets/rupeestop_assets/clientsImages/client5.jpg';
+import client6 from '@/assets/rupeestop_assets/clientsImages/client6.jpg';
+import client7 from '@/assets/rupeestop_assets/clientsImages/client7.jpg';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { BsPlay } from 'react-icons/bs';
 import './Trailblazors.css';
@@ -16,7 +16,7 @@ function TrailblazorsSection() {
       image: client1,
       heading: 'Dr. Aman Setia',
       content:
-        'Rupeestop simplified my investment journey and helped me achieve consistent growth. Their personalized advice is top-notch!',
+        "Rupeestop is managed by skilled professionals with expertise in the field. Their dedication and perseverance have helped the firm build a strong reputation and excellent creditworthiness.",
     },
     {
       image: client2,
@@ -44,7 +44,7 @@ function TrailblazorsSection() {
     },
     {
       image: client6,
-      heading: 'Shardha',
+      heading: 'Shradha & Puneet',
       content:
         'The personalized attention I received from Rupeestop is unparalleled. They treat every client like a priority!',
     },

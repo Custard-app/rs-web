@@ -17,7 +17,7 @@ const cardData = [
     title: 'Lumpsum Calculator',
     description:
       'Calculate the future value of a one-time lump sum investment.',
-    navigation: '/calculators/lumsum-calculator',
+    navigation: '/calculators/lumpsum-calculator',
     filter: ['Investment', 'Growth'],
     plan: 'Best for One-Time Investors',
   },

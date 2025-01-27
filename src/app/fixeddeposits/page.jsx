@@ -3,10 +3,10 @@ import diverse from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/
 import flexibility from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/flexibility.svg';
 import hightreturn from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/higher returns.png';
 import safety from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/safety.png';
-import bajaj from '@/assets/images/bajaj.png';
-import shriram from '@/assets/images/shriram.png';
-import mahindra from '@/assets/images/mahindra.png';
-import pnb from '@/assets/images/pnb.png';
+import bajaj from '@/assets/rupeestop_assets/Fixed Deposits/Images/bajaj.png';
+import shriram from '@/assets/rupeestop_assets/Fixed Deposits/Images/shriram.png';
+import mahindra from '@/assets/rupeestop_assets/Fixed Deposits/Images/mahindra.png';
+import pnb from '@/assets/rupeestop_assets/Fixed Deposits/Images/pnb.png';
 import waterLogo from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/rupeestop.svg';
 import FAQSection from '@/sections/fixedDeposits/FAQSection';
 import HeroSection from '@/sections/fixedDeposits/HeroSection';
@@ -68,10 +68,10 @@ function page() {
             performance, and returns on their loans and deposits.
           </p>
           <div className="flex items-center justify-evenly flex-wrap space-y-4 space-x-1 sm:space-x-2">
-            <Image src={shriram} alt="hdfc" className="w-32 h-10 sm:h-12" />
-            <Image src={mahindra} alt="mahindra" className="h-10 sm:h-12" />
-            <Image src={pnb} alt="pnb" className="h-10 sm:h-12" />
-            <Image src={bajaj} alt="bajaj" className="h-10 sm:h-12" />
+            <Image src={shriram} alt="shriram" className="w-32 h-auto" />
+            <Image src={mahindra} alt="mahindra" className="w-32 h-auto" />
+            <Image src={pnb} alt="pnb" className="w-32 h-auto" />
+            <Image src={bajaj} alt="bajaj" className="w-32 h-auto" />
           </div>
           <Image
             src={waterLogo}

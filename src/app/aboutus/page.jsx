@@ -56,7 +56,6 @@ function AboutUs() {
                   <Link href="#" className="text-primary underline">
                   info@rupeestop.com
                   </Link>{' '}
-                  or click the button below to apply online.
                 </p>
               </div>
               <p className="w-full font-lato font-bold text-2xl text-black  items-start mb-10 hidden">
