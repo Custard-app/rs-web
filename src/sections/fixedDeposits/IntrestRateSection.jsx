@@ -11,7 +11,7 @@ const InterestRateSection = () => {
     <div className="bg-[#FFFBF7] py-14 sm:py-24 px-5 sm:px-0">
       <WidthXL>
         <div className="flex flex-col gap-24">
-          {/* Shriram */}
+          {/* SHRIRAM */}
           <div className="flex flex-col sm:flex-row items-center gap-10">
             {/* Left Section */}
             <div className="w-full sm:w-[602px] flex flex-col items-start gap-4">
@@ -147,25 +147,32 @@ const InterestRateSection = () => {
                 </table>
               </div>
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>
+                <p className="italic mb-1">Notes:</p>
+                <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
+                <li className="flex items-start">
+                <span className="text-white mr-2">•</span>
                     Additional interest of 0.25% will be paid on renewals.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Additional interest of 0.10% will be paid to women
                     depositors.
                   </li>
-                  <li>Minimum amount to start investment is ₹5,000.</li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    Minimum amount to start investment is ₹5,000.</li>
                   <li>
                     Additional Interest of 0.50% will be paid to Senior
                     Citizens.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Additional interest of 0.10% will be paid to Female
                     Depositors.
                   </li>
-                  <li>Min amount to start investment Rs 5000.</li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    Min amount to start investment Rs 5000.</li>
                 </ul>
               </div>
             </div>
@@ -179,25 +186,42 @@ const InterestRateSection = () => {
                 <Image src={mahindra} alt="hdfc" className="w-28 h-auto" />
               </div>
               <h2 className="font-poppins text-[28px] sm:text-4xl font-bold mb-4 text-start">
-                Mahindra & Mahindra
+                Mahindra & Mahindra Fixed Deposits
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated
-                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
-                ICRA) for the last 23 years.
+                High Safety Assurance – Rated &#39;IND AAA/Stable&#39; by India
+                Ratings & &#39;CRISIL AAA/Stable&#39; by CRISIL
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Attractive and assured returns
+                  Secure & Reliable – Enjoy peace of mind with highly rated
+                  fixed deposits
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✔</span>A wide range of
-                  deposit products to choose from
+                  <span className="text-primary mr-2">✔</span>Attractive
+                  Interest Rates – Competitive returns on your investment
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Quick loan against deposit facility
+                  Higher Interest for Seniors – Additional 0.25% p.a. interest
+                  for senior citizens
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Special Interest for Employees – Additional 0.35% interest for
+                  Mahindra Group employees and their relatives on Samruddhi
+                  Fixed Deposits
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Flexible Deposit Options – Choose from a variety of tenures to
+                  suit your needs
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Trusted Institution – Backed by Mahindra Group’s strong
+                  financial foundation
                 </li>
               </ul>
               <Link
@@ -210,79 +234,6 @@ const InterestRateSection = () => {
             </div>
 
             {/* Right Section */}
-            {/* <div className="w-full sm:w-[506px] ">
-              <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
-                Interest Rates
-              </h3>
-              <div className="overflow-x-auto py-5 sm:py-10">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="text-black font-lato font-bold text-base sm:text-xl ">
-                      <th className="py-2 px-4 text-center border-r border-gray-300 ">
-                        Period
-                      </th>
-                      <th className="py-2 px-4 text-center border-r border-gray-300">
-                        Annual Income Plan
-                      </th>
-                      <th className="py-2 px-4 text-center">
-                        Cumulative Option
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        15 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">NA</td>
-                      <td className="py-2 px-4">7.46%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        22 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        33 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.61%
-                      </td>
-                      <td className="py-2 px-4">7.61%</td>
-                    </tr>
-                    <tr className="font-lato font-medium text-sm sm:text-lg text-center">
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        44 Months
-                      </td>
-                      <td className="py-2 px-4 border-r border-gray-300">
-                        7.56%
-                      </td>
-                      <td className="py-2 px-4">7.56%</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>Subject to TDS</li>
-                  <li>
-                    Senior citizens (60 years+) are eligible for an additional
-                    0.25% p.a. on deposits up to ₹2 crore.
-                  </li>
-                  <li>
-                    For cumulative interest options and recurring deposits
-                    plans, interest is compounded annually.
-                  </li>
-                </ul>
-              </div>
-            </div> */}
             <div className="w-full sm:w-[506px] ">
               <h3 className="font-poppins text-[20px sm:text-[24px] font-semibold text-white bg-primary text-center py-4 rounded-t-3xl ">
                 Interest Rates
@@ -380,25 +331,30 @@ const InterestRateSection = () => {
                 </table>
               </div>
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>
+                <p className="italic mb-1">Notes:</p>
+                <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
+                <li className="flex items-start">
+                <span className="text-white mr-2">•</span>
                     Minimum amount to start investment is ₹5,000 for cumulative
                     option.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Additional 0.25% p.a. for Senior Citizens for 12, 24, 36, 48
                     & 60 months tenure.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Additional 0.10% p.a. for Senior Citizens for 15, 30 & 42
                     months tenure.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     0.10% p.a. additional rate on renewal of deposits for Public
                     & Senior Citizens.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Interest rates are subject to change as per the
                     company&#39;s discretion.
                   </li>
@@ -418,22 +374,33 @@ const InterestRateSection = () => {
                 PNB Housing Finance
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated
-                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
-                ICRA) for the last 23 years.
+                High Safety Assurance – Rated &#39;AA+/Stabl&#39; by CARE &
+                &#39;AA+/Positive&#39; by CRISIL
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Attractive and assured returns
+                  Secure & Reliable – Enjoy peace of mind with highly rated
+                  fixed deposits
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✔</span>A wide range of
-                  deposit products to choose from
+                  <span className="text-primary mr-2">✔</span>Attractive
+                  Interest Rates – Competitive returns on your investment
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Quick loan against deposit facility
+                  Higher Interest for Seniors – Additional 0.30% p.a. interest
+                  for senior citizens
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Flexible Deposit Options – Choose from a variety of tenures to
+                  suit your needs
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Trusted Institution – Backed by PNB Housing’s strong
+                  financial foundation
                 </li>
               </ul>
               <Link
@@ -525,22 +492,26 @@ const InterestRateSection = () => {
                 </table>
               </div>
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>
+                <p className="italic mb-1">Notes:</p>
+                <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
+                <li className="flex items-start">
+                <span className="text-white mr-2">•</span>
                     Minimum deposit amount: ₹10,000 for cumulative option.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Interest rates are subject to change and applicable as per
                     the rate prevailing on the date of realization of
                     cheque/transfer.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Senior Citizen (60 years & above) is eligible for an
                     additional 0.25% interest for tenures 36 months & above from
                     01.04.2024.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Interest rates are subject to change and applicable as per
                     the rate prevailing on the date of realization of
                     cheque/transfer.
@@ -561,22 +532,31 @@ const InterestRateSection = () => {
                 Bajaj Finserv
               </h2>
               <p className="font-lato font-medium text-[20px] sm:text-2xl text-gray-600 mb-4 text-start">
-                Corporate Fixed Deposits of HDFC Limited have been rated
-                &#39;AAA&#39; by two leading credit rating agencies (CRISIL and
-                ICRA) for the last 23 years.
+                Rated &#39;AAA&#39; by CRISIL & [ICRA] AAA(STABLE) – Ensuring
+                High Safety & Stability
               </p>
               <ul className="space-y-2 text-gray-700 font-lato font-medium text-lg">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Attractive and assured returns
+                  Trusted by over 5 lakh customers
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✔</span>A wide range of
-                  deposit products to choose from
+                  <span className="text-primary mr-2">✔</span>Fixed Deposits
+                  worth more than ₹50,000 crore booked
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
-                  Quick loan against deposit facility
+                  Special tenure of 18, 22, 33, 42, and 44 months – Offering
+                  higher returns
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Up to 0.40% p.a. extra interest for senior citizens
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">✔</span>
+                  Flexible interest payout options – Choose from Monthly,
+                  Quarterly, Half-yearly, Annually, or at Maturity
                 </li>
               </ul>
               <Link
@@ -686,12 +666,14 @@ const InterestRateSection = () => {
                 </table>
               </div>
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
-                <p className="italic">Notes:</p>
-                <ul className="list-disc list-inside space-y-2 font-lato text-[10px] sm:text-sm italic">
-                  <li>
+                <p className="italic mb-1">Notes:</p>
+                <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Minimum deposit amount: ₹15,000 for cumulative option.
                   </li>
-                  <li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Interest rates are subject to change as per the
                     company&#39;s discretion.
                   </li>

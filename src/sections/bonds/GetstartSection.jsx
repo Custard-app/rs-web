@@ -3,6 +3,8 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import { useEffect, useRef, useState } from 'react';
 import { RxTriangleRight } from 'react-icons/rx';
 import './GetstartSection.css';
+import arrowDown from '@/assets/rupeestop_assets/Icons/arrow-down.png'
+import Image from 'next/image';
 
 export default function GetstartSection() {
   const ref = useRef(null);
@@ -150,22 +152,13 @@ export default function GetstartSection() {
           {/* FOR SMALL SCREEN */}
           <div className="w-[350px] flex sm:hidden flex-col relative gap-20">
             {/* Arrow 1 */}
-            <div className="absolute -left-2 top-[100px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
-              <RxTriangleRight className=" -ml-2" />
-            </div>
+            <Image src={arrowDown} alt='arrow'className='absolute -left-5 top-[60px] w-32 h-auto' />
 
             {/* Arrow 2 */}
-            <div className="absolute -left-2 top-[280px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
-              <RxTriangleRight className=" -ml-2" />
-            </div>
+             <Image src={arrowDown} alt='arrow'className='absolute -left-5 top-[280px] w-32 h-auto' />
 
             {/* Arrow 3 */}
-            <div className="absolute -left-2 top-[460px] flex items-center text-xl whitespace-nowrap rotate-90">
-              {`----------------`}
-              <RxTriangleRight className=" -ml-2" />
-            </div>
+            <Image src={arrowDown} alt='arrow'className='absolute -left-5 top-[495px] w-32 h-auto' />
 
             {/* card 1 */}
             <div className="w-full flex flex-row gap-4 items-start justify-center">

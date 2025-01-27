@@ -4,11 +4,11 @@ import axis from '@/assets/rupeestop_assets/Fixed Deposits/Images/axis.png';
 import adityabirla from '@/assets/rupeestop_assets/Fixed Deposits/Images/adityabirla.jpeg';
 import shriram from '@/assets/rupeestop_assets/Fixed Deposits/Images/shriram.png';
 import sbi from '@/assets/rupeestop_assets/Fixed Deposits/Images/sbi.jpg';
-import reliance from '@/assets/rupeestop_assets/Fixed Deposits/Images/reliance3.webp';
+import navi from '@/assets/rupeestop_assets/Fixed Deposits/Images/navi.png';
 import nippon from '@/assets/rupeestop_assets/Fixed Deposits/Images/nippon.png';
 import kotak from '@/assets/rupeestop_assets/Fixed Deposits/Images/kotak.png';
 import jm from '@/assets/rupeestop_assets/Fixed Deposits/Images/jm.jpg';
-import groww from '@/assets/rupeestop_assets/Fixed Deposits/Images/groww.png';
+import bandhan from '@/assets/rupeestop_assets/Fixed Deposits/Images/bandhan.png';
 import pnb from '@/assets/rupeestop_assets/Fixed Deposits/Images/pnb.png';
 
 function MfMarquee() {
@@ -25,11 +25,11 @@ function MfMarquee() {
         <img src={adityabirla.src} alt="Aditya Birla Mutual Fund" className="mx-4 w-40" />
         <img src={shriram.src} alt="Shriram Mutual Fund" className="mx-4 w-40" />
         <img src={sbi.src} alt="SBI Mutual Fund" className="mx-4 w-40" />
-        <img src={reliance.src} alt="Reliance Mutual Fund" className="mx-4 w-40" />
+        <img src={navi.src} alt="Navi Mutual Fund" className="mx-4 w-40" />
         <img src={nippon.src} alt="Nippon Mutual Fund" className="mx-4 w-40" />
         <img src={kotak.src} alt="Kotak Mutual Fund" className="mx-4 w-40" />
         <img src={jm.src} alt="JM Mutual Fund" className="mx-4 w-40" />
-        <img src={groww.src} alt="Groww Mutual Fund" className="mx-4 w-40" />
+        <img src={bandhan.src} alt="Bandhan Mutual Fund" className="mx-4 w-40" />
         <img src={pnb.src} alt="PNB Mutual Fund" className="mx-4 w-40" />
       </Marquee>
     </div>
