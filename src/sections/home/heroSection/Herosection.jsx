@@ -21,7 +21,7 @@ function Herosection() {
         <Link
           href="https://calendly.com/llprupeestop/30min"
           target="_blank"
-          className="flex items-center gap-2 sm:gap-3 bg-accentLime  pl-[20px] py-[10px] pr-[10px] rounded-full mt-8"
+          className="flex items-center gap-2 sm:gap-3 bg-accentLime  pl-[20px] py-[10px] pr-[10px] rounded-full mt-8 overflow-hidden z-10"
         >
           <p className="text-black font-semibold text-sm sm:text-base ">
             I want to invest{' '}
@@ -35,7 +35,7 @@ function Herosection() {
           <Image
             src={heroImage2}
             alt="Investment Image"
-            className="rounded-xl shadow-lg h-[200px] sm:h-[477px] w-[351px] sm:w-[967px] object-cover"
+            className="rounded-xl shadow-lg h-[200px] sm:h-[477px] w-[340px] sm:w-[967px] object-cover"
           />
         </div>
 
