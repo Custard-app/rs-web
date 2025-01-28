@@ -1,4 +1,4 @@
-import usephcimage from '@/assets/images/usephcimage.png';
+import usephcimage from '@/assets/rupeestop_assets/Portfolio Health Checker/Images/usephcimage.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 

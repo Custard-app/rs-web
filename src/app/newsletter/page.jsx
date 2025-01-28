@@ -11,6 +11,8 @@ import RoadmapSection from '@/sections/newsLetter/RoadmapSection';
 import React from 'react';
 import { GoDotFill } from 'react-icons/go';
 import '../bonds/bonds.css';
+import Link from 'next/link';
+import Marquee from 'react-fast-marquee';
 
 export default function page() {
   return (
@@ -27,25 +29,55 @@ export default function page() {
           independence early.
         </p>
       </div>
-      <div className="w-full" 
-      style={{
-        background:"linear-gradient(90deg, rgba(193,245,88,1) 0%, rgba(203,247,114,1) 87%)",
-      }}
+      <div
+        className="w-full py-2 font-lato font-medium text-lg sm:text-xl"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(193,245,88,1) 0%, rgba(203,247,114,1) 87%)',
+        }}
       >
-        <div className="text-black font-lato font-medium text-lg sm:text-xl flex whitespace-nowrap gap-8 sm:gap-24 animate-bondsHorizontalScroll py-2">
-          <p className="flex items-center gap-3">
-            <GoDotFill className='text-white'/>
-            Subscribe to our Newsletter
-          </p>
-          <p className="flex items-center gap-3">
-            <GoDotFill className='text-white'/>
-            Subscribe to our Newsletter
-          </p>
-          <p className="flex items-center gap-3">
-            <GoDotFill className='text-white'/>
-            Subscribe to our Newsletter
-          </p>
-        </div>
+          <Marquee speed={80} pauseOnHover={true} className='flex gap-5 '>
+            <Link
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="flex items-center gap-3 mr-6"
+            >
+              <GoDotFill className="text-white" />
+              Subscribe to our Newsletter
+            </Link>
+            <Link
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="flex items-center gap-3 mr-6"
+            >
+              <GoDotFill className="text-white" />
+              Subscribe to our Newsletter
+            </Link>
+            <Link
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="flex items-center gap-3 mr-6"
+            >
+              <GoDotFill className="text-white" />
+              Subscribe to our Newsletter
+            </Link>
+            <Link
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="flex items-center gap-3 mr-6"
+            >
+              <GoDotFill className="text-white" />
+              Subscribe to our Newsletter
+            </Link>
+            <Link
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="flex items-center gap-3 mr-6"
+            >
+              <GoDotFill className="text-white" />
+              Subscribe to our Newsletter
+            </Link>
+          </Marquee>
       </div>
 
       <RoadmapSection />

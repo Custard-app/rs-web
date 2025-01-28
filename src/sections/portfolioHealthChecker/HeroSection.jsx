@@ -1,5 +1,5 @@
 'use client';
-import phcimage from '@/assets/images/phcimage.png'; // Replace with your image path
+import phcimage from '@/assets/rupeestop_assets/Portfolio Health Checker/Images/Hero section.jpg'; 
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';

@@ -6,7 +6,7 @@ import pigiBank from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/sav
 import trandingImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/investing.svg';
 import walletImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/spending.svg';
 import scooterImage from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/travelling.svg';
-import archedArrow from '@/assets/images/undraw_arched-arrow.png';
+import archedArrow from '@/assets/rupeestop_assets/Newsletter/Icons and Vectors/undraw_arched-arrow.png';
 import Image from 'next/image';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 

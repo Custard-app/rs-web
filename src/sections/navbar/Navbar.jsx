@@ -1,5 +1,5 @@
 'use client';
-import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo2.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -103,9 +103,12 @@ function Navbar() {
                 'linear-gradient(90deg, rgba(193,245,88,1) 0%, rgba(219,249,144,1) 45%, rgba(255,255,221,1) 87%)',
             }}
           >
-            <p className="text-sm sm:text-base font-semibold">
+            <Link
+            href="https://rupeesorted.substack.com/"
+            target='_blank'
+            className="text-sm sm:text-base font-semibold">
             Rupee sorted - an Initiative by Rupeestop
-            </p>
+            </Link>
           </div>
         )}
         {/* BANNER END */}
@@ -116,7 +119,7 @@ function Navbar() {
                 <Image
                   src={logo}
                   alt="Rupeestop"
-                  className="w-[136px] h-[23px] sm:w-48 sm:h-8"
+                  className="w-[136px] sm:w-48 auto"
                 />
               </Link>
               <div className="flex items-center gap-8">
@@ -356,7 +359,7 @@ function Navbar() {
             <RxCross2 size={30} />
           </button>
           <Link href="/" onClick={closeMenu}>
-            <Image src={logo} alt="Rupeestop" className="w-[207px] h-[35px]" />
+            <Image src={logo} alt="Rupeestop" className="w-[207px] h-auto" />
           </Link>
           <Link
             href="/aboutus"

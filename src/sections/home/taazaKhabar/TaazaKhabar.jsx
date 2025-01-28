@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow from '@/assets/images/arrow.png';
+import arrow from '@/assets/rupeestop_assets/arrow.png';
 import { FiArrowRight, FiMail } from 'react-icons/fi';
 import { HiArrowTrendingUp } from 'react-icons/hi2';
 import { IoStarSharp } from 'react-icons/io5';

@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import { GoArrowRight } from 'react-icons/go';
-import heroImage2 from '@/assets/rupeestop_assets/Home page/Images/Herosection.png';
+import heroImage2 from '@/assets/rupeestop_assets/Home page/Images/herosection2.jpg';
 import Width3XL from '@/wrapper/widths/Width3XL';
 import axios from 'axios';
 import Link from 'next/link';

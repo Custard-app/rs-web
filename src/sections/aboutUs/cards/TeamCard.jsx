@@ -10,14 +10,14 @@ function TeamCard({ team }) {
           <p className="font-lato font-medium text-[22px]">{team.name}</p>
           {/* <p className="font-lato text-base text-primary">{team.position}</p> */}
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <Link href={team.twitter}>
             <FaTwitter size={20} />
           </Link>
           <Link href={team.linkedin}>
             <FaLinkedin size={20} />
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="w-full flex flex-row sm:flex-col items-center sm:justify-center gap-4">
         <Image

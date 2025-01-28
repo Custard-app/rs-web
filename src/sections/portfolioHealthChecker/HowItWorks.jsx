@@ -1,6 +1,6 @@
 'use client';
-import graph from '@/assets/images/graph.png';
-import logo from '@/assets/images/Logo.png';
+import graph from '@/assets/rupeestop_assets/Portfolio Health Checker/Images/graph.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import Link from 'next/link';

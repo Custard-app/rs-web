@@ -40,7 +40,7 @@ export default function Home() {
 
 // import Image from 'next/image';
 // import React from 'react';
-// import logo from '@/assets/images/Logo.png';
+//import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
 // import Link from 'next/link';
 
 // function Home() {

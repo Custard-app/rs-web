@@ -149,9 +149,9 @@ const InterestRateSection = () => {
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
                 <p className="italic mb-1">Notes:</p>
                 <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
-                <li className="flex items-start">
-                <span className="text-white mr-2">•</span>
-                    Additional interest of 0.25% will be paid on renewals.
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    Minimum amount to start investment is ₹5,000.
                   </li>
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
@@ -160,19 +160,13 @@ const InterestRateSection = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
-                    Minimum amount to start investment is ₹5,000.</li>
-                  <li>
                     Additional Interest of 0.50% will be paid to Senior
                     Citizens.
                   </li>
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
-                    Additional interest of 0.10% will be paid to Female
-                    Depositors.
+                    Additional interest of 0.25% will be paid on renewals.
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-white mr-2">•</span>
-                    Min amount to start investment Rs 5000.</li>
                 </ul>
               </div>
             </div>
@@ -206,12 +200,6 @@ const InterestRateSection = () => {
                   <span className="text-primary mr-2">✔</span>
                   Higher Interest for Seniors – Additional 0.25% p.a. interest
                   for senior citizens
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">✔</span>
-                  Special Interest for Employees – Additional 0.35% interest for
-                  Mahindra Group employees and their relatives on Samruddhi
-                  Fixed Deposits
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">✔</span>
@@ -333,8 +321,8 @@ const InterestRateSection = () => {
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
                 <p className="italic mb-1">Notes:</p>
                 <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
-                <li className="flex items-start">
-                <span className="text-white mr-2">•</span>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
                     Minimum amount to start investment is ₹5,000 for cumulative
                     option.
                   </li>
@@ -494,16 +482,11 @@ const InterestRateSection = () => {
               <div className="text-sm bg-primary text-white p-4 rounded-b-3xl">
                 <p className="italic mb-1">Notes:</p>
                 <ul className="list-disc list-inside space-y-1 sm:space-y-2 font-lato text-[10px] sm:text-sm italic">
-                <li className="flex items-start">
-                <span className="text-white mr-2">•</span>
-                    Minimum deposit amount: ₹10,000 for cumulative option.
-                  </li>
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
-                    Interest rates are subject to change and applicable as per
-                    the rate prevailing on the date of realization of
-                    cheque/transfer.
+                    Minimum deposit amount: ₹10,000 for cumulative option.
                   </li>
+
                   <li className="flex items-start">
                     <span className="text-white mr-2">•</span>
                     Senior Citizen (60 years & above) is eligible for an
@@ -676,6 +659,10 @@ const InterestRateSection = () => {
                     <span className="text-white mr-2">•</span>
                     Interest rates are subject to change as per the
                     company&#39;s discretion.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-white mr-2">•</span>
+                    Up to 0.40% p.a. extra interest for senior citizens
                   </li>
                 </ul>
               </div>

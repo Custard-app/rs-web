@@ -1,7 +1,7 @@
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 import React from 'react';
-import arrow from '@/assets/images/newsletterArrow.png';
+import arrow from '@/assets/rupeestop_assets/newsletterArrow.png';
 import Link from 'next/link';
 
 const data = [

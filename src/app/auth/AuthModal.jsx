@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import React, { useState,useEffect } from 'react';
-import logo from '@/assets/images/Logo.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
 import { RxCross2 } from 'react-icons/rx';
 import { AiOutlineEye,AiOutlineEyeInvisible  } from "react-icons/ai";
 

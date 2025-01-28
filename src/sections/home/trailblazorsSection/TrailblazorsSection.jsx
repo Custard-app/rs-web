@@ -5,6 +5,7 @@ import client4 from '@/assets/rupeestop_assets/clientsImages/client4.jpg';
 import client5 from '@/assets/rupeestop_assets/clientsImages/client5.jpg';
 import client6 from '@/assets/rupeestop_assets/clientsImages/client6.jpg';
 import client7 from '@/assets/rupeestop_assets/clientsImages/client7.jpg';
+import client8 from '@/assets/rupeestop_assets/clientsImages/client8.jpg';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import { BsPlay } from 'react-icons/bs';
 import './Trailblazors.css';
@@ -53,6 +54,12 @@ function TrailblazorsSection() {
       heading: 'Sunny ',
       content:
         "Rupeestop's fixed deposit strategies helped me balance risk and returns perfectly. I highly recommend their services.",
+    },
+    {
+      image: client8,
+      heading: 'Deepak & Preeti',
+      content:
+        "Thanks to RupeeStop, we’ve aligned our financial goals and built a strong foundation for our future.",
     },
   ];
   return (

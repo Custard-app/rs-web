@@ -1,7 +1,7 @@
 import assets from '@/assets/rupeestop_assets/About Us/Icons and Vectors/total assets.svg'
 import calender from '@/assets/rupeestop_assets/About Us/Icons and Vectors/total years.svg'
 import client from '@/assets/rupeestop_assets/About Us/Icons and Vectors/clients.svg'
-import mapIndia from '@/assets/images/mapIndia.png'
+import mapIndia from '@/assets/rupeestop_assets/About Us/Images/mapIndia.png'
 import WidthXL from '@/wrapper/widths/WidthXL'
 import Image from 'next/image'
 

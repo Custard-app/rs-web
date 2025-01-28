@@ -1,5 +1,4 @@
 'use client';
-import npsbg from '@/assets/images/npsbg.png';
 import AllOtherCalculators from '@/components/calculators/AllOtherCalculators';
 import ContactCard from '@/components/contactCard/ContactCard';
 import '@/sections/home/calculatorSection/Calculator.css';

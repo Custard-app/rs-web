@@ -13,7 +13,7 @@ const ExploreMFSection = () => {
       benefits: [
         'Relatively stable and consistent in nature',
         'Flexible in investing and withdrawal',
-        'Higher interest returns with tax efficiency',
+        'Interest Income with Capital appreciation',
       ],
     },
     'Liquid Funds': {

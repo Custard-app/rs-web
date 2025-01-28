@@ -1,5 +1,4 @@
 'use client';
-import moneyImg from '@/assets/images/money-element.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
-import aboutImg from '@/assets/images/about1.png';
+import aboutImg from '@/assets/rupeestop_assets/About Us/Images/about1.png';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import Image from 'next/image';
 

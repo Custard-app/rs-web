@@ -4,7 +4,7 @@ import './Footer.css';
 import appstore from '@/assets/icons/appstore.png';
 import playstore from '@/assets/icons/playstore.webp';
 
-import logo from '@/assets/rupeestop_assets/Home page/Logo.png';
+import logo from '@/assets/rupeestop_assets/Home page/Logo2.png';
 import Link from 'next/link';
 
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
                 <Image
                   src={logo}
                   alt="Rupeestop"
-                  className="w-[136px] h-[23px] sm:w-48 sm:h-8"
+                  className="w-[136px] sm:w-48 h-auto"
                 />
               </Link>
               <p className="text-xs sm:text-lg font-lato text-justify text-white text-wrap">
