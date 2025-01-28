@@ -9,7 +9,7 @@ import team6 from '@/assets/rupeestop_assets/teamsImages/team6.jpg';
 
 const teamsData = [
   {
-    name: 'Mohit Sharma',
+    name: 'Mohit',
     position: 'Position',
     img: team1,
     twitter: '#',
@@ -18,7 +18,7 @@ const teamsData = [
       "Mohit’s worked in financial sector over 20 years ago, initially working in entry-level roles where he gained in-depth knowledge of investment fundamentals and the financial markets. ",
   },
   {
-    name: 'Pamita Sharma',
+    name: 'Pamita',
     position: 'Position',
     img: team2,
     twitter: '#',
@@ -27,7 +27,7 @@ const teamsData = [
       "Pamita, joyful and ever ready to help; make team understand the female perspective. A service enthusiast always working on making investment journey smooth & rewarding for our clients and RupeeStop's Team also.",
   },
   {
-    name: 'Dhiraj Sharma',
+    name: 'Dhiraj',
     position: 'Position',
     img: team3,
     twitter: '#',
@@ -36,30 +36,30 @@ const teamsData = [
       "With two decades of experience in Financial and hospitality Industry, Dhiraj brings in customer first attitude. His unbiased approach, his illogical questions and novice thinking about the investment products gives us understanding to serve you with our best.",
   },
   {
-    name: 'Ujjwal Mittal',
+    name: 'Ujjwal',
     position: 'Position',
     img: team4,
     twitter: '#',
     linkedin: '#',
-    description:"Ujjwal Mittal",
+    description:"",
   },
   {
-    name: 'Pranay Sharma',
+    name: 'Pranay',
     position: 'Position',
     img: team5,
     twitter: '#',
     linkedin: '#',
     description:
-      "Pranay Sharma",
+      "",
   },
   {
-    name: 'Shubham Kumar',
+    name: 'Shubham',
     position: 'Position',
     img: team6,
     twitter: '#',
     linkedin: '#',
     description:
-      "Shubham Kumar",
+      "",
   },
   
 ]

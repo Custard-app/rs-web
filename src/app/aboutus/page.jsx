@@ -53,8 +53,11 @@ function AboutUs() {
                 </p>
                 <p className="font-lato text-xs sm:text-base text-gray-600 text-center">
                   *Send your resume and cover letter to{' '}
-                  <Link href="#" className="text-primary underline">
-                  info@rupeestop.com
+                  <Link
+                    href="mailto:info@rupeestop.com"
+                    className="text-primary underline"
+                  >
+                    info@rupeestop.com
                   </Link>{' '}
                 </p>
               </div>
