@@ -15,7 +15,7 @@ const teamsData = [
     twitter: '#',
     linkedin: '#',
     description:
-      "Mohit’s worked in financial sector over 20 years ago, initially working in entry-level roles where he gained in-depth knowledge of investment fundamentals and the financial markets. ",
+      "With over 20 years of experience in the financial sector, Mohit has in-depth knowledge of investment fundamentals and financial markets. Having worked with Nippon India and ICICI Prudential Mutual Fund, he simplifies complex investment strategies to empower clients to make informed decisions aligned with their goals.",
   },
   {
     name: 'Pamita',
@@ -41,7 +41,7 @@ const teamsData = [
     img: team4,
     twitter: '#',
     linkedin: '#',
-    description:"",
+    description:"Ujjwal is a strategic planner and entrepreneur who has founded two companies. He's a visionary with a unique blend of strategic thinking and technical intelligence, making him an empathetic and effective collaborator.",
   },
   {
     name: 'Pranay',
@@ -49,8 +49,7 @@ const teamsData = [
     img: team5,
     twitter: '#',
     linkedin: '#',
-    description:
-      "",
+    description:"Pranay is a creative and marketing expert who crafts compelling stories and campaigns. He's a master communicator with a keen understanding of what drives human connection and engagement.",
   },
   {
     name: 'Shubham',
@@ -58,8 +57,7 @@ const teamsData = [
     img: team6,
     twitter: '#',
     linkedin: '#',
-    description:
-      "",
+    description:"Shubham is the technical mastermind behind our company. With his expertise in technology and innovation, he transforms ideas into reality and drives the company's technical vision forward.",
   },
   
 ]
