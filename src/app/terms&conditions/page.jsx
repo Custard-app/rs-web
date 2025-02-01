@@ -2,25 +2,25 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div className="container mx-auto p-4 sm:p-8">
-      <h1 className="text-3xl sm:text-5xl font-bold text-center my-6 mt-20">Terms and Conditions</h1>
+    <div className="max-w-4xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-bold mb-6 mt-20 w-full text-center">Terms and Conditions</h1>
       
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">Welcome to Rupeestop LLP</h2>
         <p>
           These Terms and Conditions (&quot;Terms&quot;) govern your access to and use of our website (the &quot;Website&quot;) and any associated services (&quot;Services&quot;) provided by Rupeestop LLP. By accessing or using the Website and Services, you agree to comply with and be bound by these Terms. If you do not agree to these Terms, please refrain from using the Website or Services.
         </p>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">1. About Us</h2>
         <p>
           Rupeestop LLP is a wealth management company offering financial advisory, investment solutions, and related services to individuals and entities. Our goal is to assist clients in achieving financial growth through tailored strategies.
         </p>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">2. Acceptance of Terms</h2>
         <ul className="list-disc list-inside">
           <li>Have read, understood, and agree to these Terms.</li>
@@ -28,7 +28,7 @@ const page = () => {
         </ul>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">3. Eligibility</h2>
         <ul className="list-disc list-inside">
           <li>You must be at least 18 years old or the age of majority in your jurisdiction to use our Services.</li>
@@ -37,7 +37,7 @@ const page = () => {
         </ul>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">4. Use of Website and Services</h2>
         <h3 className="font-semibold">Permitted Use:</h3>
         <ul className="list-disc list-inside">
@@ -53,7 +53,7 @@ const page = () => {
         </ul>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">5. Services Offered</h2>
         <p>Rupeestop LLP provides wealth management and financial advisory services, including but not limited to:</p>
         <ul className="list-disc list-inside">
@@ -69,7 +69,7 @@ const page = () => {
         </ul>
       </section>
 
-      <section className="my-8">
+      <section className="my-4">
         <h2 className="text-xl sm:text-2xl font-semibold my-4">6. Account Registration</h2>
         <ul className="list-disc list-inside">
           <li>Provide accurate, complete, and up-to-date information.</li>
