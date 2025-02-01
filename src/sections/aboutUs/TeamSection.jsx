@@ -57,7 +57,7 @@ const teamsData = [
     img: team6,
     twitter: '#',
     linkedin: '#',
-    description:"Shubham is the technical mastermind behind our company. With his expertise in technology and innovation, he transforms ideas into reality and drives the company's technical vision forward.",
+    description:"Shubham is the technical mastermind behind our company. With his expertise in technology and innovation,he brings ideas to life and drives our company's technical vision forward.",
   },
   
 ]
