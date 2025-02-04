@@ -41,7 +41,7 @@ const teamsData = [
     img: team4,
     twitter: '#',
     linkedin: '#',
-    description:"Ujjwal is a strategic planner and entrepreneur who has founded two companies. He's a visionary with a unique blend of strategic thinking and technical intelligence, making him an empathetic and effective collaborator.",
+    description:"Ujjwal brings a unique combination of technical, community-building expertise and finance enthusism to our team, gained through his experience. He is a collaborative and empathetic person, fostering strong relationships and driving collective success.",
   },
   {
     name: 'Pranay',
