@@ -79,7 +79,7 @@ export default function SWPCalculator() {
                     max="10000000"
                     step="1"
                     value={totalInvestment > 0 ? totalInvestment : ''}
-                    onInput={(e) => handleInputChange(e, setTotalInvestment)}
+                    onInput={(e) => setTotalInvestment(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -93,7 +93,7 @@ export default function SWPCalculator() {
                     max="1000000"
                     step="1"
                     value={monthlyWithdrawal > 0 ? monthlyWithdrawal : ''}
-                    onInput={(e) => handleInputChange(e, setMonthlyWithdrawal)}
+                    onInput={(e) => setMonthlyWithdrawal(Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
@@ -107,7 +107,7 @@ export default function SWPCalculator() {
                     max="30"
                     step="1"
                     value={timePeriod > 0 ? timePeriod : ''}
-                    onInput={(e) => handleInputChange(e, setTimePeriod)}
+                    onInput={(e) => setTimePeriod(Number(e.target.value) > 30 ? 30 : Number(e.target.value))}
                     className="w-[100px] sm:w-[200px] mt-2 px-4 py-2 border font-lato text-lg text-gray-500 border-gray-300 rounded-md outline-none focus:ring-1 focus:ring-black"
                   />
                 </div>
