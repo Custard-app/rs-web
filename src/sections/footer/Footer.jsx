@@ -127,8 +127,8 @@ function Footer() {
             </div>
 
             {/* For mobile screen */}
-            <div className="flex sm:hidden flex-col gap-7">
-              <div className="flex justify-between gap-5">
+            <div className="flex sm:hidden flex-col items-start justify-center gap-7 w-full">
+            <div className="flex items-start justify-between gap-5">
                 {/* Navigation */}
                 <div>
                   <div className="flex flex-col mb-4">
