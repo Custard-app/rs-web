@@ -2,7 +2,7 @@ import WidthXL from '@/wrapper/widths/WidthXL';
 import TeamCard from './cards/TeamCard';
 import team1 from '@/assets/rupeestop_assets/teamsImages/team1_1.jpg';
 import team2 from '@/assets/rupeestop_assets/teamsImages/team2.jpg';
-import team3 from '@/assets/rupeestop_assets/teamsImages/team3_1.jpg';
+import team3 from '@/assets/rupeestop_assets/teamsImages/team3.jpg';
 import team4 from '@/assets/rupeestop_assets/teamsImages/team4.jpg';
 import team5 from '@/assets/rupeestop_assets/teamsImages/team5_1.jpg';
 import team6 from '@/assets/rupeestop_assets/teamsImages/team6.jpg';
