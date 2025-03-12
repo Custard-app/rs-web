@@ -15,7 +15,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
   });
   const [otp, setOtp] = useState('');
   const [isOtpVerified, setIsOtpVerified] = useState(false);
-  const [isOtpVerifying, setIsOtpVerifying] = useState(false);
+  // const [isOtpVerifying, setIsOtpVerifying] = useState(false);
 
   const handleUserInfoSubmit = async (info) => {
     setUserInfo(info);
@@ -38,7 +38,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
 
   const handleOtpSubmit = async(verifiedOtp) => {
     try {
-      setIsOtpVerifying(true);
+      // setIsOtpVerifying(true);
       setOtp(verifiedOtp);
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/otp/verify`, {
         email: userInfo.email,
@@ -50,7 +50,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
   
         setTimeout(() => {
           setStep(3);
-          setIsOtpVerifying(false);
+          // setIsOtpVerifying(false);
           setIsOtpVerified(false);
         }, 5000);
       } 
@@ -60,8 +60,8 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
       setStep(2);
       setIsOtpVerified(false);
     }finally{
-      if(!isOtpVerifying){
-        setIsOtpVerifying(false);
+      if(isOtpVerified){
+        // setIsOtpVerifying(false);
         setIsOtpVerified(false);
       }
     }
@@ -105,7 +105,6 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
             email={userInfo.email} 
             onSubmit={handleOtpSubmit} 
             isOtpVerified={isOtpVerified}
-            isOtpVerifying={isOtpVerifying}
           />
         )}
 

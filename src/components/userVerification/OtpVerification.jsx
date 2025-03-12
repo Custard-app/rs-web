@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 
-const OtpVerification = ({ email, onSubmit, isOtpVerified, isOtpVerifying }) => {
+const OtpVerification = ({ email, onSubmit, isOtpVerified }) => {
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
   const [timer, setTimer] = useState(30);
@@ -131,13 +131,11 @@ const OtpVerification = ({ email, onSubmit, isOtpVerified, isOtpVerifying }) => 
         <div className="pt-2">
           <button
             type="submit"
-            disabled={isOtpVerified || isOtpVerifying}
+            disabled={isOtpVerified}
             className={`w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white
               ${isOtpVerified 
                 ? 'bg-green-500 hover:bg-green-600' 
-                : isOtpVerifying 
-                  ? 'bg-gray-400'
-                  : 'bg-primary hover:bg-primary/90'} 
+                : ' bg-[#005e59] hover:bg-[#004C48]'} 
               transition-colors duration-200`}
           >
             {isOtpVerified ? (
@@ -146,11 +144,6 @@ const OtpVerification = ({ email, onSubmit, isOtpVerified, isOtpVerifying }) => 
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 OTP Verified
-              </div>
-            ) : isOtpVerifying ? (
-              <div className="flex items-center">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                Verifying...
               </div>
             ) : (
               'Verify OTP'
