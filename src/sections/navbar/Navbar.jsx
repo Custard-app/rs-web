@@ -17,6 +17,7 @@ import { BsPersonVcard } from 'react-icons/bs';
 import { LuNotebookPen } from 'react-icons/lu';
 import { TbMoneybag } from 'react-icons/tb';
 import { usePathname } from 'next/navigation';
+import UserVerificationPopup from '@/components/userVerification/UserVerificationPopup';
 
 function Navbar() {
   const pathname = usePathname();
@@ -90,6 +91,7 @@ function Navbar() {
   }, [showInstrumentsBanner, showCalculatorsBanner]);
 
   const isNewsletterPage = pathname === '/newsletter';
+  const isDashboard = pathname === '/dashboard'
 
   return (
     <div className="relative" ref={navRef}>
@@ -150,13 +152,25 @@ function Navbar() {
                   <Link href="/newsletter">Newsletter</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                  <Link
+                  {/* <Link
                     href="https://invest.rupeestop.com/client-login"
                     // onClick={() => setIsModalOpen(true)}
                     className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
                   >
                     Login
-                  </Link>
+                  </Link> */}
+
+                  {
+                    !isDashboard && (
+                      <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
+                  >
+                    Login
+                  </button>
+                    )
+                  }
+                  
                   <button
                     onClick={toggleHamburgerMenu}
                     className="block sm:hidden"
@@ -475,7 +489,8 @@ function Navbar() {
       </div>
 
       {/* Render Login Modal */}
-      {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />}
+      {/* {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />} */}
+      {isModalOpen && <UserVerificationPopup isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }
