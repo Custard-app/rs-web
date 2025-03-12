@@ -71,6 +71,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PortfolioOverview from '@/components/dashboard/PortfolioOverview';
 import VerificationPopup from '@/components/dashboard/VerificationPopup';
+import axios from 'axios';
 
 export default function Dashboard() {
   const [portfolioData, setPortfolioData] = useState(null);
@@ -123,8 +124,9 @@ function DashboardContent({ setPortfolioData, setLoading, setShowVerificationPop
     <div className="min-h-screen bg-gray-50">
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {loading ? (
-          <div className="flex justify-center items-center h-64">
+          <div className="flex flex-col gap-4 justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+            <p className="text-gray-500">Extracting your portfolio data...</p>
           </div>
         ) : (
           <PortfolioOverview  />
