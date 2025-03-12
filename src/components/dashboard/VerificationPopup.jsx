@@ -40,7 +40,7 @@ const VerificationPopup = ({ onClose }) => {
           </h3>
           
           <p className="text-gray-600 mb-4">
-            Your email has been successfully connected. We'll start analyzing your financial data to provide personalized insights.
+            Your email has been successfully connected. We&#39;ll start analyzing your financial data to provide personalized insights.
           </p>
 
           <button
