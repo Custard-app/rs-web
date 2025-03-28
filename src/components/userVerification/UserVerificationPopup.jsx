@@ -180,7 +180,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* <div id="recaptcha-container"></div> */}
+        <div id="recaptcha-container"></div>
 
         {step === 1 && (
           <UserInfoForm

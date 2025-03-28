@@ -125,8 +125,6 @@ const UserInfoForm = ({ initialValues, onSubmit }) => {
           <p className="mt-1 text-sm text-red-600">{errors.email}</p>
         )}
       </div>
-
-      <div id="recaptcha-container"></div>
       
       <div className="pt-2">
         <button
