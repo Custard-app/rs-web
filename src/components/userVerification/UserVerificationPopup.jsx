@@ -191,7 +191,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
 
         {step === 2 && (
           <OtpVerification
-            email={userInfo.email}
+            mobile={userInfo.mobile}
             onSubmit={handleOtpSubmit}
             isOtpVerified={isOtpVerified}
           />

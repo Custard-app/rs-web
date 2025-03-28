@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
 
-const OtpVerification = ({ email, onSubmit, isOtpVerified }) => {
+const OtpVerification = ({ mobile, onSubmit, isOtpVerified }) => {
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
   const [timer, setTimer] = useState(30);
@@ -87,7 +87,7 @@ const OtpVerification = ({ email, onSubmit, isOtpVerified }) => {
   return (
     <div className="space-y-4">
       <p className="text-sm text-gray-600">
-        We&#39;ve sent a 6-digit OTP to {email.slice(0, 2)}******{email.slice(-12)}
+        We&#39;ve sent a 6-digit OTP to {mobile.slice(0, 2)}******{mobile.slice(-2)}
       </p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
