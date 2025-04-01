@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { auth } from '@/firebase';
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
+// import { useNavigate } from 'react-router-dom';
 
 const UserVerificationPopup = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1); // 1: User Info, 2: OTP, 3: Email Consent
@@ -18,6 +19,7 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
   const [otp, setOtp] = useState('');
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [confirmationResult, setConfirmationResult] = useState(null);
+  // const navigate = useNavigate();
   // const [isOtpVerifying, setIsOtpVerifying] = useState(false);
 
   // const handleUserInfoSubmit = async (info) => {
@@ -90,30 +92,41 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
   //   }
   // }, []);
 
+  useEffect(() => {
+    // Clear previous reCAPTCHA instances
+    if (window.recaptchaVerifier) {
+      window.recaptchaVerifier.clear();
+      window.recaptchaVerifier = null;
+    }
+    
+    // Only create recaptchaVerifier when needed
+    if (step === 1 && !window.recaptchaVerifier) {
+      window.recaptchaVerifier = new RecaptchaVerifier(
+        auth,
+        'recaptcha-container',
+        {
+          size: 'invisible',
+          callback: () => {
+            console.log('reCAPTCHA Verified');
+          },
+          'expired-callback': () => {
+            console.log('reCAPTCHA expired. Resetting...');
+            window.recaptchaVerifier.clear();
+            window.recaptchaVerifier = null;
+          },
+        }
+      );
+    }
+  }, [step]);
+
   const handleUserInfoSubmit = async (info) => {
     setUserInfo(info);
     console.log('sending otp to:', info.mobile);
 
     try {
-      const phoneNumber = `+91${info.mobile}`;
-
-      // Initialize Recaptcha before sending OTP
-      if (!window.recaptchaVerifier) {
-        window.recaptchaVerifier = new RecaptchaVerifier(
-          auth,
-          'recaptcha-container',
-          {
-            size: 'invisible',
-            callback: () => {
-              console.log('reCAPTCHA Verified');
-            },
-            'expired-callback': () => {
-              console.log('reCAPTCHA expired. Resetting...');
-            },
-            appVerificationDisabledForTesting: true,  // 🔹 For local testing
-          },
-        );
-      }
+      const phoneNumber = info.mobile.startsWith('+91')
+        ? info.mobile
+        : `+91${info.mobile}`;
 
       const appVerifier = window.recaptchaVerifier;
 
@@ -127,7 +140,15 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
       setStep(2);
       //Store confirmation result
     } catch (error) {
-      console.error('Error sending OTP:', error);
+      console.error('Error sending OTP:', error.code, error.message);
+      let errorMessage = 'Failed to send verification code. Please try again.';
+      if (error.code === 'auth/invalid-app-credential') {
+        errorMessage =
+          'reCAPTCHA verification failed. Please refresh and try again.';
+      } else if (error.code === 'auth/quota-exceeded') {
+        errorMessage = 'SMS quota exceeded. Please try again later.';
+      }
+      alert(errorMessage);
       setStep(1);
     }
   };
@@ -145,19 +166,18 @@ const UserVerificationPopup = ({ isOpen, onClose }) => {
 
       setIsOtpVerified(true);
       setTimeout(() => setStep(3), 2000);
-
     } catch (error) {
       console.error('Error verifying OTP:', error);
-      alert("Invalid OTP. Please try again!");
+      alert('Invalid OTP. Please try again!');
       setStep(2);
       setIsOtpVerified(false);
-    } 
+    }
   };
 
   const handleConsentSubmit = (hasConsented) => {
     // In a real application, you would save the consent status
     console.log('User consent status:', hasConsented);
-    navigate('/');
+    // navigate('/view-portfolio');
     onClose();
   };
 

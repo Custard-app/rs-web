@@ -17,7 +17,6 @@ import { BsPersonVcard } from 'react-icons/bs';
 import { LuNotebookPen } from 'react-icons/lu';
 import { TbMoneybag } from 'react-icons/tb';
 import { usePathname } from 'next/navigation';
-import UserVerificationPopup from '@/components/userVerification/UserVerificationPopup';
 
 function Navbar() {
   const pathname = usePathname();
@@ -91,7 +90,8 @@ function Navbar() {
   }, [showInstrumentsBanner, showCalculatorsBanner]);
 
   const isNewsletterPage = pathname === '/newsletter';
-  const isDashboard = pathname === '/dashboard'
+  const isDashboard = pathname === '/dashboard';
+  const isViewPortfolio = pathname === '/view-portfolio';
 
   return (
     <div className="relative" ref={navRef}>
@@ -106,10 +106,11 @@ function Navbar() {
             }}
           >
             <Link
-            href="https://rupeesorted.substack.com/"
-            target='_blank'
-            className="text-sm sm:text-base font-semibold">
-            Rupee sorted - an Initiative by Rupeestop
+              href="https://rupeesorted.substack.com/"
+              target="_blank"
+              className="text-sm sm:text-base font-semibold"
+            >
+              Rupee sorted - an Initiative by Rupeestop
             </Link>
           </div>
         )}
@@ -152,25 +153,16 @@ function Navbar() {
                   <Link href="/newsletter">Newsletter</Link>
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                  {/* <Link
-                    href="https://invest.rupeestop.com/client-login"
-                    // onClick={() => setIsModalOpen(true)}
-                    className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
-                  >
-                    Login
-                  </Link> */}
+                  {!(isDashboard || isViewPortfolio) && (
+                    <Link
+                      href="https://invest.rupeestop.com/client-login"
+                      // onClick={() => setIsModalOpen(true)}
+                      className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
+                    >
+                      Login
+                    </Link>
+                  )}
 
-                  {
-                    !isDashboard && (
-                      <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="bg-accentOrange-200 py-1 sm:py-2 px-4 text-base font-medium text-white rounded-3xl text-center"
-                  >
-                    Login
-                  </button>
-                    )
-                  }
-                  
                   <button
                     onClick={toggleHamburgerMenu}
                     className="block sm:hidden"
@@ -282,7 +274,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   FD Calculator
                 </Link>
                 <Link
@@ -290,7 +281,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   NPS Calculator
                 </Link>
                 <Link
@@ -298,7 +288,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   RD Calculator
                 </Link>
                 <Link
@@ -306,7 +295,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   CAGR Calculator
                 </Link>
               </div>
@@ -318,7 +306,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   NSC Calculator
                 </Link>
                 <Link
@@ -326,7 +313,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   HRA Calculator
                 </Link>
                 <Link
@@ -334,7 +320,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   MF Calculator
                 </Link>
                 <Link
@@ -342,7 +327,6 @@ function Navbar() {
                   className="flex items-center gap-3 font-lato font-medium text-lg"
                   onClick={closeCalculatorBanner}
                 >
-                  
                   SSY Calculator
                 </Link>
               </div>
@@ -490,7 +474,6 @@ function Navbar() {
 
       {/* Render Login Modal */}
       {/* {isModalOpen && <AuthModal onClose={() => setIsModalOpen(false)} />} */}
-      {isModalOpen && <UserVerificationPopup isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }
