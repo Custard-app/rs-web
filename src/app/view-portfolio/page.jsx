@@ -50,7 +50,7 @@ function PortfolioSyncPage() {
                 </button>
               </div>
               <div className="hidden lg:block w-full">
-                <div className='flex justify-center items-center h-full'>
+                <div className="flex justify-center items-center h-full">
                   <Image
                     src={chart}
                     alt="Portfolio dashboard preview"
@@ -441,30 +441,25 @@ function PortfolioSyncPage() {
             <dl className="space-y-6">
               <div>
                 <dt className="text-lg font-medium text-gray-900">
-                  What email providers do you support?
+                  What is Rupeestop?
                 </dt>
                 <dd className="mt-2 text-gray-600">
-                  We support Gmail, Outlook, Yahoo Mail, and most major email
-                  providers.
+                  Rupeestop is a comprehensive financial management platform
+                  designed to help Indians track, analyze, and optimize their
+                  personal finances. We provide tools for investment tracking,
+                  expense management, and personalized financial insights.
                 </dd>
               </div>
               <div>
                 <dt className="text-lg font-medium text-gray-900">
-                  Which investment platforms can you extract data from?
+                  How does Rupeestop help me manage my finances?
                 </dt>
                 <dd className="mt-2 text-gray-600">
-                  We can extract data from over 100 investment platforms
-                  including Vanguard, Fidelity, Robinhood, Coinbase, and more.
-                </dd>
-              </div>
-              <div>
-                <dt className="text-lg font-medium text-gray-900">
-                  How do you ensure my email data is secure?
-                </dt>
-                <dd className="mt-2 text-gray-600">
-                  We use industry-standard 256-bit encryption for all
-                  communications and data storage. We only request read-only
-                  access and never store your login credentials.
+                  We analyze your financial data to provide a complete picture
+                  of your financial health. Our platform helps you track
+                  investments, monitor expenses, set budgets, receive bill
+                  payment reminders, and get personalized recommendations to
+                  improve your financial wellbeing.
                 </dd>
               </div>
               <div>
@@ -475,6 +470,18 @@ function PortfolioSyncPage() {
                   Yes, you can disconnect your email at any time from your
                   account settings. We&#39;ll stop processing new emails
                   immediately.
+                </dd>
+              </div>
+              <div>
+                <dt className="text-lg font-medium text-gray-900">
+                  What makes Rupeestop different from other financial apps?
+                </dt>
+                <dd className="mt-2 text-gray-600">
+                  Rupeestop is specifically built for the Indian financial
+                  ecosystem, with support for local banks, investment platforms,
+                  and tax regulations. Our intelligent email analysis provides a
+                  seamless way to track your finances without the hassle of
+                  manual entry or maintaining multiple app connections.
                 </dd>
               </div>
             </dl>
