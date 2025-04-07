@@ -108,7 +108,9 @@ function DashboardContent({ setPortfolioData, setLoading, setShowVerificationPop
     const fetchPortfolioData = async () => {
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/email/fetch-data`);
+        console.log("Response", response);
         const data = response.data.data;
+        console.log("Portfolio Data", data);
         setPortfolioData(data);
       } catch (error) {
         console.error('Error fetching portfolio data:', error);
