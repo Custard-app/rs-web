@@ -116,9 +116,9 @@ function DashboardContent({
         const response = await axios.get(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/email/fetch-data`,
         );
-        console.log('Response', response);
+        console.log('Response', response.status);
         const data = response.data.data;
-        console.log('Portfolio Data', data);
+        // console.log('Portfolio Data', data);
         setPortfolioData(data);
       } catch (error) {
         console.error('Error fetching portfolio data:', error);
