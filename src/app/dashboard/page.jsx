@@ -10,7 +10,7 @@
 //   const [loading, setLoading] = useState(true);
 //   const [showVerificationPopup, setShowVerificationPopup] = useState(false);
 //   const hashFetched = useRef(false);
-  
+
 //   const searchParams = useSearchParams();
 //   const isVerified = searchParams.get('verified') === 'true';
 
@@ -18,7 +18,7 @@
 //     // Show popup if user just verified
 //     if (isVerified) {
 //       setShowVerificationPopup(true);
-      
+
 //       // Remove the query parameter from URL without page reload
 //       window.history.replaceState({}, '', '/dashboard');
 //     }
@@ -63,10 +63,9 @@
 //       )}
 //     </div>
 //   );
-// } 
+// }
 
-
-"use client";
+'use client';
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PortfolioOverview from '@/components/dashboard/PortfolioOverview';
@@ -81,19 +80,26 @@ export default function Dashboard() {
   // Wrap the useSearchParams in a Suspense boundary
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <DashboardContent 
-        setPortfolioData={setPortfolioData} 
-        setLoading={setLoading} 
-        setShowVerificationPopup={setShowVerificationPopup} 
-        showVerificationPopup={showVerificationPopup} 
-        portfolioData={portfolioData} 
-        loading={loading} 
+      <DashboardContent
+        setPortfolioData={setPortfolioData}
+        setLoading={setLoading}
+        setShowVerificationPopup={setShowVerificationPopup}
+        showVerificationPopup={showVerificationPopup}
+        portfolioData={portfolioData}
+        loading={loading}
       />
     </Suspense>
   );
 }
 
-function DashboardContent({ setPortfolioData, setLoading, setShowVerificationPopup, showVerificationPopup, portfolioData, loading }) {
+function DashboardContent({
+  setPortfolioData,
+  setLoading,
+  setShowVerificationPopup,
+  showVerificationPopup,
+  portfolioData,
+  loading,
+}) {
   const searchParams = useSearchParams();
   const isVerified = searchParams.get('verified') === 'true';
 
@@ -107,10 +113,12 @@ function DashboardContent({ setPortfolioData, setLoading, setShowVerificationPop
   useEffect(() => {
     const fetchPortfolioData = async () => {
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/email/fetch-data`);
-        console.log("Response", response);
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/email/fetch-data`,
+        );
+        console.log('Response', response);
         const data = response.data.data;
-        console.log("Portfolio Data", data);
+        console.log('Portfolio Data', data);
         setPortfolioData(data);
       } catch (error) {
         console.error('Error fetching portfolio data:', error);
@@ -130,8 +138,18 @@ function DashboardContent({ setPortfolioData, setLoading, setShowVerificationPop
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
             <p className="text-gray-500">Extracting your portfolio data...</p>
           </div>
+        ) : 
+        portfolioData && portfolioData.length > 0 ? (
+          <PortfolioOverview />
         ) : (
-          <PortfolioOverview  />
+          <div className="flex flex-col gap-4 justify-center items-center h-64 text-center">
+            <p className="text-gray-600 text-lg font-medium">
+              No investment statements found in your Gmail.
+            </p>
+            <p className="text-sm text-gray-500">
+              Please ensure your inbox contains valid investment PDF statements.
+            </p>
+          </div>
         )}
       </main>
 
