@@ -48,6 +48,15 @@ function PortfolioSyncPage() {
                 >
                   Connect Email Account
                 </button>
+
+                <p className="mt-6 text-sm text-gray-500">
+                  <Link
+                    href="/privacy-policy"
+                    className="text-gray-200 hover:text-green-400 underline"
+                  >
+                    Privacy Policy
+                  </Link>{' '}
+                </p>
               </div>
               <div className="hidden lg:block w-full">
                 <div className="flex justify-center items-center h-full">

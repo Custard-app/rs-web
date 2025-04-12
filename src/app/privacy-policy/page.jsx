@@ -1,156 +1,143 @@
-
 import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      {' '}
+    <div className="flex justify-center px-4 py-10 bg-white">
+      <div className="max-w-3xl w-full text-gray-800 space-y-6">
       <h1 className="text-3xl font-bold mb-6 mt-20 w-full text-center">Privacy Policy</h1>
-      <p>
-        This privacy policy sets out how Rupeestop LLP uses and protects any
-        information that you share when you use this website. Rupeestop LLP is
-        committed to ensuring that your privacy is protected at all times.
-        Should we ask you to provide certain information by which you can be
-        identified when using this website, you can be assured that it will only
-        be used in accordance with this privacy statement.
-      </p>
-      <p>
-        Rupeestop LLP may change this policy from time to time by updating this
-        page. This policy is effective from June 1, 2018.
-      </p>
-      <p>
-        Rupeestop LLP understands that our relationship is strongly built on
-        trust and faith. In Course of using information on this website or
-        availing the services, Rupeestop LLP may become privy to the personal
-        information of its customer including information that is of
-        confidential nature. Rupeestop LLP is strictly committed to protecting
-        the privacy of its Customer and has taken reasonable measures to protect
-        the confidentiality of the customer information and its transmission
-        through World Wide Web. However it shall not be liable in any manner for
-        disclosure of the confidential information in accordance with this
-        Privacy Commitment or in terms of the agreement if any with the Customer
-        or by reasons beyond its control. We may however be required to disclose
-        your personal information to Government, Judicial bodies, and our
-        Regulators or to any person to whom the Firm is under an obligation to
-        make disclosure under the requirements of any law binding on the Firm or
-        any of its branches, if required.
-      </p>
-      <p>
-        Hyperlink Policy for user: Any hyperlink to other Internet sites is at
-        customer’s own risk. The contents of which and the accuracy of opinions
-        expressed are not verified, monitored or endorsed by Rupeestop LLP, in
-        any way or manner. Rupeestop LLP is not responsible for the setup of any
-        hyperlink from a third party website to Rupeestop LLP.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">What we collect</h2>
-      <p>We may collect the following information:</p>
-      <ul className="list-disc ml-5">
-        <li>Name and contact details</li>
-        <li>
-          We may collect personal information directly from you, such as your
-          name, email address, contact details, or other identifiers, when you
-          register an account, make a purchase, or interact with certain
-          features of the application.
-        </li>
-      </ul>
-      <p>
-        Your personal information is used to provide you with access to the
-        application&quot;s features and functionalities, personalize your experience,
-        and communicate with you about your account or transactions.
-      </p>
-      <p>
-        We implement industry-standard security measures to protect your
-        personal information from unauthorized access, alteration, disclosure,
-        or destruction.
-      </p>
-      <p>
-        You have the right to control and manage your personal information
-        within the application. You can update your account details, manage your
-        communication preferences, or exercise your rights under applicable data
-        protection laws.
-      </p>
-      <p>
-        You can also choose to delete your account or request the deletion of
-        certain personal information by contacting us through the provided
-        channels or there is an option in app settings page.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">
-        Collection/Use of image data
-      </h2>
-      <p>
-        When you grant permission, our application may access your device&quot;s
-        camera or photo gallery to enable features that involve capturing,
-        uploading.
-      </p>
-      <p>
-        The images you upload or capture within our application may be used for
-        document verification in Video KYC by the application.
-      </p>
-      <p>
-        We do not share your image data with third parties unless required by
-        law or necessary to provide the services you have requested.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">Use of location data</h2>
-      <p>
-        We access your location to verifying your identity and granting access
-        to the application&quot;s features and functionalities.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">Security</h2>
-      <p>
-        We are committed to ensuring that your information is secure. In order
-        to prevent unauthorised access or disclosure, we have put in place
-        suitable physical, electronic and managerial procedures to safeguard and
-        secure the information we collect online.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">Links to other websites</h2>
-      <p>
-        Our website may contain links to other websites of interest. However,
-        once you have used these links to leave our site, you should note that
-        we do not have any control over such third-party websites. Therefore, we
-        cannot be responsible for the protection and privacy of any information
-        which you provide whilst visiting such sites. You should exercise
-        caution and look at the privacy statement applicable to the website in
-        question.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">
-        Controlling your personal information
-      </h2>
-      <p>
-        If you believe that any of your information with us is incorrect or
-        incomplete, please email us as soon as possible at
-        info@redvisionglobal.com. We will promptly correct any information found
-        to be incorrect.
-      </p>
-      <h2 className="text-2xl font-semibold mt-6">Security certificates</h2>
-      <p>
-        Rupeestop LLP is an information technology company. We fully recognise
-        and understand the security implications of being a service provider
-        with whom people trust their money. There are many safeguards we adopt
-        in this regard – some of these are technical, and some are structural.
-      </p>
-      <p>When it comes to data security, our goal is to ensure that:</p>
-      <ul className="list-disc ml-5">
-        <li>
-          Your data is stored safely and securely – passwords are one-way
-          encrypted before being stored in the database for high security.
-        </li>
-        <li>
-          All communication with you, or with mutual fund companies and other
-          service providers – are encrypted using the highest standards.
-        </li>
-        <li>
-          Your data is not shared with anyone, unless you have explicitly
-          requested us to do so to fulfil a transaction request.
-        </li>
-      </ul>
-      <p>
-        To ensure that we achieve these goals, we have a variety of
-        certifications/trust verifications in place for our firm, both from
-        technical and legal/operational perspectives. All our communications are
-        encrypted by 256-bit encryption, and our data is hosted with top-tier
-        hosting service providers. Also, our data is continuously backed up to
-        ensure continuity of operations.
-      </p>
+
+        <p>
+          This privacy policy outlines how <strong>Rupeestop LLP</strong> uses
+          and protects any information that you share when using this website or
+          our mobile application. Rupeestop LLP is committed to ensuring that
+          your privacy is protected at all times.
+        </p>
+
+        <p>
+          We may update this policy from time to time by updating this page.
+          This policy is effective from <strong>June 1, 2018</strong>, and
+          reflects updates as of the latest version below.
+        </p>
+
+        <h2 className="text-xl font-semibold text-black">
+          Commitment to Your Privacy
+        </h2>
+        <p>
+          Rupeestop LLP understands that our relationship is built on trust.
+          While using this website or availing our services, we may become privy
+          to personal and confidential information. We are strictly committed to
+          safeguarding this data and have implemented robust measures to protect
+          its confidentiality during transmission over the internet.
+        </p>
+        <p>
+          However, Rupeestop LLP shall not be liable for any disclosure of
+          confidential information that is in accordance with this policy or due
+          to circumstances beyond our control. Information may be disclosed when
+          legally required by government agencies or judicial bodies.
+        </p>
+
+        <h2 className="text-xl font-semibold text-black">
+          Login and Authentication
+        </h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>
+            Login via PAN and mobile number followed by a One-Time Password
+            (OTP).
+          </li>
+          <li>
+            All authentication data is <strong>end-to-end encrypted</strong>.
+          </li>
+          <li>
+            Post-verification, Gmail login is prompted to fetch mutual fund
+            statements.
+          </li>
+          <li>
+            <strong>No Gmail credentials or financial data are stored</strong>{' '}
+            on our servers.
+          </li>
+          <li>
+            Data is used only during the session and is not shared with third
+            parties unless legally required.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-semibold text-black">What We Collect</h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Name and contact details (email, mobile)</li>
+          <li>PAN number (for identity and financial access)</li>
+          <li>Gmail access (for one-time mutual fund data retrieval)</li>
+        </ul>
+
+        <p>This information helps us:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4">
+          <li>Provide personalized services and insights</li>
+          <li>Communicate about account activity or updates</li>
+          <li>Improve platform experience</li>
+        </ul>
+
+        <h2 className="text-xl font-semibold text-black">
+          Use of Image Data
+        </h2>
+        <p>
+          If you grant permission, we may access your camera or photo gallery to
+          capture/upload documents for KYC purposes. Images are only used for
+          identity verification and are not shared with third parties unless
+          legally required.
+        </p>
+
+        <h2 className="text-xl font-semibold text-black">
+          Security Measures
+        </h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>
+            <strong>256-bit SSL encryption</strong> secures all communication.
+          </li>
+          <li>Passwords are one-way encrypted before storage.</li>
+          <li>
+            Data is hosted on top-tier infrastructure and regularly backed up.
+          </li>
+          <li>
+            All sensitive data transactions are{' '}
+            <strong>end-to-end encrypted</strong>.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-semibold text-black">
+          Security Certifications
+        </h2>
+        <p>
+          Our systems are certified and regularly audited to ensure high-level
+          protection. We comply with trust standards from technical, legal, and
+          operational standpoints.
+        </p>
+
+        <h2 className="text-xl font-semibold text-black">
+          Third-Party Links
+        </h2>
+        <p>
+          We may include links to other websites for convenience. Once you leave
+          our platform, we are not responsible for the content or privacy
+          practices of external sites.
+        </p>
+
+        <h2 className="text-xl font-semibold text-black">
+          Managing Your Information
+        </h2>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Users can update personal info or preferences via the app.</li>
+          <li>
+            Accounts or specific data can be deleted via app settings or by
+            emailing{' '}
+            <a
+              href="mailto:info@redvisionglobal.com"
+              className="text-black underline"
+            >
+              info@redvisionglobal.com
+            </a>
+            .
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
