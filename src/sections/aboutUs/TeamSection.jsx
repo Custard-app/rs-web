@@ -6,6 +6,7 @@ import team3 from '@/assets/rupeestop_assets/teamsImages/team3.jpg';
 import team4 from '@/assets/rupeestop_assets/teamsImages/team4.jpg';
 import team5 from '@/assets/rupeestop_assets/teamsImages/team5_1.jpg';
 import team6 from '@/assets/rupeestop_assets/teamsImages/team6.jpg';
+import team7 from '@/assets/rupeestop_assets/teamsImages/team7.png';
 
 const teamsData = [
   {
@@ -41,7 +42,7 @@ const teamsData = [
     img: team4,
     twitter: '#',
     linkedin: '#',
-    description:"Ujjwal brings a unique combination of technical, community-building expertise and finance enthusism to our team, gained through his experience. He is a collaborative and empathetic person, fostering strong relationships and driving collective success.",
+    description: "Ujjwal brings a unique combination of technical, community-building expertise and finance enthusism to our team, gained through his experience. He is a collaborative and empathetic person, fostering strong relationships and driving collective success.",
   },
   {
     name: 'Pranay',
@@ -49,17 +50,25 @@ const teamsData = [
     img: team5,
     twitter: '#',
     linkedin: '#',
-    description:"Pranay is a creative and marketing expert who crafts compelling stories and campaigns. He's a master communicator with a keen understanding of what drives human connection and engagement.",
+    description: "Pranay is a creative and marketing expert who crafts compelling stories and campaigns. He's a master communicator with a keen understanding of what drives human connection and engagement.",
   },
   {
-    name: 'Shubham',
-    position: 'Position',
+    name: 'Mohit',
+    position: 'Lead SDE',
     img: team6,
     twitter: '#',
     linkedin: '#',
-    description:"Shubham is the technical mastermind behind our company. With his expertise in technology and innovation,he brings ideas to life and drives our company's technical vision forward.",
+    description: "Mohit serves as the Lead Software Development Engineer, spearheading the development and innovation of our products. With extensive expertise in modern technologies, he leads scalable solutions that drive our company's technological advancement and product excellence.",
   },
-  
+  {
+    name: 'Divyansh',
+    position: 'Operations & Sales Lead',
+    img: team7,
+    twitter: '#',
+    linkedin: '#',
+    description: "Divyansh drives business growth through strategic customer management and sales excellence. With several years of experience in business development, he has developed strong expertise in customer relationship management, sales strategies, and operational efficiency.",
+  },
+
 ]
 
 function TeamSection() {
