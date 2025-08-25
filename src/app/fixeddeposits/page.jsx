@@ -10,7 +10,7 @@ import pnb from '@/assets/rupeestop_assets/Fixed Deposits/Images/pnb.png';
 import waterLogo from '@/assets/rupeestop_assets/Fixed Deposits/Icons and Vectors/rupeestop.svg';
 import FAQSection from '@/sections/fixedDeposits/FAQSection';
 import HeroSection from '@/sections/fixedDeposits/HeroSection';
-import InterestRateSection from '@/sections/fixedDeposits/IntrestRateSection';
+import DynamicFdRatesSection from '@/components/fd/DynamicFdRatesSection';
 import WidthXL from '@/wrapper/widths/WidthXL';
 import WidthXXL from '@/wrapper/widths/WidthXXL';
 import Image from 'next/image';
@@ -80,7 +80,7 @@ function page() {
           />
         </div>
       </div>
-      <InterestRateSection />
+      <DynamicFdRatesSection />
       <div className='bg-backgroundLight2 py-14 sm:py-24 px-5 sm:px-0'>
         <WidthXL>
           <div className="flex flex-col sm:flex-row items-center sm:items-start  gap-10 sm:gap-0">
@@ -89,7 +89,7 @@ function page() {
               {benefits.map((benefit) => (
                 <div key={benefit.id} className="flex flex-col items-center gap-[10px] w-[164px] sm:w-[231px]">
                   <Image src={benefit.icon.src} alt={benefit.title} width={60}
-                    height={60}/>
+                    height={60} />
                   <p className='font-lato font-semibold text-lg sm:text-2xl text-center text-wrap'>{benefit.title}</p>
                   <p className='font-lato text-sm sm:text-lg text-center text-wrap'>{benefit.description}</p>
                 </div>
@@ -98,7 +98,7 @@ function page() {
           </div>
         </WidthXL>
       </div>
-      <FAQSection/>
+      <FAQSection />
       {/* Card */}
       <div className="bg-white py-14 sm:py-24 px-5 sm:px-0">
         <WidthXXL>
@@ -108,14 +108,14 @@ function page() {
             </p>
             <div className="w-full sm:w-[756px]">
               <p className="w-full font-lato font-medium text-[20px] text-wrap text-center text-gray-100">
-              Connect with our expert and secure your investment in corporate fixed deposits!
+                Connect with our expert and secure your investment in corporate fixed deposits!
               </p>
             </div>
 
             <Link
-             href="https://calendly.com/llprupeestop/30min"
-            target="_blank"
-            className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
+              href="https://calendly.com/llprupeestop/30min"
+              target="_blank"
+              className="flex items-center bg-accentLime p-2 pl-6 pr-2 rounded-full z-5">
               <p className="text-black font-semibold text-base capitalize">
                 Chat With Us
               </p>
